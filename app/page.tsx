@@ -1,0 +1,102 @@
+import { Container, Section } from "@/components/layout";
+import {
+  HeroSection,
+  StatsBar,
+  FeatureCard,
+  PlanCard,
+  TestimonialCard,
+  CTASection,
+  FAQAccordion,
+  SectionHeader,
+} from "@/components/marketing";
+import { FEATURES, STATS, PLANS, TESTIMONIALS, FAQS } from "@/lib/constants";
+
+export default function HomePage() {
+  return (
+    <>
+      {/* Hero */}
+      <HeroSection
+        title="Meilleur IPTV"
+        highlight="en France"
+        subtitle="Streamez 10 000+ chaînes en direct et 50 000+ films en qualité 4K époustouflante. Sans engagement, sans coupure — que du divertissement pur."
+        primaryCTA={{ label: "Voir les Abonnements", href: "#plans" }}
+        secondaryCTA={{ label: "En Savoir Plus", href: "/about" }}
+      />
+
+      {/* Stats Bar */}
+      <StatsBar stats={STATS} />
+
+      {/* Features */}
+      <Section id="features">
+        <Container>
+          <SectionHeader
+            title="Pourquoi Choisir IPTV The King ?"
+            subtitle="Nous offrons la meilleure expérience de streaming avec des fonctionnalités premium qui nous distinguent de la concurrence."
+          />
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {FEATURES.map((feature) => (
+              <FeatureCard
+                key={feature.title}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+              />
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Plans */}
+      <Section id="plans" className="bg-surface/30">
+        <Container>
+          <SectionHeader
+            title="Choisissez Votre Abonnement"
+            subtitle="Des tarifs flexibles sans frais cachés. Tous les abonnements incluent l'accès complet à nos chaînes et notre bibliothèque VOD."
+          />
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {PLANS.map((plan) => (
+              <PlanCard key={plan.id} plan={plan} />
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Testimonials */}
+      <Section>
+        <Container>
+          <SectionHeader
+            title="Ce Que Disent Nos Clients"
+            subtitle="Rejoignez des milliers de clients satisfaits qui ont fait le choix d'IPTV The King."
+          />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {TESTIMONIALS.map((testimonial) => (
+              <TestimonialCard
+                key={testimonial.name}
+                testimonial={testimonial}
+              />
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* CTA */}
+      <CTASection
+        title="Prêt à Commencer le Streaming ?"
+        subtitle="Rejoignez des milliers de clients satisfaits et découvrez le meilleur service IPTV disponible. Essai gratuit dès aujourd'hui."
+        buttonLabel="Commencer Maintenant"
+        buttonHref="#plans"
+      />
+
+      {/* FAQ */}
+      <Section id="faq">
+        <Container>
+          <SectionHeader
+            title="Questions Fréquemment Posées"
+            subtitle="Tout ce que vous devez savoir sur notre service IPTV."
+          />
+          <FAQAccordion faqs={FAQS} />
+        </Container>
+      </Section>
+    </>
+  );
+}

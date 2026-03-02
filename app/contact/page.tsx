@@ -1,0 +1,72 @@
+import type { Metadata } from "next";
+import { Mail, Clock, MessageCircle } from "lucide-react";
+import { Container, Section } from "@/components/layout";
+import { SectionHeader, ContactForm } from "@/components/marketing";
+
+export const metadata: Metadata = {
+    title: "Contact — Contactez-Nous",
+    description:
+        "Besoin d'aide ? Contactez l'équipe IPTV The King par email, chat ou WhatsApp. Support client disponible 24/7.",
+};
+
+const CONTACT_INFO = [
+    {
+        icon: Mail,
+        title: "Email",
+        description: "support@iptvtheking.com",
+        detail: "Réponse sous 24 heures",
+    },
+    {
+        icon: Clock,
+        title: "Horaires de Support",
+        description: "24/7 — Tous les jours",
+        detail: "Nous sommes toujours disponibles",
+    },
+    {
+        icon: MessageCircle,
+        title: "Chat & WhatsApp",
+        description: "Chat en direct sur le site",
+        detail: "Réponse instantanée",
+    },
+];
+
+export default function ContactPage() {
+    return (
+        <>
+            <Section>
+                <Container>
+                    <SectionHeader
+                        title="Contactez-Nous"
+                        subtitle="Une question ? Besoin d'aide ? Notre équipe est là pour vous. Remplissez le formulaire ci-dessous ou utilisez nos autres moyens de contact."
+                    />
+
+                    <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+                        {/* Form */}
+                        <div>
+                            <ContactForm />
+                        </div>
+
+                        {/* Contact Info */}
+                        <div className="flex flex-col justify-center gap-8">
+                            {CONTACT_INFO.map((item) => (
+                                <div
+                                    key={item.title}
+                                    className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 transition-all hover:border-brand-300/50 hover:shadow-lg hover:shadow-brand-500/5"
+                                >
+                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-600">
+                                        <item.icon className="h-5 w-5" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm font-semibold">{item.title}</h3>
+                                        <p className="mt-1 text-sm text-text-primary">{item.description}</p>
+                                        <p className="mt-0.5 text-xs text-text-muted">{item.detail}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </Container>
+            </Section>
+        </>
+    );
+}
