@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: PlanPageProps): Promise<Metad
     const plan = PLANS.find((p) => p.slug === slug);
     if (!plan) return {};
     return {
-        title: `Abonnement IPTV ${plan.duration} — ${plan.price}€`,
-        description: `Abonnement IPTV ${plan.duration} à seulement ${plan.pricePerMonth}€/mois. ${plan.features.length} fonctionnalités incluses. Accès à 10 000+ chaînes en qualité 4K.`,
+        title: `Abonnement IPTV ${plan.duration} à ${plan.price}€ — Meilleur Prix`,
+        description: `Profitez de l'abonnement IPTV ${plan.duration} à seulement ${plan.pricePerMonth}€/mois. ${plan.features.length} fonctionnalités incluses : 10 000+ chaînes en direct, films et séries en qualité 4K. Sans engagement.`,
     };
 }
 

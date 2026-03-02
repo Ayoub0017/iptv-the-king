@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "IPTV The King — Meilleur IPTV en France | 10 000+ Chaînes",
+    default: "Meilleur IPTV en France | 10 000+ Chaînes | IPTV The King",
     template: "%s | IPTV The King",
   },
   description:

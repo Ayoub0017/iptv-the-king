@@ -4,9 +4,9 @@ import { Container, Section } from "@/components/layout";
 import { SectionHeader, ContactForm } from "@/components/marketing";
 
 export const metadata: Metadata = {
-    title: "Contact — Contactez-Nous",
+    title: "Contactez-Nous — Support Client 24/7",
     description:
-        "Besoin d'aide ? Contactez l'équipe IPTV The King par email, chat ou WhatsApp. Support client disponible 24/7.",
+        "Besoin d'aide avec votre abonnement IPTV ? Contactez l'équipe IPTV The King par email, chat en direct ou WhatsApp. Support client disponible 24h/24 et 7j/7.",
 };
 
 const CONTACT_INFO = [

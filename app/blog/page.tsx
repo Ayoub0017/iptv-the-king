@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import type { Metadata } from "next";
 import { Container, Section } from "@/components/layout";
 import { SectionHeader, BlogCard } from "@/components/marketing";
 import { BLOG_POSTS, BLOG_CATEGORIES } from "@/lib/constants";

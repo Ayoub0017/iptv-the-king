@@ -13,9 +13,9 @@ import { STATS, COMPANY_VALUES } from "@/lib/constants";
 const VALUE_ICONS = [Tv, Heart, Lightbulb, Eye];
 
 export const metadata: Metadata = {
-    title: "À Propos — Notre Mission & Histoire",
+    title: "À Propos — Notre Mission & Notre Histoire",
     description:
-        "Découvrez IPTV The King, le meilleur service IPTV en France. Notre mission est de rendre le divertissement premium accessible à tous.",
+        "Découvrez l'histoire d'IPTV The King, le meilleur fournisseur IPTV en France. Notre mission : rendre le streaming premium accessible à tous avec 10 000+ chaînes en 4K.",
 };
 
 export default function AboutPage() {
