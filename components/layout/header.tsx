@@ -105,7 +105,7 @@ export function Header() {
                     {/* CTA + Mobile Toggle */}
                     <div className="flex items-center gap-3">
                         <Link
-                            href="/#plans"
+                            href="/contact"
                             className="hidden md:inline-flex h-9 items-center justify-center rounded-full bg-cta px-5 text-sm font-semibold text-cta-foreground transition-all hover:opacity-90 hover:shadow-lg"
                         >
                             Commencer
@@ -177,7 +177,7 @@ export function Header() {
                             )
                         )}
                         <Link
-                            href="/#plans"
+                            href="/contact"
                             onClick={() => setMobileOpen(false)}
                             className="mt-2 flex h-10 items-center justify-center rounded-full bg-cta text-sm font-semibold text-cta-foreground transition-all hover:opacity-90"
                         >
