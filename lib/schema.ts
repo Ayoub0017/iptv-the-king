@@ -117,10 +117,15 @@ export function productSchema(plan: Plan): JsonLd {
             availability: "https://schema.org/InStock",
             url: `${SITE_URL}/plans/${plan.slug}`,
             priceValidUntil: "2027-12-31",
-            billingDuration: {
-                "@type": "QuantitativeValue",
-                value: plan.months,
-                unitCode: "MON",
+            priceSpecification: {
+                "@type": "UnitPriceSpecification",
+                price: plan.price,
+                priceCurrency: "EUR",
+                referenceQuantity: {
+                    "@type": "QuantitativeValue",
+                    value: plan.months,
+                    unitCode: "MON",
+                },
             },
         },
     };
