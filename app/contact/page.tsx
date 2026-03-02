@@ -2,6 +2,15 @@ import type { Metadata } from "next";
 import { Mail, Clock, MessageCircle } from "lucide-react";
 import { Container, Section } from "@/components/layout";
 import { SectionHeader, ContactForm } from "@/components/marketing";
+import { SchemaMarkup } from "@/components/schema-markup";
+import {
+    contactOrganizationSchema,
+    webPageSchema,
+    breadcrumbSchema,
+    getSiteUrl,
+} from "@/lib/schema";
+
+const SITE_URL = getSiteUrl();
 
 export const metadata: Metadata = {
     title: "Contactez-Nous — Support Client 24/7",
@@ -33,6 +42,22 @@ const CONTACT_INFO = [
 export default function ContactPage() {
     return (
         <>
+            <SchemaMarkup
+                schemas={[
+                    webPageSchema({
+                        name: "Contactez-Nous — Support Client 24/7",
+                        description:
+                            "Besoin d'aide avec votre abonnement IPTV ? Contactez l'équipe IPTV The King par email, chat en direct ou WhatsApp. Support client disponible 24h/24 et 7j/7.",
+                        url: `${SITE_URL}/contact`,
+                        type: "ContactPage",
+                    }),
+                    contactOrganizationSchema(),
+                    breadcrumbSchema([
+                        { name: "Accueil", url: SITE_URL },
+                        { name: "Contact", url: `${SITE_URL}/contact` },
+                    ]),
+                ]}
+            />
             <Section>
                 <Container>
                     <SectionHeader

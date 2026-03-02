@@ -10,7 +10,17 @@ import {
     FAQAccordion,
     SectionHeader,
 } from "@/components/marketing";
+import { SchemaMarkup } from "@/components/schema-markup";
 import { PLANS, TESTIMONIALS, FAQS } from "@/lib/constants";
+import {
+    productSchema,
+    serviceSchema,
+    breadcrumbSchema,
+    webPageSchema,
+    getSiteUrl,
+} from "@/lib/schema";
+
+const SITE_URL = getSiteUrl();
 
 const SLUG_MAP: Record<string, string> = {
     "3-months": "3mo",
@@ -44,6 +54,22 @@ export default async function PlanPage({ params }: PlanPageProps) {
 
     return (
         <>
+            <SchemaMarkup
+                schemas={[
+                    productSchema(plan),
+                    serviceSchema(plan),
+                    webPageSchema({
+                        name: `Abonnement IPTV ${plan.duration} à ${plan.price}€ — Meilleur Prix`,
+                        description: `Profitez de l'abonnement IPTV ${plan.duration} à seulement ${plan.pricePerMonth}€/mois. ${plan.features.length} fonctionnalités incluses.`,
+                        url: `${SITE_URL}/plans/${plan.slug}`,
+                    }),
+                    breadcrumbSchema([
+                        { name: "Accueil", url: SITE_URL },
+                        { name: "Abonnements", url: `${SITE_URL}/#plans` },
+                        { name: `Abonnement ${plan.duration}`, url: `${SITE_URL}/plans/${plan.slug}` },
+                    ]),
+                ]}
+            />
             {/* Hero */}
             <HeroSection
                 title={`Abonnement ${plan.duration}`}

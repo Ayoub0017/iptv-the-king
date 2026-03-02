@@ -9,11 +9,34 @@ import {
   FAQAccordion,
   SectionHeader,
 } from "@/components/marketing";
+import { SchemaMarkup } from "@/components/schema-markup";
 import { FEATURES, STATS, PLANS, TESTIMONIALS, FAQS } from "@/lib/constants";
+import {
+  websiteSchema,
+  organizationSchema,
+  webPageSchema,
+  breadcrumbSchema,
+  getSiteUrl,
+} from "@/lib/schema";
+
+const SITE_URL = getSiteUrl();
 
 export default function HomePage() {
   return (
     <>
+      <SchemaMarkup
+        schemas={[
+          websiteSchema(),
+          organizationSchema(),
+          webPageSchema({
+            name: "Meilleur IPTV en France | 10 000+ Chaînes | IPTV The King",
+            description:
+              "Le meilleur service IPTV en France avec 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K. Abonnements flexibles, support 24/7 et 99.9% de disponibilité.",
+            url: SITE_URL,
+          }),
+          breadcrumbSchema([{ name: "Accueil", url: SITE_URL }]),
+        ]}
+      />
       {/* Hero */}
       <HeroSection
         title="Meilleur IPTV"

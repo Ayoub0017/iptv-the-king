@@ -3,8 +3,18 @@
 import { useState } from "react";
 import { Container, Section } from "@/components/layout";
 import { SectionHeader, BlogCard } from "@/components/marketing";
+import { SchemaMarkup } from "@/components/schema-markup";
 import { BLOG_POSTS, BLOG_CATEGORIES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import {
+    blogSchema,
+    blogItemListSchema,
+    breadcrumbSchema,
+    webPageSchema,
+    getSiteUrl,
+} from "@/lib/schema";
+
+const SITE_URL = getSiteUrl();
 
 export default function BlogPage() {
     const [activeCategory, setActiveCategory] = useState("Tous");
@@ -16,6 +26,22 @@ export default function BlogPage() {
 
     return (
         <>
+            <SchemaMarkup
+                schemas={[
+                    blogSchema(),
+                    blogItemListSchema(BLOG_POSTS),
+                    webPageSchema({
+                        name: "Blog IPTV — Guides, Astuces & Actualités",
+                        description:
+                            "Retrouvez nos guides d'installation, astuces d'optimisation et actualités sur l'IPTV. Tout pour profiter au maximum de votre abonnement IPTV The King.",
+                        url: `${SITE_URL}/blog`,
+                    }),
+                    breadcrumbSchema([
+                        { name: "Accueil", url: SITE_URL },
+                        { name: "Blog", url: `${SITE_URL}/blog` },
+                    ]),
+                ]}
+            />
             <Section>
                 <Container>
                     <SectionHeader

@@ -8,9 +8,17 @@ import {
     CTASection,
     SectionHeader,
 } from "@/components/marketing";
+import { SchemaMarkup } from "@/components/schema-markup";
 import { STATS, COMPANY_VALUES } from "@/lib/constants";
+import {
+    organizationSchema,
+    webPageSchema,
+    breadcrumbSchema,
+    getSiteUrl,
+} from "@/lib/schema";
 
 const VALUE_ICONS = [Tv, Heart, Lightbulb, Eye];
+const SITE_URL = getSiteUrl();
 
 export const metadata: Metadata = {
     title: "À Propos — Notre Mission & Notre Histoire",
@@ -21,6 +29,25 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <>
+            <SchemaMarkup
+                schemas={[
+                    webPageSchema({
+                        name: "À Propos — Notre Mission & Notre Histoire",
+                        description:
+                            "Découvrez l'histoire d'IPTV The King, le meilleur fournisseur IPTV en France. Notre mission : rendre le streaming premium accessible à tous avec 10 000+ chaînes en 4K.",
+                        url: `${SITE_URL}/about`,
+                        type: "AboutPage",
+                    }),
+                    organizationSchema({
+                        description:
+                            "IPTV The King est le meilleur fournisseur IPTV en France, offrant 10 000+ chaînes en direct et 50 000+ films et séries en qualité 4K.",
+                    }),
+                    breadcrumbSchema([
+                        { name: "Accueil", url: SITE_URL },
+                        { name: "À Propos", url: `${SITE_URL}/about` },
+                    ]),
+                ]}
+            />
             {/* Hero */}
             <HeroSection
                 title="Le Meilleur IPTV,"
