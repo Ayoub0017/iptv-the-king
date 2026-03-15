@@ -89,10 +89,10 @@ export function Footer() {
                                 © {currentYear} IPTV The King. Tous droits réservés.
                             </p>
                             <div className="flex items-center gap-6">
-                                <Link href="#" className="text-xs text-text-muted hover:text-text-primary transition-colors">
+                                <Link href="/politique-de-confidentialite" className="text-xs text-text-muted hover:text-text-primary transition-colors">
                                     Politique de Confidentialité
                                 </Link>
-                                <Link href="#" className="text-xs text-text-muted hover:text-text-primary transition-colors">
+                                <Link href="/conditions-d-utilisation" className="text-xs text-text-muted hover:text-text-primary transition-colors">
                                     Conditions d&apos;Utilisation
                                 </Link>
                             </div>
