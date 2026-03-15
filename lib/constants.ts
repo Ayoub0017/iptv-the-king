@@ -301,7 +301,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Guides",
     date: "2026-02-28",
     readTime: "5 min de lecture",
-    image: "/images/blog-1.jpg",
+    image: "/logo.png",
   },
   {
     id: "2",
@@ -312,7 +312,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Avis",
     date: "2026-02-20",
     readTime: "7 min de lecture",
-    image: "/images/blog-2.jpg",
+    image: "/logo.png",
   },
   {
     id: "3",
@@ -323,7 +323,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Guides",
     date: "2026-02-15",
     readTime: "6 min de lecture",
-    image: "/images/blog-3.jpg",
+    image: "/logo.png",
   },
   {
     id: "4",
@@ -334,7 +334,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Astuces",
     date: "2026-02-10",
     readTime: "4 min de lecture",
-    image: "/images/blog-4.jpg",
+    image: "/logo.png",
   },
   {
     id: "5",
@@ -345,7 +345,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Actualités",
     date: "2026-02-05",
     readTime: "8 min de lecture",
-    image: "/images/blog-5.jpg",
+    image: "/logo.png",
   },
   {
     id: "6",
@@ -356,7 +356,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Guides",
     date: "2026-01-28",
     readTime: "5 min de lecture",
-    image: "/images/blog-6.jpg",
+    image: "/logo.png",
   },
 ];
 

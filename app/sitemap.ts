@@ -1,9 +1,13 @@
 import type { MetadataRoute } from "next";
-import { PLANS, BLOG_POSTS } from "@/lib/constants";
+import { PLANS } from "@/lib/constants";
+import { getBlogPosts } from "@/lib/contentful";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    const siteUrl = "https://iptvtheking.com"; // Replace with your real domain
+export const revalidate = 3600; // ISR: refresh sitemap every hour
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+    const siteUrl = "https://iptvtheking.com";
     const now = new Date();
+    const blogPosts = await getBlogPosts();
 
     // Static pages
     const staticPages: MetadataRoute.Sitemap = [
@@ -42,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     // Blog post pages
-    const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
         url: `${siteUrl}/blog/${post.slug}`,
         lastModified: new Date(post.date),
         changeFrequency: "monthly" as const,
