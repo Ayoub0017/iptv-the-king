@@ -72,7 +72,7 @@ export default async function PlanPage({ params }: PlanPageProps) {
                 title={`Abonnement ${plan.duration}`}
                 highlight={`${plan.price}€`}
                 subtitle={`Seulement ${plan.pricePerMonth}€ par mois. Accès complet à toutes nos chaînes, films et séries en qualité 4K.`}
-                primaryCTA={{ label: "Choisir ce Plan", href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price}€. Pouvez-vous me donner plus d'informations ?`)}` }}
+                primaryCTA={{ label: "Test Gratuit", href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price}€. Pouvez-vous me donner plus d'informations ?`)}` }}
                 secondaryCTA={{ label: "Comparer les Plans", href: "#comparison" }}
             />
 
@@ -132,7 +132,7 @@ export default async function PlanPage({ params }: PlanPageProps) {
             <CTASection
                 title="Prêt à Profiter du Meilleur IPTV ?"
                 subtitle="Commencez dès maintenant et profitez d'un streaming illimité en qualité 4K."
-                buttonLabel="Choisir ce Plan"
+                buttonLabel="Test Gratuit"
                 buttonHref={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price}€. Pouvez-vous me donner plus d'informations ?`)}`}
             />
 

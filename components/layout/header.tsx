@@ -109,12 +109,14 @@ export function Header() {
 
                     {/* CTA + Mobile Toggle */}
                     <div className="flex items-center gap-3">
-                        <Link
-                            href="/contactez-nous"
+                        <a
+                            href="https://wa.me/33753820307?text=Bonjour%2C%20je%20souhaite%20tester%20votre%20service%20IPTV%20gratuitement."
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="hidden md:inline-flex h-9 items-center justify-center rounded-full bg-cta px-5 text-sm font-semibold text-cta-foreground transition-all hover:opacity-90 hover:shadow-lg"
                         >
-                            Commencer
-                        </Link>
+                            Test Gratuit
+                        </a>
                         <button
                             onClick={() => setMobileOpen(!mobileOpen)}
                             className="inline-flex md:hidden h-9 w-9 items-center justify-center rounded-lg text-text-muted hover:text-text-primary transition-colors"
@@ -181,13 +183,15 @@ export function Header() {
                                 </Link>
                             )
                         )}
-                        <Link
-                            href="/contactez-nous"
+                        <a
+                            href="https://wa.me/33753820307?text=Bonjour%2C%20je%20souhaite%20tester%20votre%20service%20IPTV%20gratuitement."
+                            target="_blank"
+                            rel="noopener noreferrer"
                             onClick={() => setMobileOpen(false)}
                             className="mt-2 flex h-10 items-center justify-center rounded-full bg-cta text-sm font-semibold text-cta-foreground transition-all hover:opacity-90"
                         >
-                            Commencer
-                        </Link>
+                            Test Gratuit
+                        </a>
                     </nav>
                 </div>
             </Container>

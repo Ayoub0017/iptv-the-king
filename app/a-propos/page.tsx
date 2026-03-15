@@ -83,7 +83,7 @@ export default function AboutPage() {
             <CTASection
                 title="Rejoignez la Famille IPTV The King"
                 subtitle="Découvrez pourquoi des milliers de clients nous font confiance pour leur divertissement quotidien."
-                buttonLabel="Commencer Maintenant"
+                buttonLabel="Test Gratuit"
                 buttonHref="/#plans"
             />
         </>

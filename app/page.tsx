@@ -106,7 +106,7 @@ export default function HomePage() {
       <CTASection
         title="Prêt à Commencer le Streaming ?"
         subtitle="Rejoignez des milliers de clients satisfaits et découvrez le meilleur service IPTV disponible. Essai gratuit dès aujourd'hui."
-        buttonLabel="Commencer Maintenant"
+        buttonLabel="Test Gratuit"
         buttonHref="#plans"
       />
 

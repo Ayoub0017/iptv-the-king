@@ -57,7 +57,7 @@ export function PlanCard({ plan, className }: PlanCardProps) {
                 rel="noopener noreferrer"
                 className="mt-8 flex h-11 items-center justify-center rounded-full bg-cta text-sm font-semibold text-cta-foreground transition-all hover:scale-[1.02] hover:opacity-90 hover:shadow-lg"
             >
-                Choisir ce Plan
+                Test Gratuit
             </a>
         </div>
     );
