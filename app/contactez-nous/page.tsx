@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Clock, MessageCircle } from "lucide-react";
+import { Mail, Clock, MessageCircle, Phone } from "lucide-react";
 import { Container, Section } from "@/components/layout";
 import { SectionHeader, ContactForm } from "@/components/marketing";
 import { SchemaMarkup } from "@/components/schema-markup";
@@ -20,22 +20,32 @@ export const metadata: Metadata = {
 
 const CONTACT_INFO = [
     {
+        icon: Phone,
+        title: "Téléphone / WhatsApp",
+        description: "+33 7 53 82 03 07",
+        detail: "Disponible 24/7 sur WhatsApp",
+        href: "https://wa.me/33753820307",
+    },
+    {
         icon: Mail,
         title: "Email",
         description: "support@iptvtheking.com",
         detail: "Réponse sous 24 heures",
+        href: "mailto:support@iptvtheking.com",
     },
     {
         icon: Clock,
         title: "Horaires de Support",
         description: "24/7 — Tous les jours",
         detail: "Nous sommes toujours disponibles",
+        href: undefined,
     },
     {
         icon: MessageCircle,
-        title: "Chat & WhatsApp",
-        description: "Chat en direct sur le site",
+        title: "WhatsApp",
+        description: "+33 7 53 82 03 07",
         detail: "Réponse instantanée",
+        href: "https://wa.me/33753820307",
     },
 ];
 
@@ -73,21 +83,38 @@ export default function ContactPage() {
 
                         {/* Contact Info */}
                         <div className="flex flex-col justify-center gap-8">
-                            {CONTACT_INFO.map((item) => (
-                                <div
-                                    key={item.title}
-                                    className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 transition-all hover:border-brand-300/50 hover:shadow-lg hover:shadow-brand-500/5"
-                                >
-                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-600">
-                                        <item.icon className="h-5 w-5" />
+                            {CONTACT_INFO.map((item) => {
+                                const content = (
+                                    <>
+                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-600">
+                                            <item.icon className="h-5 w-5" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-sm font-semibold">{item.title}</h3>
+                                            <p className="mt-1 text-sm text-text-primary">{item.description}</p>
+                                            <p className="mt-0.5 text-xs text-text-muted">{item.detail}</p>
+                                        </div>
+                                    </>
+                                );
+
+                                const className = "flex items-start gap-4 rounded-2xl border border-border bg-card p-6 transition-all hover:border-brand-300/50 hover:shadow-lg hover:shadow-brand-500/5";
+
+                                return item.href ? (
+                                    <a
+                                        key={item.title}
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={className}
+                                    >
+                                        {content}
+                                    </a>
+                                ) : (
+                                    <div key={item.title} className={className}>
+                                        {content}
                                     </div>
-                                    <div>
-                                        <h3 className="text-sm font-semibold">{item.title}</h3>
-                                        <p className="mt-1 text-sm text-text-primary">{item.description}</p>
-                                        <p className="mt-0.5 text-xs text-text-muted">{item.detail}</p>
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </Container>

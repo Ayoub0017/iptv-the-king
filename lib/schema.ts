@@ -349,6 +349,7 @@ export function contactOrganizationSchema(): JsonLd {
             "@type": "ContactPoint",
             contactType: "customer support",
             email: "support@iptvtheking.com",
+            telephone: "+33753820307",
             availableLanguage: ["French", "English"],
         },
     });

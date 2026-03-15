@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Plan } from "@/lib/constants";
@@ -6,6 +5,13 @@ import type { Plan } from "@/lib/constants";
 interface PlanCardProps {
     plan: Plan;
     className?: string;
+}
+
+function getWhatsAppUrl(plan: Plan) {
+    const message = encodeURIComponent(
+        `Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price}€. Pouvez-vous me donner plus d'informations ?`
+    );
+    return `https://wa.me/33753820307?text=${message}`;
 }
 
 export function PlanCard({ plan, className }: PlanCardProps) {
@@ -45,12 +51,15 @@ export function PlanCard({ plan, className }: PlanCardProps) {
             </ul>
 
             {/* CTA */}
-            <Link
-                href={`/${plan.slug}`}
+            <a
+                href={getWhatsAppUrl(plan)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 flex h-11 items-center justify-center rounded-full bg-cta text-sm font-semibold text-cta-foreground transition-all hover:scale-[1.02] hover:opacity-90 hover:shadow-lg"
             >
                 Choisir ce Plan
-            </Link>
+            </a>
         </div>
     );
 }
+
