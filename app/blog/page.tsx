@@ -12,6 +12,8 @@ import { getBlogPosts } from "@/lib/contentful";
 
 const SITE_URL = getSiteUrl();
 
+export const revalidate = 0; // Always fetch fresh from Contentful
+
 export default async function BlogPage() {
     const allPosts = await getBlogPosts();
 
