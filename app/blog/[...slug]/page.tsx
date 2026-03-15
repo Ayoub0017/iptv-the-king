@@ -9,7 +9,6 @@ import { TableOfContents, type TocHeading } from "@/components/blog/table-of-con
 import { getBlogPostBySlug, getBlogPosts } from "@/lib/contentful";
 import {
     breadcrumbSchema,
-    webPageSchema,
     blogPostingSchema,
     getSiteUrl,
 } from "@/lib/schema";
@@ -121,14 +120,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         description: post.excerpt,
                         image: post.image?.startsWith("http") ? post.image : `${SITE_URL}${post.image}`,
                         datePublished: post.date,
-                        dateModified: post.date,
+                        dateModified: post.updatedAt || post.date,
                         authorName: post.author?.name || "IPTV The King",
+                        authorImage: post.author?.avatar || undefined,
                         url: `${SITE_URL}/blog/${currentPath}`,
-                    }),
-                    webPageSchema({
-                        name: post.title,
-                        description: post.excerpt,
-                        url: `${SITE_URL}/blog/${currentPath}`,
+                        articleSection: post.category,
+                        wordCount: post.body ? post.body.trim().split(/\s+/).length : undefined,
+                        keywords: [post.category, "IPTV", "streaming", "France"].filter(Boolean),
                     }),
                     breadcrumbSchema([
                         { name: "Accueil", url: SITE_URL },

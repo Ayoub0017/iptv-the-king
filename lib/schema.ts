@@ -278,20 +278,36 @@ export function blogPostingSchema(options: {
     dateModified: string;
     authorName: string;
     url: string;
+    authorImage?: string;
+    articleSection?: string;
+    wordCount?: number;
+    keywords?: string[];
 }): JsonLd {
+    const author: JsonLd = {
+        "@type": "Person",
+        name: options.authorName,
+    };
+    if (options.authorImage) author.image = options.authorImage;
+
     return {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         headline: options.headline,
         description: options.description,
-        image: options.image,
+        image: {
+            "@type": "ImageObject",
+            url: options.image,
+            width: 1200,
+            height: 630,
+        },
         datePublished: options.datePublished,
         dateModified: options.dateModified,
         url: options.url,
-        author: {
-            "@type": "Person",
-            name: options.authorName,
-        },
+        inLanguage: "fr-FR",
+        ...(options.articleSection && { articleSection: options.articleSection }),
+        ...(options.wordCount && { wordCount: options.wordCount }),
+        ...(options.keywords?.length && { keywords: options.keywords.join(", ") }),
+        author,
         publisher: {
             "@type": "Organization",
             name: SITE_NAME,

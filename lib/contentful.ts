@@ -77,6 +77,7 @@ export async function getBlogPostBySlug(slug: string): Promise<any | null> {
       excerpt: entry.fields.excerpt || "",
       category: entry.fields.category?.fields?.title || (typeof entry.fields.category === "string" ? entry.fields.category : "Actualités"),
       date: entry.sys.createdAt,
+      updatedAt: entry.sys.updatedAt,
       readTime: entry.fields.readTime || "5 min de lecture",
       image: entry.fields.image?.fields?.file?.url
         ? `https:${entry.fields.image.fields.file.url}`
