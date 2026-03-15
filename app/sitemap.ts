@@ -14,13 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1.0,
         },
         {
-            url: `${siteUrl}/about`,
+            url: `${siteUrl}/a-propos`,
             lastModified: now,
             changeFrequency: "monthly",
             priority: 0.7,
         },
         {
-            url: `${siteUrl}/contact`,
+            url: `${siteUrl}/contactez-nous`,
             lastModified: now,
             changeFrequency: "monthly",
             priority: 0.7,
@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Plan pages
     const planPages: MetadataRoute.Sitemap = PLANS.map((plan) => ({
-        url: `${siteUrl}/plans/${plan.slug}`,
+        url: `${siteUrl}/${plan.slug}`,
         lastModified: now,
         changeFrequency: "weekly" as const,
         priority: 0.9,

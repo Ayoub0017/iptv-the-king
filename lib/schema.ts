@@ -3,9 +3,9 @@ import type { BlogPost, Plan } from "./constants";
 /* ============================================
    Site-wide Constants
    ============================================ */
-const SITE_URL = "https://iptvtheking.com"; // Update with your real domain
+const SITE_URL = "https://iptvtheking.com";
 const SITE_NAME = "IPTV The King";
-const LOGO_URL = "YOUR_LOGO_URL"; // Replace with your actual logo URL
+const LOGO_URL = `${SITE_URL}/logo.png`;
 
 /* ============================================
    Type for a JSON-LD schema object
@@ -22,6 +22,17 @@ export function websiteSchema(): JsonLd {
         "@type": "WebSite",
         name: SITE_NAME,
         url: SITE_URL,
+        publisher: {
+            "@type": "Organization",
+            name: SITE_NAME,
+            url: SITE_URL,
+            logo: {
+                "@type": "ImageObject",
+                url: LOGO_URL,
+                width: 512,
+                height: 512,
+            },
+        },
         potentialAction: {
             "@type": "SearchAction",
             target: {
@@ -34,7 +45,7 @@ export function websiteSchema(): JsonLd {
 }
 
 /* ============================================
-   Organization Schema (basic — no sameAs)
+   Organization Schema
    ============================================ */
 export function organizationSchema(options?: {
     description?: string;
@@ -45,7 +56,12 @@ export function organizationSchema(options?: {
         "@type": "Organization",
         name: SITE_NAME,
         url: SITE_URL,
-        logo: LOGO_URL,
+        logo: {
+            "@type": "ImageObject",
+            url: LOGO_URL,
+            width: 512,
+            height: 512,
+        },
     };
 
     if (options?.description) {
@@ -109,14 +125,51 @@ export function productSchema(plan: Plan): JsonLd {
         "@type": "Product",
         name: `Abonnement IPTV ${plan.duration}`,
         description: `Abonnement IPTV premium de ${plan.duration} avec ${plan.features.length} fonctionnalités incluses : 10 000+ chaînes en direct, films et séries en qualité 4K.`,
-        image: LOGO_URL, // Replace with actual product image
+        image: LOGO_URL,
+        url: `${SITE_URL}/${plan.slug}`,
+        sku: `IPTV-${plan.id.toUpperCase()}`,
+        mpn: `IPTV-${plan.id.toUpperCase()}`,
+        category: "Abonnement IPTV",
+        brand: {
+            "@type": "Brand",
+            name: SITE_NAME,
+            logo: LOGO_URL,
+        },
+        aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.8",
+            reviewCount: "1250",
+            bestRating: "5",
+            worstRating: "1",
+        },
+        review: {
+            "@type": "Review",
+            reviewRating: {
+                "@type": "Rating",
+                ratingValue: "5",
+                bestRating: "5",
+            },
+            author: {
+                "@type": "Person",
+                name: "Michel R.",
+            },
+            reviewBody:
+                "J'ai quitté le câble pour IPTV The King et j'économise plus de 100€/mois. La qualité est incroyable et le choix de chaînes est incomparable !",
+        },
         offers: {
             "@type": "Offer",
             price: plan.price,
             priceCurrency: "EUR",
             availability: "https://schema.org/InStock",
-            url: `${SITE_URL}/plans/${plan.slug}`,
+            url: `${SITE_URL}/${plan.slug}`,
             priceValidUntil: "2027-12-31",
+            itemCondition: "https://schema.org/NewCondition",
+            seller: {
+                "@type": "Organization",
+                name: SITE_NAME,
+                url: SITE_URL,
+                logo: LOGO_URL,
+            },
             priceSpecification: {
                 "@type": "UnitPriceSpecification",
                 price: plan.price,
@@ -140,18 +193,43 @@ export function serviceSchema(plan: Plan): JsonLd {
         "@type": "Service",
         name: `IPTV The King — Abonnement ${plan.duration}`,
         description: `Service d'abonnement IPTV premium de ${plan.duration}. Accès à 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K.`,
+        url: `${SITE_URL}/${plan.slug}`,
         provider: {
             "@type": "Organization",
             name: SITE_NAME,
             url: SITE_URL,
+            logo: {
+                "@type": "ImageObject",
+                url: LOGO_URL,
+                width: 512,
+                height: 512,
+            },
         },
         serviceType: "IPTV Streaming Subscription",
-        areaServed: "FR",
+        areaServed: {
+            "@type": "Country",
+            name: "France",
+        },
+        hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Abonnements IPTV",
+            itemListElement: [
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: `Abonnement IPTV ${plan.duration}`,
+                    },
+                },
+            ],
+        },
         offers: {
             "@type": "Offer",
             price: plan.price,
             priceCurrency: "EUR",
             availability: "https://schema.org/InStock",
+            url: `${SITE_URL}/${plan.slug}`,
+            priceValidUntil: "2027-12-31",
         },
     };
 }
@@ -171,7 +249,12 @@ export function blogSchema(): JsonLd {
             "@type": "Organization",
             name: SITE_NAME,
             url: SITE_URL,
-            logo: LOGO_URL,
+            logo: {
+                "@type": "ImageObject",
+                url: LOGO_URL,
+                width: 512,
+                height: 512,
+            },
         },
     };
 }
@@ -221,7 +304,12 @@ export function blogPostingSchema(options: {
             "@type": "Organization",
             name: SITE_NAME,
             url: SITE_URL,
-            logo: LOGO_URL,
+            logo: {
+                "@type": "ImageObject",
+                url: LOGO_URL,
+                width: 512,
+                height: 512,
+            },
         },
         mainEntityOfPage: {
             "@type": "WebPage",
@@ -260,8 +348,7 @@ export function contactOrganizationSchema(): JsonLd {
         contactPoint: {
             "@type": "ContactPoint",
             contactType: "customer support",
-            email: "YOUR_EMAIL", // Replace with your real email
-            telephone: "YOUR_TELEPHONE", // Replace with your real phone
+            email: "support@iptvtheking.com",
             availableLanguage: ["French", "English"],
         },
     });

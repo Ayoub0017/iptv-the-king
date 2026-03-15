@@ -35,7 +35,7 @@ export default function AboutPage() {
                         name: "À Propos — Notre Mission & Notre Histoire",
                         description:
                             "Découvrez l'histoire d'IPTV The King, le meilleur fournisseur IPTV en France. Notre mission : rendre le streaming premium accessible à tous avec 10 000+ chaînes en 4K.",
-                        url: `${SITE_URL}/about`,
+                        url: `${SITE_URL}/a-propos`,
                         type: "AboutPage",
                     }),
                     organizationSchema({
@@ -44,7 +44,7 @@ export default function AboutPage() {
                     }),
                     breadcrumbSchema([
                         { name: "Accueil", url: SITE_URL },
-                        { name: "À Propos", url: `${SITE_URL}/about` },
+                        { name: "À Propos", url: `${SITE_URL}/a-propos` },
                     ]),
                 ]}
             />

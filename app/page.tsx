@@ -43,7 +43,7 @@ export default function HomePage() {
         highlight="en France"
         subtitle="Streamez 10 000+ chaînes en direct et 50 000+ films en qualité 4K époustouflante. Sans engagement, sans coupure — que du divertissement pur."
         primaryCTA={{ label: "Voir les Abonnements", href: "#plans" }}
-        secondaryCTA={{ label: "En Savoir Plus", href: "/about" }}
+        secondaryCTA={{ label: "En Savoir Plus", href: "/a-propos" }}
       />
 
       {/* Stats Bar */}

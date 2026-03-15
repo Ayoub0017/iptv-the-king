@@ -22,19 +22,15 @@ import {
 
 const SITE_URL = getSiteUrl();
 
-const SLUG_MAP: Record<string, string> = {
-    "3-months": "3mo",
-    "6-months": "6mo",
-    "12-months": "12mo",
-    "24-months": "24mo",
-};
+/** Valid plan slugs */
+const PLAN_SLUGS = PLANS.map((p) => p.slug);
 
 interface PlanPageProps {
     params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-    return Object.keys(SLUG_MAP).map((slug) => ({ slug }));
+    return PLAN_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PlanPageProps): Promise<Metadata> {
@@ -61,12 +57,12 @@ export default async function PlanPage({ params }: PlanPageProps) {
                     webPageSchema({
                         name: `Abonnement IPTV ${plan.duration} à ${plan.price}€ — Meilleur Prix`,
                         description: `Profitez de l'abonnement IPTV ${plan.duration} à seulement ${plan.pricePerMonth}€/mois. ${plan.features.length} fonctionnalités incluses.`,
-                        url: `${SITE_URL}/plans/${plan.slug}`,
+                        url: `${SITE_URL}/${plan.slug}`,
                     }),
                     breadcrumbSchema([
                         { name: "Accueil", url: SITE_URL },
                         { name: "Abonnements", url: `${SITE_URL}/#plans` },
-                        { name: `Abonnement ${plan.duration}`, url: `${SITE_URL}/plans/${plan.slug}` },
+                        { name: `Abonnement ${plan.duration}`, url: `${SITE_URL}/${plan.slug}` },
                     ]),
                 ]}
             />

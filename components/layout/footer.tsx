@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Crown } from "lucide-react";
+import Image from "next/image";
 import { Container } from "./container";
 import { FOOTER_LINKS } from "@/lib/constants";
 
@@ -14,9 +14,13 @@ export function Footer() {
                         {/* Brand */}
                         <div className="sm:col-span-2 lg:col-span-1">
                             <Link href="/" className="flex items-center gap-2 mb-4">
-                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500 text-white">
-                                    <Crown className="h-4 w-4" />
-                                </div>
+                                <Image
+                                    src="/logo.png"
+                                    alt="IPTV The King"
+                                    width={32}
+                                    height={32}
+                                    className="rounded-lg"
+                                />
                                 <span className="text-base font-bold tracking-tight">
                                     IPTV The King
                                 </span>

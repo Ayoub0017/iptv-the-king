@@ -15,8 +15,8 @@ export const NAV_LINKS = [
   { label: "Accueil", href: "/" },
   { label: "Abonnements", href: "/#plans" },
   { label: "Blog", href: "/blog" },
-  { label: "À propos", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "À propos", href: "/a-propos" },
+  { label: "Contact", href: "/contactez-nous" },
 ] as const;
 
 /* ============================================
@@ -37,7 +37,7 @@ export interface Plan {
 export const PLANS: Plan[] = [
   {
     id: "3mo",
-    slug: "3-months",
+    slug: "abonnement-iptv-3-mois",
     duration: "3 Mois",
     months: 3,
     price: 29.99,
@@ -56,7 +56,7 @@ export const PLANS: Plan[] = [
   },
   {
     id: "6mo",
-    slug: "6-months",
+    slug: "abonnement-iptv-6-mois",
     duration: "6 Mois",
     months: 6,
     price: 49.99,
@@ -76,7 +76,7 @@ export const PLANS: Plan[] = [
   },
   {
     id: "12mo",
-    slug: "12-months",
+    slug: "abonnement-iptv-12-mois",
     duration: "12 Mois",
     months: 12,
     price: 69.99,
@@ -98,7 +98,7 @@ export const PLANS: Plan[] = [
   },
   {
     id: "24mo",
-    slug: "24-months",
+    slug: "abonnement-iptv-24-mois",
     duration: "24 Mois",
     months: 24,
     price: 109.99,
@@ -391,19 +391,19 @@ export const COMPANY_VALUES = [
    ============================================ */
 export const FOOTER_LINKS = {
   plans: [
-    { label: "Abonnement 3 Mois", href: "/plans/3-months" },
-    { label: "Abonnement 6 Mois", href: "/plans/6-months" },
-    { label: "Abonnement 12 Mois", href: "/plans/12-months" },
-    { label: "Abonnement 24 Mois", href: "/plans/24-months" },
+    { label: "Abonnement 3 Mois", href: "/abonnement-iptv-3-mois" },
+    { label: "Abonnement 6 Mois", href: "/abonnement-iptv-6-mois" },
+    { label: "Abonnement 12 Mois", href: "/abonnement-iptv-12-mois" },
+    { label: "Abonnement 24 Mois", href: "/abonnement-iptv-24-mois" },
   ],
   company: [
-    { label: "À propos", href: "/about" },
+    { label: "À propos", href: "/a-propos" },
     { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/contact" },
+    { label: "Contact", href: "/contactez-nous" },
   ],
   support: [
     { label: "FAQ", href: "/#faq" },
     { label: "Guide d'Installation", href: "/blog" },
-    { label: "Contacter le Support", href: "/contact" },
+    { label: "Contacter le Support", href: "/contactez-nous" },
   ],
 } as const;

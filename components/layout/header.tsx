@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Crown, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Container } from "./container";
 import { NAV_LINKS, PLANS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const PLAN_DROPDOWN = PLANS.map((p) => ({
     label: `Abonnement ${p.duration}`,
-    href: `/plans/${p.slug}`,
+    href: `/${p.slug}`,
     price: `${p.price}€`,
 }));
 
@@ -23,9 +24,13 @@ export function Header() {
                 <div className="flex h-16 items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 text-white transition-transform group-hover:scale-105">
-                            <Crown className="h-5 w-5" />
-                        </div>
+                        <Image
+                            src="/logo.png"
+                            alt="IPTV The King"
+                            width={36}
+                            height={36}
+                            className="rounded-lg transition-transform group-hover:scale-105"
+                        />
                         <span className="text-lg font-bold tracking-tight">
                             IPTV <span className="text-gradient-purple">The King</span>
                         </span>
@@ -105,7 +110,7 @@ export function Header() {
                     {/* CTA + Mobile Toggle */}
                     <div className="flex items-center gap-3">
                         <Link
-                            href="/contact"
+                            href="/contactez-nous"
                             className="hidden md:inline-flex h-9 items-center justify-center rounded-full bg-cta px-5 text-sm font-semibold text-cta-foreground transition-all hover:opacity-90 hover:shadow-lg"
                         >
                             Commencer
@@ -177,7 +182,7 @@ export function Header() {
                             )
                         )}
                         <Link
-                            href="/contact"
+                            href="/contactez-nous"
                             onClick={() => setMobileOpen(false)}
                             className="mt-2 flex h-10 items-center justify-center rounded-full bg-cta text-sm font-semibold text-cta-foreground transition-all hover:opacity-90"
                         >

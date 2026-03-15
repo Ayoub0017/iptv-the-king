@@ -48,13 +48,13 @@ export default function ContactPage() {
                         name: "Contactez-Nous — Support Client 24/7",
                         description:
                             "Besoin d'aide avec votre abonnement IPTV ? Contactez l'équipe IPTV The King par email, chat en direct ou WhatsApp. Support client disponible 24h/24 et 7j/7.",
-                        url: `${SITE_URL}/contact`,
+                        url: `${SITE_URL}/contactez-nous`,
                         type: "ContactPage",
                     }),
                     contactOrganizationSchema(),
                     breadcrumbSchema([
                         { name: "Accueil", url: SITE_URL },
-                        { name: "Contact", url: `${SITE_URL}/contact` },
+                        { name: "Contact", url: `${SITE_URL}/contactez-nous` },
                     ]),
                 ]}
             />
