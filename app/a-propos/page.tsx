@@ -24,6 +24,13 @@ export const metadata: Metadata = {
     title: "À Propos — Notre Mission & Notre Histoire",
     description:
         "Découvrez l'histoire d'IPTV The King, le meilleur fournisseur IPTV en France. Notre mission : rendre le streaming premium accessible à tous avec 10 000+ chaînes en 4K.",
+    alternates: {
+        canonical: `${SITE_URL}/a-propos`,
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 export default function AboutPage() {

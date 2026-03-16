@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Container, Section } from "@/components/layout";
 import {
   HeroSection,
@@ -20,6 +21,19 @@ import {
 } from "@/lib/schema";
 
 const SITE_URL = getSiteUrl();
+
+export const metadata: Metadata = {
+  title: "Meilleur IPTV en France | 10 000+ Chaînes | IPTV The King",
+  description:
+    "Le meilleur service IPTV en France avec 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K. Abonnements flexibles, support 24/7 et 99.9% de disponibilité.",
+  alternates: {
+    canonical: SITE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function HomePage() {
   return (

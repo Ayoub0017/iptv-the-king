@@ -9,6 +9,13 @@ export const metadata: Metadata = {
     title: "Politique de Confidentialité",
     description:
         "Consultez la politique de confidentialité d'IPTV The King. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles.",
+    alternates: {
+        canonical: `${SITE_URL}/politique-de-confidentialite`,
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 export default function PolitiqueDeConfidentialitePage() {

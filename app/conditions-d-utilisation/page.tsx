@@ -9,6 +9,13 @@ export const metadata: Metadata = {
     title: "Conditions d'Utilisation",
     description:
         "Consultez les conditions générales d'utilisation d'IPTV The King. Règles d'usage, abonnements, paiements et responsabilités.",
+    alternates: {
+        canonical: `${SITE_URL}/conditions-d-utilisation`,
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 export default function ConditionsDUtilisationPage() {

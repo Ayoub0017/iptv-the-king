@@ -76,6 +76,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     return {
         title: `${post.title} | Blog IPTV The King`,
         description: post.excerpt,
+        alternates: {
+            canonical: `${SITE_URL}/blog/${slug.join("/")}`,
+        },
+        robots: {
+            index: true,
+            follow: true,
+        },
         openGraph: {
             title: post.title,
             description: post.excerpt,

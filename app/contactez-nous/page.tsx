@@ -16,6 +16,13 @@ export const metadata: Metadata = {
     title: "Contactez-Nous — Support Client 24/7",
     description:
         "Besoin d'aide avec votre abonnement IPTV ? Contactez l'équipe IPTV The King par email, chat en direct ou WhatsApp. Support client disponible 24h/24 et 7j/7.",
+    alternates: {
+        canonical: `${SITE_URL}/contactez-nous`,
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 const CONTACT_INFO = [

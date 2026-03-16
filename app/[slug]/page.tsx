@@ -41,6 +41,13 @@ export async function generateMetadata({ params }: PlanPageProps): Promise<Metad
     return {
         title: `Abonnement IPTV ${plan.duration} à ${plan.price}€ — Meilleur Prix`,
         description: `Profitez de l'abonnement IPTV ${plan.duration} à seulement ${plan.pricePerMonth}€/mois. ${plan.features.length} fonctionnalités incluses : 10 000+ chaînes en direct, films et séries en qualité 4K. Sans engagement.`,
+        alternates: {
+            canonical: `${SITE_URL}/${slug}`,
+        },
+        robots: {
+            index: true,
+            follow: true,
+        },
     };
 }
 
