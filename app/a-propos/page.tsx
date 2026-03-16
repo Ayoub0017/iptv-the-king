@@ -50,9 +50,8 @@ export default function AboutPage() {
             />
             {/* Hero */}
             <HeroSection
-                title="Le Meilleur IPTV,"
-                highlight="par Passion"
-                subtitle="Nous sommes une équipe passionnée par le streaming de qualité. Notre mission : rendre le divertissement premium accessible à tous, partout en France."
+                title="À Propos d'IPTV The King"
+                subtitle="IPTV The King est un fournisseur IPTV en France reconnu pour la qualité et la fiabilité de ses services. Avec plus de 10 000 chaînes en direct, 50 000 films et séries en qualité 4K, et une assistance disponible 7j/7, nous nous imposons comme le choix numéro un pour tous ceux qui recherchent une expérience de streaming premium. Notre engagement envers nos clients et notre infrastructure de pointe font d'IPTV The King le meilleur fournisseur IPTV en France."
                 primaryCTA={{ label: "Voir nos Abonnements", href: "/#plans" }}
             />
 
