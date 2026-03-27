@@ -5,7 +5,7 @@ import { getBlogPosts } from "@/lib/contentful";
 export const revalidate = 3600; // ISR: refresh sitemap every hour
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const siteUrl = "https://iptvtheking.com";
+    const siteUrl = "https://www.iptvtheking.com";
     const now = new Date();
     const blogPosts = await getBlogPosts();
 

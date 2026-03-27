@@ -3,7 +3,7 @@ import type { BlogPost, Plan } from "./constants";
 /* ============================================
    Site-wide Constants
    ============================================ */
-const SITE_URL = "https://iptvtheking.com";
+const SITE_URL = "https://www.iptvtheking.com";
 const SITE_NAME = "IPTV The King";
 const LOGO_URL = `${SITE_URL}/logo.png`;
 
