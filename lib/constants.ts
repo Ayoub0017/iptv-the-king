@@ -14,7 +14,7 @@ import {
 export const NAV_LINKS = [
   { label: "Accueil", href: "/" },
   { label: "Abonnements", href: "/#plans" },
-  { label: "Blog", href: "/articles" },
+  { label: "Articles", href: "/articles" },
   { label: "À propos", href: "/a-propos" },
   { label: "Contact", href: "/contactez-nous" },
 ] as const;
@@ -398,7 +398,7 @@ export const FOOTER_LINKS = {
   ],
   company: [
     { label: "À propos", href: "/a-propos" },
-    { label: "Blog", href: "/articles" },
+    { label: "Articles", href: "/articles" },
     { label: "Contact", href: "/contactez-nous" },
   ],
   support: [
