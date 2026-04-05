@@ -14,7 +14,7 @@ import {
 export const NAV_LINKS = [
   { label: "Accueil", href: "/" },
   { label: "Abonnements", href: "/#plans" },
-  { label: "Blog", href: "/blog" },
+  { label: "Blog", href: "/articles" },
   { label: "À propos", href: "/a-propos" },
   { label: "Contact", href: "/contactez-nous" },
 ] as const;
@@ -398,12 +398,12 @@ export const FOOTER_LINKS = {
   ],
   company: [
     { label: "À propos", href: "/a-propos" },
-    { label: "Blog", href: "/blog" },
+    { label: "Blog", href: "/articles" },
     { label: "Contact", href: "/contactez-nous" },
   ],
   support: [
     { label: "FAQ", href: "/#faq" },
-    { label: "Guide d'Installation", href: "/blog" },
+    { label: "Guide d'Installation", href: "/articles" },
     { label: "Contacter le Support", href: "/contactez-nous" },
   ],
 } as const;
