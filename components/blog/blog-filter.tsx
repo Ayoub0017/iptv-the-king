@@ -8,9 +8,10 @@ import type { BlogPost } from "@/lib/constants";
 interface BlogFilterProps {
     posts: BlogPost[];
     categories: string[];
+    basePath?: string;
 }
 
-export function BlogFilter({ posts, categories }: BlogFilterProps) {
+export function BlogFilter({ posts, categories, basePath = "/blog" }: BlogFilterProps) {
     const [active, setActive] = useState("Tous");
 
     const filtered = active === "Tous" ? posts : posts.filter((p) => p.category === active);
@@ -38,7 +39,7 @@ export function BlogFilter({ posts, categories }: BlogFilterProps) {
             {/* Blog Grid */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {filtered.map((post) => (
-                    <BlogCard key={post.id} post={post} />
+                    <BlogCard key={post.id} post={post} basePath={basePath} />
                 ))}
             </div>
 

@@ -5,12 +5,13 @@ import type { BlogPost } from "@/lib/constants";
 interface BlogCardProps {
     post: BlogPost;
     className?: string;
+    basePath?: string;
 }
 
-export function BlogCard({ post, className }: BlogCardProps) {
+export function BlogCard({ post, className, basePath = "/blog" }: BlogCardProps) {
     return (
         <Link
-            href={`/blog/${post.slug}`}
+            href={`${basePath}/${post.slug}`}
             className={cn(
                 "group flex flex-col rounded-2xl border border-border bg-card overflow-hidden transition-all duration-300",
                 "hover:border-brand-300/50 hover:shadow-lg hover:shadow-brand-500/5 hover:-translate-y-0.5",
