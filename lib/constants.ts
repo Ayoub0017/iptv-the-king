@@ -45,6 +45,8 @@ export interface Plan {
   featureDetails: PlanFeatureDetail[];
   whyChoose: WhyChooseReason[];
   planFaqs: { question: string; answer: string }[];
+  image: string;
+  imageAlt: string;
 }
 
 export const PLANS: Plan[] = [
@@ -66,6 +68,8 @@ export const PLANS: Plan[] = [
       "Accès Bibliothèque VOD",
     ],
     popular: false,
+    image: "/abonnement-iptv-3-mois.png",
+    imageAlt: "Abonnement IPTV 3 Mois — Homme regardant une Smart TV 4K dans un salon moderne avec éclairage ambiant bleu et violet",
     featureDetails: [
       {
         title: "10 000+ Chaînes TV en Direct",
@@ -156,6 +160,8 @@ export const PLANS: Plan[] = [
       "Catch-Up TV (7 Jours)",
     ],
     popular: false,
+    image: "/abonnement-iptv-6-mois.png",
+    imageAlt: "Abonnement IPTV 6 Mois — Homme regardant une Smart TV 4K dans un salon moderne avec éclairage ambiant bleu et violet",
     featureDetails: [
       {
         title: "10 000+ Chaînes TV en Direct",
@@ -252,6 +258,8 @@ export const PLANS: Plan[] = [
     ],
     popular: true,
     badge: "Le Plus Populaire",
+    image: "/abonnement-iptv-12-mois.png",
+    imageAlt: "Abonnement IPTV 12 Mois — Homme regardant une Smart TV 4K dans un salon premium avec éclairage ambiant bleu et violet, streaming haute qualité toute l'année",
     featureDetails: [
       {
         title: "10 000+ Chaînes TV en Direct",
@@ -353,6 +361,8 @@ export const PLANS: Plan[] = [
     ],
     popular: false,
     badge: "Meilleur Rapport Qualité-Prix",
+    image: "/abonnement-iptv-24-mois.png",
+    imageAlt: "Abonnement IPTV 24 Mois — Homme profitant d'un salon home cinema avec Smart TV 4K, éclairage LED ambiant, expérience streaming VIP premium",
     featureDetails: [
       {
         title: "10 000+ Chaînes TV en Direct",

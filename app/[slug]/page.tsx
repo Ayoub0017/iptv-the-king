@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { Container, Section } from "@/components/layout";
 import {
-    HeroSection,
     PlanCard,
     TestimonialCard,
     CTASection,
@@ -73,14 +74,67 @@ export default async function PlanPage({ params }: PlanPageProps) {
                     ]),
                 ]}
             />
-            {/* Hero */}
-            <HeroSection
-                title={`Abonnement ${plan.duration}`}
-                highlight={`${plan.price}€`}
-                subtitle={`Seulement ${plan.pricePerMonth}€ par mois. Accès complet à toutes nos chaînes, films et séries en qualité 4K.`}
-                primaryCTA={{ label: "Test Gratuit", href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price}€. Pouvez-vous me donner plus d'informations ?`)}` }}
-                secondaryCTA={{ label: "Comparer les Plans", href: "#comparison" }}
-            />
+            {/* Hero — split layout */}
+            <section className="relative overflow-hidden py-16 md:py-24">
+                {/* Background glow */}
+                <div className="pointer-events-none absolute inset-0">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-brand-500/10 blur-[120px]" />
+                </div>
+                <Container className="relative z-10">
+                    <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-16">
+                        {/* Left — image */}
+                        <div className="w-full lg:w-1/2 shrink-0">
+                            <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-brand-500/10">
+                                <Image
+                                    src={plan.image}
+                                    alt={plan.imageAlt}
+                                    width={1080}
+                                    height={1080}
+                                    className="w-full h-auto object-cover"
+                                    priority
+                                />
+                            </div>
+                        </div>
+                        {/* Right — content */}
+                        <div className="flex flex-col items-start gap-6 w-full lg:w-1/2">
+                            {plan.badge && (
+                                <span className="inline-flex items-center rounded-full bg-brand-100 px-3 py-1 text-sm font-semibold text-brand-700">
+                                    {plan.badge}
+                                </span>
+                            )}
+                            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+                                Abonnement IPTV{" "}
+                                <span className="text-gradient-purple">{plan.duration}</span>
+                            </h1>
+                            <p className="text-lg text-text-muted leading-relaxed">
+                                Seulement{" "}
+                                <span className="font-semibold text-text-primary">{plan.pricePerMonth}€/mois</span>.{" "}
+                                Accès complet à toutes nos chaînes, films et séries en qualité 4K.
+                            </p>
+                            <div className="flex items-end gap-2">
+                                <span className="text-5xl font-extrabold text-text-primary">{plan.price}€</span>
+                                <span className="mb-2 text-text-muted">/ {plan.duration.toLowerCase()}</span>
+                            </div>
+                            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                                <a
+                                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price}€. Pouvez-vous me donner plus d'informations ?`)}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex h-12 items-center justify-center rounded-full bg-cta px-8 text-sm font-semibold text-cta-foreground transition-all hover:opacity-90 hover:shadow-xl hover:scale-[1.02] glow-purple"
+                                >
+                                    Test Gratuit
+                                </a>
+                                <Link
+                                    href="#comparison"
+                                    className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-surface/50 px-8 text-sm font-semibold text-text-primary transition-all hover:bg-surface hover:border-brand-300"
+                                >
+                                    Comparer les Plans
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </section>
 
             {/* Full Feature List */}
             <Section>
