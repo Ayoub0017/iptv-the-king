@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
 import { Container, Section } from "@/components/layout";
 import {
     HeroSection,
@@ -90,17 +89,45 @@ export default async function PlanPage({ params }: PlanPageProps) {
                         title="Tout Ce Qui Est Inclus"
                         subtitle={`Votre abonnement ${plan.duration} comprend toutes ces fonctionnalités.`}
                     />
-                    <div className="mx-auto max-w-2xl">
-                        <div className="rounded-2xl border border-border bg-card p-8">
-                            <ul className="space-y-4">
-                                {plan.features.map((feature) => (
-                                    <li key={feature} className="flex items-start gap-3">
-                                        <Check className="h-5 w-5 mt-0.5 shrink-0 text-brand-500" />
-                                        <span className="text-text-muted">{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        {plan.featureDetails.map((feature) => (
+                            <div
+                                key={feature.title}
+                                className="rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:border-brand-300/50 hover:shadow-lg hover:shadow-brand-500/5"
+                            >
+                                <h3 className="mb-2 text-base font-semibold text-text-primary">
+                                    {feature.title}
+                                </h3>
+                                <p className="text-sm leading-relaxed text-text-muted">
+                                    {feature.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </Container>
+            </Section>
+
+            {/* Why Choose */}
+            <Section className="bg-surface/30">
+                <Container>
+                    <SectionHeader
+                        title={`Pourquoi Choisir un Abonnement IPTV ${plan.duration} ?`}
+                        subtitle="Voici les raisons pour lesquelles cette formule est faite pour vous."
+                    />
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+                        {plan.whyChoose.map((reason) => (
+                            <div
+                                key={reason.title}
+                                className="rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:border-brand-300/50 hover:shadow-lg hover:shadow-brand-500/5"
+                            >
+                                <h3 className="mb-3 text-lg font-semibold text-text-primary">
+                                    {reason.title}
+                                </h3>
+                                <p className="text-sm leading-relaxed text-text-muted">
+                                    {reason.description}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </Container>
             </Section>

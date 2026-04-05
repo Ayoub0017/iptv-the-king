@@ -22,6 +22,16 @@ export const NAV_LINKS = [
 /* ============================================
    Plans
    ============================================ */
+export interface PlanFeatureDetail {
+  title: string;
+  description: string;
+}
+
+export interface WhyChooseReason {
+  title: string;
+  description: string;
+}
+
 export interface Plan {
   id: string;
   slug: string;
@@ -32,6 +42,8 @@ export interface Plan {
   features: string[];
   popular: boolean;
   badge?: string;
+  featureDetails: PlanFeatureDetail[];
+  whyChoose: WhyChooseReason[];
 }
 
 export const PLANS: Plan[] = [
@@ -53,6 +65,54 @@ export const PLANS: Plan[] = [
       "Accès Bibliothèque VOD",
     ],
     popular: false,
+    featureDetails: [
+      {
+        title: "10 000+ Chaînes TV en Direct",
+        description: "Accédez à plus de 10 000 chaînes du monde entier : sport, info, cinéma, jeunesse et bien plus, tous en temps réel.",
+      },
+      {
+        title: "50 000+ Films & Séries",
+        description: "Une bibliothèque VOD de plus de 50 000 titres mise à jour régulièrement pour satisfaire toutes vos envies.",
+      },
+      {
+        title: "Qualité HD & Full HD",
+        description: "Profitez de vos contenus en Haute Définition et Full HD pour une image nette et une expérience visuelle optimale.",
+      },
+      {
+        title: "1 Appareil Connecté",
+        description: "Utilisez votre abonnement sur l'appareil de votre choix : Smart TV, smartphone, tablette, PC ou Fire Stick.",
+      },
+      {
+        title: "Technologie Anti-Freeze",
+        description: "Notre infrastructure serveur haute performance élimine les coupures et la mise en mémoire tampon pour un streaming fluide.",
+      },
+      {
+        title: "Support Client 24/7",
+        description: "Notre équipe est disponible 24h/24, 7j/7 par chat, email ou WhatsApp pour répondre à toutes vos questions.",
+      },
+      {
+        title: "Guide TV EPG",
+        description: "Consultez le programme TV en temps réel directement dans votre lecteur IPTV pour ne jamais rater vos émissions préférées.",
+      },
+      {
+        title: "Accès Bibliothèque VOD",
+        description: "Accédez à notre catalogue de films et séries à la demande, disponible en streaming instantané à tout moment.",
+      },
+    ],
+    whyChoose: [
+      {
+        title: "Idéal pour Découvrir",
+        description: "Testez la qualité IPTV The King sans engagement long terme. Parfait pour explorer notre catalogue avant de vous décider pour une formule plus longue.",
+      },
+      {
+        title: "Flexibilité Maximale",
+        description: "Renouvelez, changez de formule ou stoppez à tout moment après votre période. Aucune contrainte, aucun frais caché.",
+      },
+      {
+        title: "Activation Immédiate",
+        description: "Recevez vos identifiants en quelques minutes après le paiement et profitez immédiatement de vos chaînes préférées.",
+      },
+    ],
   },
   {
     id: "6mo",
@@ -73,6 +133,58 @@ export const PLANS: Plan[] = [
       "Catch-Up TV (7 Jours)",
     ],
     popular: false,
+    featureDetails: [
+      {
+        title: "10 000+ Chaînes TV en Direct",
+        description: "Accédez à plus de 10 000 chaînes du monde entier : sport, info, cinéma, jeunesse et bien plus, tous en temps réel.",
+      },
+      {
+        title: "50 000+ Films & Séries",
+        description: "Une bibliothèque VOD de plus de 50 000 titres mise à jour régulièrement pour satisfaire toutes vos envies.",
+      },
+      {
+        title: "Qualité HD, Full HD & 4K",
+        description: "Du HD au 4K Ultra HD, adaptez la qualité à votre écran et à votre connexion pour une image toujours parfaite.",
+      },
+      {
+        title: "1 Appareil Connecté",
+        description: "Utilisez votre abonnement sur l'appareil de votre choix : Smart TV, smartphone, tablette, PC ou Fire Stick.",
+      },
+      {
+        title: "Technologie Anti-Freeze",
+        description: "Notre infrastructure serveur haute performance élimine les coupures et la mise en mémoire tampon pour un streaming fluide.",
+      },
+      {
+        title: "Support Client 24/7",
+        description: "Notre équipe est disponible 24h/24, 7j/7 par chat, email ou WhatsApp pour répondre à toutes vos questions.",
+      },
+      {
+        title: "Guide TV EPG",
+        description: "Consultez le programme TV en temps réel directement dans votre lecteur IPTV pour ne jamais rater vos émissions préférées.",
+      },
+      {
+        title: "Accès Bibliothèque VOD",
+        description: "Accédez à notre catalogue de films et séries à la demande, disponible en streaming instantané à tout moment.",
+      },
+      {
+        title: "Catch-Up TV (7 Jours)",
+        description: "Revivez vos émissions et matchs préférés jusqu'à 7 jours après leur diffusion. Plus besoin de programmer un enregistrement.",
+      },
+    ],
+    whyChoose: [
+      {
+        title: "Couvrez Toute une Saison",
+        description: "6 mois suffisent pour suivre entièrement une saison de football, de tennis ou de F1 sans interruption de service.",
+      },
+      {
+        title: "Économies par Rapport au 3 Mois",
+        description: "En choisissant 6 mois d'un coup, vous réduisez votre coût mensuel et évitez les renouvellements fréquents.",
+      },
+      {
+        title: "Stabilité et Tranquillité",
+        description: "Profitez d'un accès stable pendant 6 mois sans vous soucier du renouvellement. Un confort idéal pour toute la famille.",
+      },
+    ],
   },
   {
     id: "12mo",
@@ -95,6 +207,62 @@ export const PLANS: Plan[] = [
     ],
     popular: true,
     badge: "Le Plus Populaire",
+    featureDetails: [
+      {
+        title: "10 000+ Chaînes TV en Direct",
+        description: "Accédez à plus de 10 000 chaînes du monde entier : sport, info, cinéma, jeunesse et bien plus, tous en temps réel.",
+      },
+      {
+        title: "50 000+ Films & Séries",
+        description: "Une bibliothèque VOD de plus de 50 000 titres mise à jour régulièrement pour satisfaire toutes vos envies.",
+      },
+      {
+        title: "Qualité HD, Full HD & 4K",
+        description: "Du HD au 4K Ultra HD, adaptez la qualité à votre écran et à votre connexion pour une image toujours parfaite.",
+      },
+      {
+        title: "1 Appareil Connecté",
+        description: "Utilisez votre abonnement sur l'appareil de votre choix : Smart TV, smartphone, tablette, PC ou Fire Stick.",
+      },
+      {
+        title: "Technologie Anti-Freeze",
+        description: "Notre infrastructure serveur haute performance élimine les coupures et la mise en mémoire tampon pour un streaming fluide.",
+      },
+      {
+        title: "Support Prioritaire 24/7",
+        description: "Bénéficiez d'un accès prioritaire à notre équipe de support disponible 24h/24, 7j/7 pour une résolution rapide de vos demandes.",
+      },
+      {
+        title: "Guide TV EPG",
+        description: "Consultez le programme TV en temps réel directement dans votre lecteur IPTV pour ne jamais rater vos émissions préférées.",
+      },
+      {
+        title: "Accès Bibliothèque VOD",
+        description: "Accédez à notre catalogue de films et séries à la demande, disponible en streaming instantané à tout moment.",
+      },
+      {
+        title: "Catch-Up TV (14 Jours)",
+        description: "Accédez à 14 jours de contenu en replay. Rattrapez facilement vos séries, documentaires et événements sportifs manqués.",
+      },
+      {
+        title: "Événements PPV Inclus",
+        description: "Les grands événements pay-per-view (combats de boxe, MMA, matchs exclusifs) sont inclus sans surcoût dans votre abonnement.",
+      },
+    ],
+    whyChoose: [
+      {
+        title: "Meilleur Rapport Qualité-Prix",
+        description: "À seulement 5,83€/mois, c'est notre formule la plus populaire. Économisez un maximum tout en profitant d'un service premium toute l'année.",
+      },
+      {
+        title: "Événements PPV Sans Supplément",
+        description: "Combats de boxe, MMA, matchs exclusifs... Tous les grands événements pay-per-view sont inclus dans votre abonnement 12 mois.",
+      },
+      {
+        title: "Toute l'Année Sans Interruption",
+        description: "Un an d'accès ininterrompu à 10 000+ chaînes et 50 000+ films. Vous ne pensez plus à rien, on s'occupe de tout.",
+      },
+    ],
   },
   {
     id: "24mo",
@@ -118,6 +286,66 @@ export const PLANS: Plan[] = [
     ],
     popular: false,
     badge: "Meilleur Rapport Qualité-Prix",
+    featureDetails: [
+      {
+        title: "10 000+ Chaînes TV en Direct",
+        description: "Accédez à plus de 10 000 chaînes du monde entier : sport, info, cinéma, jeunesse et bien plus, tous en temps réel.",
+      },
+      {
+        title: "50 000+ Films & Séries",
+        description: "Une bibliothèque VOD de plus de 50 000 titres mise à jour régulièrement pour satisfaire toutes vos envies.",
+      },
+      {
+        title: "Qualité HD, Full HD & 4K",
+        description: "Du HD au 4K Ultra HD, adaptez la qualité à votre écran et à votre connexion pour une image toujours parfaite.",
+      },
+      {
+        title: "1 Appareil Connecté",
+        description: "Utilisez votre abonnement sur l'appareil de votre choix : Smart TV, smartphone, tablette, PC ou Fire Stick.",
+      },
+      {
+        title: "Technologie Anti-Freeze",
+        description: "Notre infrastructure serveur haute performance élimine les coupures et la mise en mémoire tampon pour un streaming fluide.",
+      },
+      {
+        title: "Support VIP 24/7",
+        description: "Accès VIP à notre équipe d'experts disponible à toute heure pour un accompagnement personnalisé et une réactivité maximale.",
+      },
+      {
+        title: "Guide TV EPG",
+        description: "Consultez le programme TV en temps réel directement dans votre lecteur IPTV pour ne jamais rater vos émissions préférées.",
+      },
+      {
+        title: "Accès Complet Bibliothèque VOD",
+        description: "Profitez de l'intégralité de notre bibliothèque VOD sans restriction, avec des milliers de titres en qualité HD et 4K.",
+      },
+      {
+        title: "Catch-Up TV (30 Jours)",
+        description: "Le replay le plus généreux du marché : 30 jours d'archives pour ne jamais rien manquer, même après un mois d'absence.",
+      },
+      {
+        title: "Événements PPV Inclus",
+        description: "Les grands événements pay-per-view (combats de boxe, MMA, matchs exclusifs) sont inclus sans surcoût dans votre abonnement.",
+      },
+      {
+        title: "Assistance Installation Gratuite",
+        description: "Un technicien dédié vous guide pas à pas pour installer et configurer votre service IPTV sur tous vos appareils.",
+      },
+    ],
+    whyChoose: [
+      {
+        title: "Prix le Plus Bas du Catalogue",
+        description: "À seulement 4,58€/mois, c'est le tarif le plus avantageux que nous proposons. Deux ans d'accès pour le coût d'un café par mois.",
+      },
+      {
+        title: "Support VIP & Installation Offerte",
+        description: "Bénéficiez d'un support VIP 24/7 et d'une assistance à l'installation gratuite. Un service premium de bout en bout, sans compromis.",
+      },
+      {
+        title: "Catch-Up TV 30 Jours",
+        description: "Revivez vos programmes préférés jusqu'à 30 jours en arrière. Le délai de replay le plus généreux de toute notre gamme.",
+      },
+    ],
   },
 ];
 
