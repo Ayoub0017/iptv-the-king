@@ -10,7 +10,7 @@ import {
     SectionHeader,
 } from "@/components/marketing";
 import { SchemaMarkup } from "@/components/schema-markup";
-import { PLANS, TESTIMONIALS, FAQS } from "@/lib/constants";
+import { PLANS, TESTIMONIALS } from "@/lib/constants";
 import {
     productSchema,
     serviceSchema,
@@ -177,7 +177,7 @@ export default async function PlanPage({ params }: PlanPageProps) {
                         title="Questions Fréquentes"
                         subtitle="Tout ce que vous devez savoir avant de vous abonner."
                     />
-                    <FAQAccordion faqs={FAQS} />
+                    <FAQAccordion faqs={plan.planFaqs} />
                 </Container>
             </Section>
         </>

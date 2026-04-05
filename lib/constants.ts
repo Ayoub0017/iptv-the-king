@@ -44,6 +44,7 @@ export interface Plan {
   badge?: string;
   featureDetails: PlanFeatureDetail[];
   whyChoose: WhyChooseReason[];
+  planFaqs: { question: string; answer: string }[];
 }
 
 export const PLANS: Plan[] = [
@@ -111,6 +112,28 @@ export const PLANS: Plan[] = [
       {
         title: "Activation Immédiate",
         description: "Recevez vos identifiants en quelques minutes après le paiement et profitez immédiatement de vos chaînes préférées.",
+      },
+    ],
+    planFaqs: [
+      {
+        question: "L'abonnement 3 mois est-il sans engagement ?",
+        answer: "Oui, totalement. Il n'y a aucun contrat, aucun renouvellement automatique et aucun frais caché. À l'issue des 3 mois, vous choisissez librement de renouveler ou non.",
+      },
+      {
+        question: "Puis-je passer à un abonnement plus long après les 3 mois ?",
+        answer: "Absolument. À l'expiration de votre abonnement 3 mois, vous pouvez facilement upgrader vers un abonnement 6, 12 ou 24 mois pour bénéficier d'un tarif mensuel plus avantageux.",
+      },
+      {
+        question: "La qualité 4K est-elle disponible avec l'abonnement 3 mois ?",
+        answer: "L'abonnement 3 mois inclut la qualité HD et Full HD. Pour accéder au streaming 4K Ultra HD, nous vous recommandons de passer à l'abonnement 6, 12 ou 24 mois.",
+      },
+      {
+        question: "Quels appareils sont compatibles avec l'abonnement 3 mois ?",
+        answer: "Votre abonnement 3 mois fonctionne sur tous les appareils : Smart TV (Samsung, LG, Sony), smartphones et tablettes iOS/Android, Amazon Fire Stick, PC, et tout appareil compatible IPTV.",
+      },
+      {
+        question: "Comment activer mon abonnement 3 mois ?",
+        answer: "Après confirmation de votre paiement, vous recevez vos identifiants de connexion par WhatsApp ou email en quelques minutes. Notre équipe vous guide pour l'installation sur votre appareil.",
       },
     ],
   },
@@ -183,6 +206,28 @@ export const PLANS: Plan[] = [
       {
         title: "Stabilité et Tranquillité",
         description: "Profitez d'un accès stable pendant 6 mois sans vous soucier du renouvellement. Un confort idéal pour toute la famille.",
+      },
+    ],
+    planFaqs: [
+      {
+        question: "Quelle est la différence entre l'abonnement 6 mois et le 3 mois ?",
+        answer: "L'abonnement 6 mois inclut la qualité 4K Ultra HD et le Catch-Up TV 7 jours, en plus d'un tarif mensuel réduit à 8,33€/mois contre 9,99€/mois pour le 3 mois. C'est plus de fonctionnalités pour un prix moindre.",
+      },
+      {
+        question: "Le Catch-Up TV est-il inclus dans l'abonnement 6 mois ?",
+        answer: "Oui, l'abonnement 6 mois inclut le Catch-Up TV sur 7 jours. Vous pouvez revisionner n'importe quelle émission, match ou série diffusé au cours des 7 derniers jours.",
+      },
+      {
+        question: "Puis-je regarder en 4K avec l'abonnement 6 mois ?",
+        answer: "Oui, la qualité 4K Ultra HD est incluse à partir de l'abonnement 6 mois. Assurez-vous d'avoir une connexion d'au moins 25 Mbps et un écran compatible pour en profiter pleinement.",
+      },
+      {
+        question: "L'abonnement 6 mois se renouvelle-t-il automatiquement ?",
+        answer: "Non. Tous nos abonnements sont prépayés et ne se renouvellent pas automatiquement. Vous recevrez un rappel avant l'expiration pour vous permettre de choisir sereinement votre prochaine formule.",
+      },
+      {
+        question: "Combien d'appareils puis-je connecter simultanément ?",
+        answer: "L'abonnement 6 mois permet de connecter 1 appareil à la fois. Si vous souhaitez utiliser le service sur plusieurs écrans en même temps, contactez notre support pour connaître les options disponibles.",
       },
     ],
   },
@@ -261,6 +306,28 @@ export const PLANS: Plan[] = [
       {
         title: "Toute l'Année Sans Interruption",
         description: "Un an d'accès ininterrompu à 10 000+ chaînes et 50 000+ films. Vous ne pensez plus à rien, on s'occupe de tout.",
+      },
+    ],
+    planFaqs: [
+      {
+        question: "Pourquoi l'abonnement 12 mois est-il le plus populaire ?",
+        answer: "L'abonnement 12 mois offre le meilleur équilibre entre prix et fonctionnalités : à 5,83€/mois, il inclut la 4K, le Catch-Up TV 14 jours, les événements PPV et un support prioritaire. C'est la formule préférée de nos clients pour une année entière sans se soucier du renouvellement.",
+      },
+      {
+        question: "Les événements PPV sont-ils vraiment inclus sans supplément ?",
+        answer: "Oui, absolument. Avec l'abonnement 12 mois, tous les grands événements pay-per-view — combats de boxe, MMA, matchs exclusifs — sont diffusés sans frais additionnels. Aucune mauvaise surprise sur votre facture.",
+      },
+      {
+        question: "Qu'est-ce que le Catch-Up TV 14 jours inclus dans ce plan ?",
+        answer: "Le Catch-Up TV vous permet de revisionner n'importe quel programme diffusé au cours des 14 derniers jours. Un match raté, une série manquée ? Retrouvez-le facilement depuis votre lecteur IPTV, sans enregistrement préalable.",
+      },
+      {
+        question: "En quoi consiste le support prioritaire 24/7 ?",
+        answer: "Contrairement au support standard, le support prioritaire vous place en tête de file pour un traitement accéléré de vos demandes. Notre équipe est disponible 24h/24, 7j/7 par chat, email et WhatsApp pour vous répondre en priorité.",
+      },
+      {
+        question: "Puis-je upgrader vers le 24 mois en cours d'abonnement ?",
+        answer: "Oui, vous pouvez contacter notre support à tout moment pour passer à l'abonnement 24 mois. Nous nous chargeons de la transition et ajustons la durée restante pour que vous ne perdiez aucun jour.",
       },
     ],
   },
@@ -344,6 +411,28 @@ export const PLANS: Plan[] = [
       {
         title: "Catch-Up TV 30 Jours",
         description: "Revivez vos programmes préférés jusqu'à 30 jours en arrière. Le délai de replay le plus généreux de toute notre gamme.",
+      },
+    ],
+    planFaqs: [
+      {
+        question: "Pourquoi choisir 24 mois plutôt qu'un abonnement plus court ?",
+        answer: "L'abonnement 24 mois est notre offre la plus économique à 4,58€/mois, soit une économie significative par rapport aux autres formules. Il inclut également des avantages exclusifs : support VIP, assistance installation gratuite et Catch-Up TV 30 jours que vous ne trouverez dans aucun autre plan.",
+      },
+      {
+        question: "En quoi consiste l'assistance installation gratuite ?",
+        answer: "Un technicien de notre équipe vous accompagne personnellement pour installer et configurer votre service IPTV sur tous vos appareils : Smart TV, Fire Stick, smartphone, décodeur MAG, etc. Cette assistance est offerte sans frais supplémentaires avec l'abonnement 24 mois.",
+      },
+      {
+        question: "Qu'est-ce que le Catch-Up TV 30 jours ?",
+        answer: "Le Catch-Up TV 30 jours vous permet d'accéder à un mois complet d'archives télévisées. Revivez n'importe quel programme diffusé au cours des 30 derniers jours, directement depuis votre lecteur IPTV, sans enregistrement préalable.",
+      },
+      {
+        question: "Le support VIP est-il vraiment différent du support standard ?",
+        answer: "Oui. Le support VIP vous donne accès à une ligne dédiée avec des temps de réponse réduits et un accompagnement personnalisé. Vous bénéficiez d'un interlocuteur prioritaire disponible 24h/24, 7j/7, que ce soit pour une question technique ou une demande de configuration.",
+      },
+      {
+        question: "Que se passe-t-il à l'expiration de mon abonnement 24 mois ?",
+        answer: "Votre abonnement expire simplement sans renouvellement automatique. Vous recevrez un rappel avant la date d'expiration pour vous permettre de renouveler ou de choisir une autre formule. Votre historique et vos préférences sont conservés.",
       },
     ],
   },
