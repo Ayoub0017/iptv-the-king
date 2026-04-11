@@ -19,7 +19,7 @@ interface ArticlePostPageProps {
     params: Promise<{ slug: string[] }>;
 }
 
-export const revalidate = 3600;
+export const revalidate = 0; // Always fetch fresh from Contentful
 
 /** Convert heading text to a URL-safe anchor ID. */
 function slugify(text: string): string {
