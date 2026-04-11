@@ -58,13 +58,12 @@ const markdownComponents: Components = {
 
 export async function generateStaticParams() {
     const posts = await getBlogPosts();
-    return posts.map((post) => ({ slug: [post.slug] }));
+    return posts.map((post) => ({ slug: post.fullSlug }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
     const { slug } = await params;
-    const postSlug = slug[slug.length - 1];
-    const post = await getBlogPostBySlug(postSlug);
+    const post = await getBlogPostBySlug(slug);
 
     if (!post) {
         return {
@@ -111,8 +110,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
     const { slug } = await params;
     const currentPath = slug.join("/");
-    const postSlug = slug[slug.length - 1];
-    const post = await getBlogPostBySlug(postSlug);
+    const post = await getBlogPostBySlug(slug);
 
     if (!post) notFound();
 

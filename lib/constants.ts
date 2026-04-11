@@ -602,6 +602,7 @@ export const FAQS: FAQ[] = [
 export interface BlogPost {
   id: string;
   slug: string;
+  fullSlug: string[]; // e.g. ['parent-slug', 'child-slug'] or ['slug']
   title: string;
   excerpt: string;
   category: string;
@@ -622,6 +623,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: "1",
     slug: "comment-installer-iptv-sur-firestick",
+    fullSlug: ["comment-installer-iptv-sur-firestick"],
     title: "Comment Installer l'IPTV sur Amazon Fire Stick",
     excerpt:
       "Un guide complet étape par étape pour installer et configurer l'IPTV sur votre Amazon Fire Stick pour la meilleure expérience de streaming.",
@@ -633,6 +635,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: "2",
     slug: "meilleurs-lecteurs-iptv-2026",
+    fullSlug: ["meilleurs-lecteurs-iptv-2026"],
     title: "Top 5 des Lecteurs IPTV pour 2026",
     excerpt:
       "Découvrez les meilleures applications de lecteur IPTV disponibles aujourd'hui. Nous comparons les fonctionnalités, performances et compatibilité.",
@@ -644,6 +647,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: "3",
     slug: "iptv-vs-cable-comparaison",
+    fullSlug: ["iptv-vs-cable-comparaison"],
     title: "IPTV vs Câble TV : Lequel Choisir ?",
     excerpt:
       "Une comparaison détaillée entre l'IPTV et la télévision par câble traditionnelle — coût, qualité, flexibilité et choix de chaînes.",
@@ -655,6 +659,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: "4",
     slug: "optimiser-qualite-streaming",
+    fullSlug: ["optimiser-qualite-streaming"],
     title: "5 Astuces pour Optimiser la Qualité de Votre IPTV",
     excerpt:
       "Vous avez des problèmes de mise en mémoire tampon ? Ces astuces éprouvées vous aideront à obtenir un streaming IPTV fluide et de haute qualité.",
@@ -666,6 +671,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: "5",
     slug: "tendances-iptv-2026",
+    fullSlug: ["tendances-iptv-2026"],
     title: "Les Tendances IPTV à Suivre en 2026",
     excerpt:
       "Des recommandations IA au streaming 8K, voici les grandes tendances qui façonnent l'avenir de l'IPTV.",
@@ -677,6 +683,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: "6",
     slug: "vpn-avec-iptv-guide",
+    fullSlug: ["vpn-avec-iptv-guide"],
     title: "Faut-il Utiliser un VPN avec l'IPTV ? Guide Complet",
     excerpt:
       "Découvrez pourquoi utiliser un VPN peut améliorer votre expérience IPTV et comment le configurer correctement.",

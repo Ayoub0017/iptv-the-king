@@ -14,6 +14,26 @@ if (process.env.CONTENTFUL_SPACE_ID && process.env.CONTENTFUL_ACCESS_TOKEN) {
 }
 
 /**
+ * Recursively build the full slug path by traversing the parentArticle chain.
+ * e.g. grandparent → parent → child becomes ['grandparent-slug', 'parent-slug', 'child-slug']
+ */
+function buildFullSlug(entry: any, allEntries: any[]): string[] {
+  const slug: string = entry.fields.slug || "no-slug";
+  const parentRef = entry.fields.parentArticle;
+
+  if (!parentRef) return [slug];
+
+  // parentRef is resolved when include >= 1
+  const parentEntry = parentRef.fields
+    ? parentRef
+    : allEntries.find((e: any) => e.sys.id === parentRef.sys?.id);
+
+  if (!parentEntry?.fields) return [slug];
+
+  return [...buildFullSlug(parentEntry, allEntries), slug];
+}
+
+/**
  * Fetch blog posts from Contentful.
  * Falls back to local static BLOG_POSTS if Contentful is not yet configured.
  */
@@ -25,19 +45,20 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 
   try {
     const entries = await contentfulClient.getEntries({
-      content_type: "blogPost", // Make sure this matches your Contentful Content Type ID
-      order: ["-sys.createdAt"], // Sort by descending date
+      content_type: "blogPost",
+      order: ["-sys.createdAt"],
+      include: 2, // resolve linked entries (parentArticle) up to 2 levels deep
     });
 
     return entries.items.map((entry: any) => ({
       id: entry.sys.id,
       slug: entry.fields.slug || "no-slug",
+      fullSlug: buildFullSlug(entry, entries.items),
       title: entry.fields.title || "Untitled",
       excerpt: entry.fields.excerpt || "",
       category: entry.fields.category?.fields?.title || (typeof entry.fields.category === "string" ? entry.fields.category : "Actualités"),
       date: entry.sys.createdAt,
       readTime: entry.fields.readTime || "5 min de lecture",
-      // Contentful image field might have nested `fields.file.url`
       image: entry.fields.image?.fields?.file?.url
         ? `https:${entry.fields.image.fields.file.url}`
         : "/logo.png",
@@ -50,9 +71,13 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 }
 
 /**
- * Fetch a single blog post by its slug fully SSR.
+ * Fetch a single blog post by its slug.
+ * Pass the full slug array (e.g. ['parent', 'child']) — only the last segment
+ * is used to query Contentful, but the parent chain is verified.
  */
-export async function getBlogPostBySlug(slug: string): Promise<any | null> {
+export async function getBlogPostBySlug(slugArray: string[]): Promise<any | null> {
+  const slug = slugArray[slugArray.length - 1];
+
   if (!contentfulClient) {
     console.warn("Contentful is not configured. Falling back to local static data.");
     const post = BLOG_POSTS.find((p) => p.slug === slug);
@@ -61,18 +86,24 @@ export async function getBlogPostBySlug(slug: string): Promise<any | null> {
 
   try {
     const entries = await contentfulClient.getEntries({
-      content_type: "blogPost", // Ensure this matches exactly with your Contentful model
+      content_type: "blogPost",
       "fields.slug": slug,
+      include: 2, // resolve parentArticle links
       limit: 1,
     });
 
     if (entries.items.length === 0) return null;
 
     const entry: any = entries.items[0];
+    const fullSlug = buildFullSlug(entry, entries.items);
+
+    // Validate that the URL path matches the actual parent chain
+    if (fullSlug.join("/") !== slugArray.join("/")) return null;
 
     return {
       id: entry.sys.id,
       slug: entry.fields.slug || "no-slug",
+      fullSlug,
       title: entry.fields.title || "Untitled",
       excerpt: entry.fields.excerpt || "",
       category: entry.fields.category?.fields?.title || (typeof entry.fields.category === "string" ? entry.fields.category : "Actualités"),
