@@ -151,7 +151,7 @@ export function productSchema(plan: Plan): JsonLd {
         offers: {
             "@type": "Offer",
             price: plan.price,
-            priceCurrency: "EUR",
+            priceCurrency: "MAD",
             availability: "https://schema.org/InStock",
             url: `${SITE_URL}/${plan.slug}`,
             priceValidUntil: "2027-12-31",
@@ -165,7 +165,7 @@ export function productSchema(plan: Plan): JsonLd {
             priceSpecification: {
                 "@type": "UnitPriceSpecification",
                 price: plan.price,
-                priceCurrency: "EUR",
+                priceCurrency: "MAD",
                 referenceQuantity: {
                     "@type": "QuantitativeValue",
                     value: plan.months,
@@ -200,7 +200,7 @@ export function serviceSchema(plan: Plan): JsonLd {
         serviceType: "IPTV Streaming Subscription",
         areaServed: {
             "@type": "Country",
-            name: "France",
+            name: "Maroc",
         },
         hasOfferCatalog: {
             "@type": "OfferCatalog",
@@ -218,7 +218,7 @@ export function serviceSchema(plan: Plan): JsonLd {
         offers: {
             "@type": "Offer",
             price: plan.price,
-            priceCurrency: "EUR",
+            priceCurrency: "MAD",
             availability: "https://schema.org/InStock",
             url: `${SITE_URL}/${plan.slug}`,
             priceValidUntil: "2027-12-31",

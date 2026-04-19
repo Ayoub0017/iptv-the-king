@@ -98,7 +98,7 @@ export default function ConditionsDUtilisationPage() {
                         <ul>
                             <li>Les paiements sont traités de manière sécurisée par nos prestataires (Stripe, PayPal).</li>
                             <li>Tout abonnement souscrit est dû dans son intégralité, même en cas d&apos;utilisation partielle.</li>
-                            <li>Les prix sont indiqués en euros (€) toutes taxes comprises (TTC).</li>
+                            <li>Les prix sont indiqués en dirhams marocains (DH).</li>
                             <li>IPTV The King se réserve le droit de modifier ses tarifs, avec notification préalable aux abonnés.</li>
                         </ul>
 
@@ -162,12 +162,11 @@ export default function ConditionsDUtilisationPage() {
 
                         <h2>11. Droit applicable et litiges</h2>
                         <p>
-                            Les présentes CGU sont soumises au droit français. En cas de litige, une solution amiable sera recherchée en
-                            priorité. À défaut, les tribunaux compétents français seront seuls compétents.
+                            Les présentes CGU sont soumises au droit marocain. En cas de litige, une solution amiable sera recherchée en
+                            priorité. À défaut, les tribunaux compétents marocains seront seuls compétents.
                         </p>
                         <p>
-                            Conformément à l&apos;article L. 612-1 du Code de la consommation, tout consommateur a le droit de recourir
-                            gratuitement à un médiateur de la consommation.
+                            Tout consommateur a le droit de recourir à un médiateur de la consommation conformément à la législation marocaine en vigueur.
                         </p>
 
                         <h2>12. Contact</h2>

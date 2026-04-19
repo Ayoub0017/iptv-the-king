@@ -18,21 +18,6 @@ const nextConfig: NextConfig = {
         destination: "/abonnement-iptv-12-mois",
         permanent: true,
       },
-      {
-        source: "/plans/24-months",
-        destination: "/abonnement-iptv-24-mois",
-        permanent: true,
-      },
-      {
-        source: "/blog",
-        destination: "/articles",
-        permanent: true,
-      },
-      {
-        source: "/blog/:path*",
-        destination: "/articles/:path*",
-        permanent: true,
-      },
     ];
   },
 };

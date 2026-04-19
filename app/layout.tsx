@@ -16,14 +16,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Meilleur IPTV en France | 10 000+ Chaînes | IPTV The King",
+    default: "Meilleur Abonnement IPTV au Maroc | 10 000+ Chaînes | IPTV The King",
     template: "%s | IPTV The King",
   },
   description:
-    "Le meilleur service IPTV en France avec 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K. Abonnements flexibles, support 24/7 et 99.9% de disponibilité.",
+    "Le meilleur abonnement IPTV au Maroc avec 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K. Abonnements flexibles, support 24/7 et 99.9% de disponibilité.",
   keywords: [
-    "meilleur iptv en france",
-    "iptv france",
+    "meilleur abonnement iptv au maroc",
+    "iptv maroc",
     "abonnement iptv",
     "iptv 4K",
     "iptv premium",

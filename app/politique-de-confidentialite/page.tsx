@@ -60,7 +60,7 @@ export default function PolitiqueDeConfidentialitePage() {
 
                         <h2>1. Qui sommes-nous ?</h2>
                         <p>
-                            IPTV The King exploite le site <strong>iptvtheking.com</strong> et fournit des services d&apos;abonnement IPTV en France.
+                            IPTV The King exploite le site <strong>iptvtheking.com</strong> et fournit des services d&apos;abonnement IPTV au Maroc.
                             En tant que responsable du traitement, nous sommes engagés à protéger et respecter votre vie privée conformément au
                             Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.
                         </p>
@@ -137,7 +137,7 @@ export default function PolitiqueDeConfidentialitePage() {
                         <p>
                             Pour exercer ces droits, contactez-nous à{" "}
                             <a href="mailto:support@iptvtheking.com">support@iptvtheking.com</a>. Nous répondrons dans un délai d&apos;un mois.
-                            Vous avez également le droit d&apos;introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a>).
+                            Vous avez également le droit d&apos;introduire une réclamation auprès de la CNDP (<a href="https://www.cndp.ma" target="_blank" rel="noopener noreferrer">www.cndp.ma</a>).
                         </p>
 
                         <h2>9. Sécurité</h2>

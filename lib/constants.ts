@@ -14,7 +14,6 @@ import {
 export const NAV_LINKS = [
   { label: "Accueil", href: "/" },
   { label: "Abonnements", href: "/#plans" },
-  { label: "Articles", href: "/articles" },
   { label: "À propos", href: "/a-propos" },
   { label: "Contact", href: "/contactez-nous" },
 ] as const;
@@ -55,8 +54,8 @@ export const PLANS: Plan[] = [
     slug: "abonnement-iptv-3-mois",
     duration: "3 Mois",
     months: 3,
-    price: 29.99,
-    pricePerMonth: 9.99,
+    price: 80,
+    pricePerMonth: 26.67,
     features: [
       "10 000+ Chaînes TV en Direct",
       "50 000+ Films & Séries",
@@ -125,11 +124,11 @@ export const PLANS: Plan[] = [
       },
       {
         question: "Puis-je passer à un abonnement plus long après les 3 mois ?",
-        answer: "Absolument. À l'expiration de votre abonnement 3 mois, vous pouvez facilement upgrader vers un abonnement 6, 12 ou 24 mois pour bénéficier d'un tarif mensuel plus avantageux.",
+        answer: "Absolument. À l'expiration de votre abonnement 3 mois, vous pouvez facilement upgrader vers un abonnement 6 ou 12 mois pour bénéficier d'un tarif mensuel plus avantageux.",
       },
       {
         question: "La qualité 4K est-elle disponible avec l'abonnement 3 mois ?",
-        answer: "L'abonnement 3 mois inclut la qualité HD et Full HD. Pour accéder au streaming 4K Ultra HD, nous vous recommandons de passer à l'abonnement 6, 12 ou 24 mois.",
+        answer: "L'abonnement 3 mois inclut la qualité HD et Full HD. Pour accéder au streaming 4K Ultra HD, nous vous recommandons de passer à l'abonnement 6 ou 12 mois.",
       },
       {
         question: "Quels appareils sont compatibles avec l'abonnement 3 mois ?",
@@ -146,8 +145,8 @@ export const PLANS: Plan[] = [
     slug: "abonnement-iptv-6-mois",
     duration: "6 Mois",
     months: 6,
-    price: 49.99,
-    pricePerMonth: 8.33,
+    price: 150,
+    pricePerMonth: 25,
     features: [
       "10 000+ Chaînes TV en Direct",
       "50 000+ Films & Séries",
@@ -217,7 +216,7 @@ export const PLANS: Plan[] = [
     planFaqs: [
       {
         question: "Quelle est la différence entre l'abonnement 6 mois et le 3 mois ?",
-        answer: "L'abonnement 6 mois inclut la qualité 4K Ultra HD et le Catch-Up TV 7 jours, en plus d'un tarif mensuel réduit à 8,33€/mois contre 9,99€/mois pour le 3 mois. C'est plus de fonctionnalités pour un prix moindre.",
+        answer: "L'abonnement 6 mois inclut la qualité 4K Ultra HD et le Catch-Up TV 7 jours, en plus d'un tarif mensuel réduit à 25 DH/mois contre 26,67 DH/mois pour le 3 mois. C'est plus de fonctionnalités pour un prix moindre.",
       },
       {
         question: "Le Catch-Up TV est-il inclus dans l'abonnement 6 mois ?",
@@ -242,8 +241,8 @@ export const PLANS: Plan[] = [
     slug: "abonnement-iptv-12-mois",
     duration: "12 Mois",
     months: 12,
-    price: 69.99,
-    pricePerMonth: 5.83,
+    price: 290,
+    pricePerMonth: 24.17,
     features: [
       "10 000+ Chaînes TV en Direct",
       "50 000+ Films & Séries",
@@ -305,7 +304,7 @@ export const PLANS: Plan[] = [
     whyChoose: [
       {
         title: "Meilleur Rapport Qualité-Prix",
-        description: "À seulement 5,83€/mois, c'est notre formule la plus populaire. Économisez un maximum tout en profitant d'un service premium toute l'année.",
+        description: "À seulement 24,17 DH/mois, c'est notre formule la plus populaire. Économisez un maximum tout en profitant d'un service premium toute l'année.",
       },
       {
         title: "Événements PPV Sans Supplément",
@@ -319,7 +318,7 @@ export const PLANS: Plan[] = [
     planFaqs: [
       {
         question: "Pourquoi l'abonnement 12 mois est-il le plus populaire ?",
-        answer: "L'abonnement 12 mois offre le meilleur équilibre entre prix et fonctionnalités : à 5,83€/mois, il inclut la 4K, le Catch-Up TV 14 jours, les événements PPV et un support prioritaire. C'est la formule préférée de nos clients pour une année entière sans se soucier du renouvellement.",
+        answer: "L'abonnement 12 mois offre le meilleur équilibre entre prix et fonctionnalités : à 24,17 DH/mois, il inclut la 4K, le Catch-Up TV 14 jours, les événements PPV et un support prioritaire. C'est la formule préférée de nos clients pour une année entière sans se soucier du renouvellement.",
       },
       {
         question: "Les événements PPV sont-ils vraiment inclus sans supplément ?",
@@ -332,117 +331,6 @@ export const PLANS: Plan[] = [
       {
         question: "En quoi consiste le support prioritaire 24/7 ?",
         answer: "Contrairement au support standard, le support prioritaire vous place en tête de file pour un traitement accéléré de vos demandes. Notre équipe est disponible 24h/24, 7j/7 par chat, email et WhatsApp pour vous répondre en priorité.",
-      },
-      {
-        question: "Puis-je upgrader vers le 24 mois en cours d'abonnement ?",
-        answer: "Oui, vous pouvez contacter notre support à tout moment pour passer à l'abonnement 24 mois. Nous nous chargeons de la transition et ajustons la durée restante pour que vous ne perdiez aucun jour.",
-      },
-    ],
-  },
-  {
-    id: "24mo",
-    slug: "abonnement-iptv-24-mois",
-    duration: "24 Mois",
-    months: 24,
-    price: 109.99,
-    pricePerMonth: 4.58,
-    features: [
-      "10 000+ Chaînes TV en Direct",
-      "50 000+ Films & Séries",
-      "Qualité HD, Full HD & 4K",
-      "1 Appareil Connecté",
-      "Technologie Anti-Freeze",
-      "Support VIP 24/7",
-      "Guide TV EPG",
-      "Accès Complet Bibliothèque VOD",
-      "Catch-Up TV (30 Jours)",
-      "Événements PPV Inclus",
-      "Assistance Installation Gratuite",
-    ],
-    popular: false,
-    badge: "Meilleur Rapport Qualité-Prix",
-    image: "/abonnement-iptv-24-mois.png",
-    imageAlt: "Abonnement IPTV 24 Mois — Homme profitant d'un salon home cinema avec Smart TV 4K, éclairage LED ambiant, expérience streaming VIP premium",
-    featureDetails: [
-      {
-        title: "10 000+ Chaînes TV en Direct",
-        description: "Accédez à plus de 10 000 chaînes du monde entier : sport, info, cinéma, jeunesse et bien plus, tous en temps réel.",
-      },
-      {
-        title: "50 000+ Films & Séries",
-        description: "Une bibliothèque VOD de plus de 50 000 titres mise à jour régulièrement pour satisfaire toutes vos envies.",
-      },
-      {
-        title: "Qualité HD, Full HD & 4K",
-        description: "Du HD au 4K Ultra HD, adaptez la qualité à votre écran et à votre connexion pour une image toujours parfaite.",
-      },
-      {
-        title: "1 Appareil Connecté",
-        description: "Utilisez votre abonnement sur l'appareil de votre choix : Smart TV, smartphone, tablette, PC ou Fire Stick.",
-      },
-      {
-        title: "Technologie Anti-Freeze",
-        description: "Notre infrastructure serveur haute performance élimine les coupures et la mise en mémoire tampon pour un streaming fluide.",
-      },
-      {
-        title: "Support VIP 24/7",
-        description: "Accès VIP à notre équipe d'experts disponible à toute heure pour un accompagnement personnalisé et une réactivité maximale.",
-      },
-      {
-        title: "Guide TV EPG",
-        description: "Consultez le programme TV en temps réel directement dans votre lecteur IPTV pour ne jamais rater vos émissions préférées.",
-      },
-      {
-        title: "Accès Complet Bibliothèque VOD",
-        description: "Profitez de l'intégralité de notre bibliothèque VOD sans restriction, avec des milliers de titres en qualité HD et 4K.",
-      },
-      {
-        title: "Catch-Up TV (30 Jours)",
-        description: "Le replay le plus généreux du marché : 30 jours d'archives pour ne jamais rien manquer, même après un mois d'absence.",
-      },
-      {
-        title: "Événements PPV Inclus",
-        description: "Les grands événements pay-per-view (combats de boxe, MMA, matchs exclusifs) sont inclus sans surcoût dans votre abonnement.",
-      },
-      {
-        title: "Assistance Installation Gratuite",
-        description: "Un technicien dédié vous guide pas à pas pour installer et configurer votre service IPTV sur tous vos appareils.",
-      },
-    ],
-    whyChoose: [
-      {
-        title: "Prix le Plus Bas du Catalogue",
-        description: "À seulement 4,58€/mois, c'est le tarif le plus avantageux que nous proposons. Deux ans d'accès pour le coût d'un café par mois.",
-      },
-      {
-        title: "Support VIP & Installation Offerte",
-        description: "Bénéficiez d'un support VIP 24/7 et d'une assistance à l'installation gratuite. Un service premium de bout en bout, sans compromis.",
-      },
-      {
-        title: "Catch-Up TV 30 Jours",
-        description: "Revivez vos programmes préférés jusqu'à 30 jours en arrière. Le délai de replay le plus généreux de toute notre gamme.",
-      },
-    ],
-    planFaqs: [
-      {
-        question: "Pourquoi choisir 24 mois plutôt qu'un abonnement plus court ?",
-        answer: "L'abonnement 24 mois est notre offre la plus économique à 4,58€/mois, soit une économie significative par rapport aux autres formules. Il inclut également des avantages exclusifs : support VIP, assistance installation gratuite et Catch-Up TV 30 jours que vous ne trouverez dans aucun autre plan.",
-      },
-      {
-        question: "En quoi consiste l'assistance installation gratuite ?",
-        answer: "Un technicien de notre équipe vous accompagne personnellement pour installer et configurer votre service IPTV sur tous vos appareils : Smart TV, Fire Stick, smartphone, décodeur MAG, etc. Cette assistance est offerte sans frais supplémentaires avec l'abonnement 24 mois.",
-      },
-      {
-        question: "Qu'est-ce que le Catch-Up TV 30 jours ?",
-        answer: "Le Catch-Up TV 30 jours vous permet d'accéder à un mois complet d'archives télévisées. Revivez n'importe quel programme diffusé au cours des 30 derniers jours, directement depuis votre lecteur IPTV, sans enregistrement préalable.",
-      },
-      {
-        question: "Le support VIP est-il vraiment différent du support standard ?",
-        answer: "Oui. Le support VIP vous donne accès à une ligne dédiée avec des temps de réponse réduits et un accompagnement personnalisé. Vous bénéficiez d'un interlocuteur prioritaire disponible 24h/24, 7j/7, que ce soit pour une question technique ou une demande de configuration.",
-      },
-      {
-        question: "Que se passe-t-il à l'expiration de mon abonnement 24 mois ?",
-        answer: "Votre abonnement expire simplement sans renouvellement automatique. Vous recevrez un rappel avant la date d'expiration pour vous permettre de renouveler ou de choisir une autre formule. Votre historique et vos préférences sont conservés.",
       },
     ],
   },
@@ -728,16 +616,13 @@ export const FOOTER_LINKS = {
     { label: "Abonnement 3 Mois", href: "/abonnement-iptv-3-mois" },
     { label: "Abonnement 6 Mois", href: "/abonnement-iptv-6-mois" },
     { label: "Abonnement 12 Mois", href: "/abonnement-iptv-12-mois" },
-    { label: "Abonnement 24 Mois", href: "/abonnement-iptv-24-mois" },
   ],
   company: [
     { label: "À propos", href: "/a-propos" },
-    { label: "Articles", href: "/articles" },
     { label: "Contact", href: "/contactez-nous" },
   ],
   support: [
     { label: "FAQ", href: "/#faq" },
-    { label: "Guide d'Installation", href: "/articles" },
     { label: "Contacter le Support", href: "/contactez-nous" },
   ],
 } as const;

@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 const PLAN_DROPDOWN = PLANS.map((p) => ({
     label: `Abonnement ${p.duration}`,
     href: `/${p.slug}`,
-    price: `${p.price}€`,
+    price: `${p.price} DH`,
 }));
 
 export function Header() {

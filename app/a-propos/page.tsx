@@ -23,7 +23,7 @@ const SITE_URL = getSiteUrl();
 export const metadata: Metadata = {
     title: "À Propos — Notre Mission & Notre Histoire",
     description:
-        "Découvrez l'histoire d'IPTV The King, le meilleur fournisseur IPTV en France. Notre mission : rendre le streaming premium accessible à tous avec 10 000+ chaînes en 4K.",
+        "Découvrez l'histoire d'IPTV The King, le meilleur fournisseur IPTV au Maroc. Notre mission : rendre le streaming premium accessible à tous avec 10 000+ chaînes en 4K.",
     alternates: {
         canonical: `${SITE_URL}/a-propos`,
     },
@@ -41,13 +41,13 @@ export default function AboutPage() {
                     webPageSchema({
                         name: "À Propos — Notre Mission & Notre Histoire",
                         description:
-                            "Découvrez l'histoire d'IPTV The King, le meilleur fournisseur IPTV en France. Notre mission : rendre le streaming premium accessible à tous avec 10 000+ chaînes en 4K.",
+                            "Découvrez l'histoire d'IPTV The King, le meilleur fournisseur IPTV au Maroc. Notre mission : rendre le streaming premium accessible à tous avec 10 000+ chaînes en 4K.",
                         url: `${SITE_URL}/a-propos`,
                         type: "AboutPage",
                     }),
                     organizationSchema({
                         description:
-                            "IPTV The King est le meilleur fournisseur IPTV en France, offrant 10 000+ chaînes en direct et 50 000+ films et séries en qualité 4K.",
+                            "IPTV The King est le meilleur fournisseur IPTV au Maroc, offrant 10 000+ chaînes en direct et 50 000+ films et séries en qualité 4K.",
                     }),
                     breadcrumbSchema([
                         { name: "Accueil", url: SITE_URL },
@@ -58,7 +58,7 @@ export default function AboutPage() {
             {/* Hero */}
             <HeroSection
                 title="À Propos d'IPTV The King"
-                subtitle="IPTV The King est un fournisseur IPTV en France reconnu pour la qualité et la fiabilité de ses services. Avec plus de 10 000 chaînes en direct, 50 000 films et séries en qualité 4K, et une assistance disponible 7j/7, nous nous imposons comme le choix numéro un pour tous ceux qui recherchent une expérience de streaming premium. Notre engagement envers nos clients et notre infrastructure de pointe font d'IPTV The King le meilleur fournisseur IPTV en France."
+                subtitle="IPTV The King est un fournisseur IPTV au Maroc reconnu pour la qualité et la fiabilité de ses services. Avec plus de 10 000 chaînes en direct, 50 000 films et séries en qualité 4K, et une assistance disponible 7j/7, nous nous imposons comme le choix numéro un pour tous ceux qui recherchent une expérience de streaming premium. Notre engagement envers nos clients et notre infrastructure de pointe font d'IPTV The King le meilleur fournisseur IPTV au Maroc."
                 primaryCTA={{ label: "Voir nos Abonnements", href: "/#plans" }}
             />
 

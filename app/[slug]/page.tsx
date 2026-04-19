@@ -39,8 +39,8 @@ export async function generateMetadata({ params }: PlanPageProps): Promise<Metad
     const plan = PLANS.find((p) => p.slug === slug);
     if (!plan) return {};
     return {
-        title: `Abonnement IPTV ${plan.duration} à ${plan.price}€ — Meilleur Prix`,
-        description: `Profitez de l'abonnement IPTV ${plan.duration} à seulement ${plan.pricePerMonth}€/mois. ${plan.features.length} fonctionnalités incluses : 10 000+ chaînes en direct, films et séries en qualité 4K. Sans engagement.`,
+        title: `Abonnement IPTV ${plan.duration} à ${plan.price} DH — Meilleur Prix`,
+        description: `Profitez de l'abonnement IPTV ${plan.duration} à seulement ${plan.pricePerMonth} DH/mois. ${plan.features.length} fonctionnalités incluses : 10 000+ chaînes en direct, films et séries en qualité 4K. Sans engagement.`,
         alternates: {
             canonical: `${SITE_URL}/${slug}`,
         },
@@ -63,8 +63,8 @@ export default async function PlanPage({ params }: PlanPageProps) {
                     productSchema(plan),
                     serviceSchema(plan),
                     webPageSchema({
-                        name: `Abonnement IPTV ${plan.duration} à ${plan.price}€ — Meilleur Prix`,
-                        description: `Profitez de l'abonnement IPTV ${plan.duration} à seulement ${plan.pricePerMonth}€/mois. ${plan.features.length} fonctionnalités incluses.`,
+                        name: `Abonnement IPTV ${plan.duration} à ${plan.price} DH — Meilleur Prix`,
+                        description: `Profitez de l'abonnement IPTV ${plan.duration} à seulement ${plan.pricePerMonth} DH/mois. ${plan.features.length} fonctionnalités incluses.`,
                         url: `${SITE_URL}/${plan.slug}`,
                     }),
                     breadcrumbSchema([
@@ -108,16 +108,16 @@ export default async function PlanPage({ params }: PlanPageProps) {
                             </h1>
                             <p className="text-lg text-text-muted leading-relaxed">
                                 Seulement{" "}
-                                <span className="font-semibold text-text-primary">{plan.pricePerMonth}€/mois</span>.{" "}
+                                <span className="font-semibold text-text-primary">{plan.pricePerMonth} DH/mois</span>.{" "}
                                 Accès complet à toutes nos chaînes, films et séries en qualité 4K.
                             </p>
                             <div className="flex items-end gap-2">
-                                <span className="text-5xl font-extrabold text-text-primary">{plan.price}€</span>
+                                <span className="text-5xl font-extrabold text-text-primary">{plan.price} DH</span>
                                 <span className="mb-2 text-text-muted">/ {plan.duration.toLowerCase()}</span>
                             </div>
                             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                                 <a
-                                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price}€. Pouvez-vous me donner plus d'informations ?`)}`}
+                                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price} DH. Pouvez-vous me donner plus d'informations ?`)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex h-12 items-center justify-center rounded-full bg-cta px-8 text-sm font-semibold text-cta-foreground transition-all hover:opacity-90 hover:shadow-xl hover:scale-[1.02] glow-purple"
@@ -221,7 +221,7 @@ export default async function PlanPage({ params }: PlanPageProps) {
                 title="Prêt à Profiter du Meilleur IPTV ?"
                 subtitle="Commencez dès maintenant et profitez d'un streaming illimité en qualité 4K."
                 buttonLabel="Test Gratuit"
-                buttonHref={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price}€. Pouvez-vous me donner plus d'informations ?`)}`}
+                buttonHref={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price} DH. Pouvez-vous me donner plus d'informations ?`)}`}
             />
 
             {/* FAQ */}

@@ -23,9 +23,9 @@ import {
 const SITE_URL = getSiteUrl();
 
 export const metadata: Metadata = {
-  title: "Meilleur IPTV en France | 10 000+ Chaînes | IPTV The King",
+  title: "Meilleur Abonnement IPTV au Maroc | 10 000+ Chaînes | IPTV The King",
   description:
-    "Le meilleur service IPTV en France avec 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K. Abonnements flexibles, support 24/7 et 99.9% de disponibilité.",
+    "Le meilleur abonnement IPTV au Maroc avec 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K. Abonnements flexibles, support 24/7 et 99.9% de disponibilité.",
   alternates: {
     canonical: SITE_URL,
   },
@@ -43,9 +43,9 @@ export default function HomePage() {
           websiteSchema(),
           organizationSchema(),
           webPageSchema({
-            name: "Meilleur IPTV en France | 10 000+ Chaînes | IPTV The King",
+            name: "Meilleur Abonnement IPTV au Maroc | 10 000+ Chaînes | IPTV The King",
             description:
-              "Le meilleur service IPTV en France avec 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K. Abonnements flexibles, support 24/7 et 99.9% de disponibilité.",
+              "Le meilleur abonnement IPTV au Maroc avec 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K. Abonnements flexibles, support 24/7 et 99.9% de disponibilité.",
             url: SITE_URL,
           }),
           breadcrumbSchema([{ name: "Accueil", url: SITE_URL }]),
@@ -53,8 +53,8 @@ export default function HomePage() {
       />
       {/* Hero */}
       <HeroSection
-        title="Meilleur Abonnement IPTV en France"
-        subtitle="Streamez 10 000+ chaînes en direct et 50 000+ films en qualité 4K époustouflante. Sans engagement, sans coupure — que du divertissement pur."
+        title="Meilleur Abonnement IPTV au Maroc"
+        subtitle="Streamez 10 000+ chaînes en direct et 50 000+ films en qualité 4K époustouflante depuis le Maroc. Sans engagement, sans coupure — que du divertissement pur."
         primaryCTA={{ label: "Voir les Abonnements", href: "#plans" }}
         secondaryCTA={{ label: "En Savoir Plus", href: "/a-propos" }}
       />
@@ -89,7 +89,7 @@ export default function HomePage() {
             title="Choisissez Votre Abonnement"
             subtitle="Des tarifs flexibles sans frais cachés. Tous les abonnements incluent l'accès complet à nos chaînes et notre bibliothèque VOD."
           />
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {PLANS.map((plan) => (
               <PlanCard key={plan.id} plan={plan} />
             ))}
