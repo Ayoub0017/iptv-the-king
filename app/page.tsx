@@ -89,7 +89,7 @@ export default function HomePage() {
             title="Choose Your Subscription"
             subtitle="Flexible pricing with no hidden fees. All subscriptions include full access to our channels and VOD library."
           />
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {PLANS.map((plan) => (
               <PlanCard key={plan.id} plan={plan} />
             ))}

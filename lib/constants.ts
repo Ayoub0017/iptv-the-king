@@ -50,12 +50,103 @@ export interface Plan {
 
 export const PLANS: Plan[] = [
   {
+    id: "1mo",
+    slug: "iptv-subscription-1-month",
+    duration: "1 Month",
+    months: 1,
+    price: 29,
+    pricePerMonth: 29.00,
+    features: [
+      "10,000+ Live TV Channels",
+      "50,000+ Films & Series",
+      "HD Quality",
+      "1 Connected Device",
+      "Anti-Freeze Technology",
+      "24/7 Customer Support",
+      "TV Guide EPG",
+      "VOD Library Access",
+    ],
+    popular: false,
+    image: "/abonnement-iptv-3-mois.png",
+    imageAlt: "1-Month IPTV Subscription — Man watching a 4K Smart TV in a modern living room with blue and purple ambient lighting",
+    featureDetails: [
+      {
+        title: "10,000+ Live TV Channels",
+        description: "Access over 10,000 channels from around the world: sport, news, films, kids' TV and much more, all in real time.",
+      },
+      {
+        title: "50,000+ Films & Series",
+        description: "A VOD library of over 50,000 titles, updated regularly to keep up with everything you want to watch.",
+      },
+      {
+        title: "HD Quality",
+        description: "Enjoy your content in crisp High Definition for a sharp, clear picture on any screen.",
+      },
+      {
+        title: "1 Connected Device",
+        description: "Use your subscription on the device of your choice: Smart TV, smartphone, tablet, PC or Fire Stick.",
+      },
+      {
+        title: "Anti-Freeze Technology",
+        description: "Our high-performance server infrastructure eliminates buffering and freezing for smooth, uninterrupted streaming.",
+      },
+      {
+        title: "24/7 Customer Support",
+        description: "Our team is available 24 hours a day, 7 days a week via chat, email or WhatsApp to answer all your questions.",
+      },
+      {
+        title: "TV Guide EPG",
+        description: "View the live TV schedule directly in your IPTV player so you never miss your favourite programmes.",
+      },
+      {
+        title: "VOD Library Access",
+        description: "Access our on-demand catalogue of films and series, available for instant streaming at any time.",
+      },
+    ],
+    whyChoose: [
+      {
+        title: "Perfect for Getting Started",
+        description: "Try IPTV The King with no long-term commitment. Ideal if you want to experience the service before choosing a longer plan.",
+      },
+      {
+        title: "Maximum Flexibility",
+        description: "Renew, switch plan or cancel at any time. No ties, no hidden fees — complete freedom.",
+      },
+      {
+        title: "Instant Activation",
+        description: "Receive your login details within minutes of payment and start watching your favourite channels straight away.",
+      },
+    ],
+    planFaqs: [
+      {
+        question: "Is the 1-month subscription contract-free?",
+        answer: "Yes, absolutely. There is no contract, no automatic renewal and no hidden fees. You are free to renew or not at the end of the month.",
+      },
+      {
+        question: "Can I upgrade to a longer subscription after 1 month?",
+        answer: "Absolutely. When your 1-month subscription expires, you can easily upgrade to a 3, 6 or 12-month subscription to benefit from a lower monthly rate.",
+      },
+      {
+        question: "Is 4K quality available with the 1-month subscription?",
+        answer: "The 1-month subscription includes HD quality. To access Full HD and 4K Ultra HD streaming, we recommend upgrading to a 3-month or longer subscription.",
+      },
+      {
+        question: "Which devices are compatible with the 1-month subscription?",
+        answer: "Your 1-month subscription works on all devices: Smart TV (Samsung, LG, Sony), iOS/Android smartphones and tablets, Amazon Fire Stick, PC, and any IPTV-compatible device.",
+      },
+      {
+        question: "How do I activate my 1-month subscription?",
+        answer: "After your payment is confirmed, you will receive your login details via WhatsApp or email within minutes. Our team will guide you through installation on your device.",
+      },
+    ],
+  },
+  {
     id: "3mo",
     slug: "iptv-subscription-3-months",
     duration: "3 Months",
     months: 3,
-    price: 15,
-    pricePerMonth: 5.00,
+    price: 75,
+    pricePerMonth: 25.00,
     features: [
       "10,000+ Live TV Channels",
       "50,000+ Films & Series",
@@ -109,8 +200,8 @@ export const PLANS: Plan[] = [
         description: "Try IPTV The King quality without a long-term commitment. Perfect for exploring our catalogue before choosing a longer plan.",
       },
       {
-        title: "Maximum Flexibility",
-        description: "Renew, switch plan or cancel at any time after your period ends. No ties, no hidden fees.",
+        title: "Save vs Monthly",
+        description: "At £25/month, you save £4/month compared to the monthly plan — with no sacrifice on features.",
       },
       {
         title: "Instant Activation",
@@ -124,7 +215,7 @@ export const PLANS: Plan[] = [
       },
       {
         question: "Can I upgrade to a longer subscription after 3 months?",
-        answer: "Absolutely. When your 3-month subscription expires, you can easily upgrade to a 6 or 12-month subscription to benefit from a lower monthly rate.",
+        answer: "Absolutely. When your 3-month subscription expires, you can easily upgrade to a 6 or 12-month subscription to benefit from an even lower monthly rate.",
       },
       {
         question: "Is 4K quality available with the 3-month subscription?",
@@ -145,8 +236,8 @@ export const PLANS: Plan[] = [
     slug: "iptv-subscription-6-months",
     duration: "6 Months",
     months: 6,
-    price: 24,
-    pricePerMonth: 4.00,
+    price: 132,
+    pricePerMonth: 22.00,
     features: [
       "10,000+ Live TV Channels",
       "50,000+ Films & Series",
@@ -205,8 +296,8 @@ export const PLANS: Plan[] = [
         description: "6 months is plenty of time to follow an entire football, tennis or F1 season without any interruption to service.",
       },
       {
-        title: "Savings vs the 3-Month Plan",
-        description: "By choosing 6 months upfront, you reduce your monthly cost and avoid frequent renewals.",
+        title: "Save £42 vs Monthly",
+        description: "At £22/month, you save £7/month compared to the monthly plan — and unlock 4K and 7-day Catch-Up TV.",
       },
       {
         title: "Stability and Peace of Mind",
@@ -216,7 +307,7 @@ export const PLANS: Plan[] = [
     planFaqs: [
       {
         question: "What is the difference between the 6-month and 3-month subscription?",
-        answer: "The 6-month subscription includes 4K Ultra HD quality and 7-day Catch-Up TV, plus a reduced monthly rate of £4.00/month versus £5.00/month for the 3-month plan. More features for less.",
+        answer: "The 6-month subscription includes 4K Ultra HD quality and 7-day Catch-Up TV, plus a reduced monthly rate of £22/month versus £25/month for the 3-month plan. More features for less.",
       },
       {
         question: "Is Catch-Up TV included in the 6-month subscription?",
@@ -241,8 +332,8 @@ export const PLANS: Plan[] = [
     slug: "iptv-subscription-12-months",
     duration: "12 Months",
     months: 12,
-    price: 42,
-    pricePerMonth: 3.50,
+    price: 216,
+    pricePerMonth: 18.00,
     features: [
       "10,000+ Live TV Channels",
       "50,000+ Films & Series",
@@ -304,7 +395,7 @@ export const PLANS: Plan[] = [
     whyChoose: [
       {
         title: "Best Value for Money",
-        description: "At just £3.50/month, this is our most popular plan. Save the most while enjoying a premium service all year round.",
+        description: "At just £18/month, this is our most popular plan. Save £11/month versus the monthly rate while enjoying a premium service all year round.",
       },
       {
         title: "PPV Events at No Extra Cost",
@@ -318,7 +409,7 @@ export const PLANS: Plan[] = [
     planFaqs: [
       {
         question: "Why is the 12-month subscription the most popular?",
-        answer: "The 12-month subscription offers the best balance of price and features: at £3.50/month, it includes 4K, 14-day Catch-Up TV, PPV events and priority support. It is the preferred plan for customers who want a full year without worrying about renewal.",
+        answer: "The 12-month subscription offers the best balance of price and features: at £18/month, it includes 4K, 14-day Catch-Up TV, PPV events and priority support. It is the preferred plan for customers who want a full year without worrying about renewal.",
       },
       {
         question: "Are PPV events really included at no extra cost?",
@@ -613,6 +704,7 @@ export const COMPANY_VALUES = [
    ============================================ */
 export const FOOTER_LINKS = {
   plans: [
+    { label: "1-Month Subscription", href: "/iptv-subscription-1-month" },
     { label: "3-Month Subscription", href: "/iptv-subscription-3-months" },
     { label: "6-Month Subscription", href: "/iptv-subscription-6-months" },
     { label: "12-Month Subscription", href: "/iptv-subscription-12-months" },
