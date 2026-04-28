@@ -67,8 +67,8 @@ export const PLANS: Plan[] = [
       "VOD Library Access",
     ],
     popular: false,
-    image: "/abonnement-iptv-3-mois.png",
-    imageAlt: "3-Month IPTV Subscription — Man watching a 4K Smart TV in a modern living room with blue and purple ambient lighting",
+    image: "/3-months-iptv-uk.png",
+    imageAlt: "3-Month Premium IPTV Subscription UK - Access 10,000+ live channels and sports on your 4K Smart TV",
     featureDetails: [
       {
         title: "10,000+ Live TV Channels",
@@ -159,8 +159,8 @@ export const PLANS: Plan[] = [
       "Catch-Up TV (7 Days)",
     ],
     popular: false,
-    image: "/abonnement-iptv-6-mois.png",
-    imageAlt: "6-Month IPTV Subscription — Man watching a 4K Smart TV in a modern living room with blue and purple ambient lighting",
+    image: "/6-months-iptv-uk.png",
+    imageAlt: "6-Month Best IPTV Subscription UK - Enjoy unlimited 4K movies, series, and sports without freezing",
     featureDetails: [
       {
         title: "10,000+ Live TV Channels",
@@ -257,8 +257,8 @@ export const PLANS: Plan[] = [
     ],
     popular: true,
     badge: "Most Popular",
-    image: "/abonnement-iptv-12-mois.png",
-    imageAlt: "12-Month IPTV Subscription — Man watching a 4K Smart TV in a premium living room with blue and purple ambient lighting, high-quality streaming all year round",
+    image: "/12-months-iptv-uk.png",
+    imageAlt: "12-Month Top Premium IPTV Subscription UK - 1 Year access to 4K channels, catch-up TV, and exclusive PPV events",
     featureDetails: [
       {
         title: "10,000+ Live TV Channels",
