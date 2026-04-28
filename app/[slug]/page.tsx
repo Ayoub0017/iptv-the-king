@@ -193,7 +193,7 @@ export default async function PlanPage({ params }: PlanPageProps) {
                         title="Compare All Subscriptions"
                         subtitle="Choose the plan that best suits your needs."
                     />
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
                         {PLANS.map((p) => (
                             <PlanCard key={p.id} plan={p} />
                         ))}
