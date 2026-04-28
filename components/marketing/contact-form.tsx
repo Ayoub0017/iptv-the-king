@@ -29,7 +29,7 @@ export function ContactForm() {
                     htmlFor="contact-name"
                     className="block text-sm font-medium mb-2"
                 >
-                    Nom
+                    Name
                 </label>
                 <input
                     id="contact-name"
@@ -40,7 +40,7 @@ export function ContactForm() {
                         setFormData({ ...formData, name: e.target.value })
                     }
                     className="w-full h-11 rounded-lg border border-input bg-background px-4 text-sm transition-colors focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
-                    placeholder="Votre nom"
+                    placeholder="Your name"
                 />
             </div>
 
@@ -60,7 +60,7 @@ export function ContactForm() {
                         setFormData({ ...formData, email: e.target.value })
                     }
                     className="w-full h-11 rounded-lg border border-input bg-background px-4 text-sm transition-colors focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
-                    placeholder="votre@email.com"
+                    placeholder="your@email.com"
                 />
             </div>
 
@@ -80,7 +80,7 @@ export function ContactForm() {
                         setFormData({ ...formData, message: e.target.value })
                     }
                     className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm transition-colors focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 resize-none"
-                    placeholder="Comment pouvons-nous vous aider ?"
+                    placeholder="How can we help you?"
                 />
             </div>
 
@@ -94,10 +94,10 @@ export function ContactForm() {
                 )}
             >
                 {submitted ? (
-                    "Message Envoyé !"
+                    "Message Sent!"
                 ) : (
                     <>
-                        Envoyer le Message
+                        Send Message
                         <Send className="h-4 w-4" />
                     </>
                 )}

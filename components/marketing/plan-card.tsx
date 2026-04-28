@@ -9,7 +9,7 @@ interface PlanCardProps {
 
 function getWhatsAppUrl(plan: Plan) {
     const message = encodeURIComponent(
-        `Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price} DH. Pouvez-vous me donner plus d'informations ?`
+        `Hello, I'm interested in the ${plan.duration} IPTV subscription for £${plan.price}. Could you give me more information?`
     );
     return `https://wa.me/33753820307?text=${message}`;
 }
@@ -28,12 +28,12 @@ export function PlanCard({ plan, className }: PlanCardProps) {
                 <h3 className="text-lg font-semibold">{plan.duration}</h3>
                 <div className="mt-4">
                     <span className="text-4xl font-extrabold tracking-tight">
-                        {plan.price} DH
+                        £{plan.price}
                     </span>
-                    <span className="text-sm text-text-muted ml-1">/ {plan.months} mois</span>
+                    <span className="text-sm text-text-muted ml-1">/ {plan.months} months</span>
                 </div>
                 <p className="mt-1 text-sm text-text-muted">
-                    {plan.pricePerMonth} DH/mois
+                    £{plan.pricePerMonth}/month
                 </p>
             </div>
 
@@ -57,9 +57,8 @@ export function PlanCard({ plan, className }: PlanCardProps) {
                 rel="noopener noreferrer"
                 className="mt-8 flex h-11 items-center justify-center rounded-full bg-cta text-sm font-semibold text-cta-foreground transition-all hover:scale-[1.02] hover:opacity-90 hover:shadow-lg"
             >
-                Test Gratuit
+                Free Trial
             </a>
         </div>
     );
 }
-

@@ -26,13 +26,13 @@ export function Footer() {
                                 </span>
                             </Link>
                             <p className="text-sm text-text-muted leading-relaxed max-w-xs">
-                                Service IPTV premium avec 10 000+ chaînes, qualité 4K et support 24/7. L&apos;expérience streaming ultime.
+                                Premium IPTV service with 10,000+ channels, 4K quality and 24/7 support. The ultimate streaming experience.
                             </p>
                         </div>
 
                         {/* Plans */}
                         <div>
-                            <h4 className="text-sm font-semibold mb-4">Abonnements</h4>
+                            <h4 className="text-sm font-semibold mb-4">Subscriptions</h4>
                             <ul className="space-y-2.5">
                                 {FOOTER_LINKS.plans.map((link) => (
                                     <li key={link.href}>
@@ -49,7 +49,7 @@ export function Footer() {
 
                         {/* Company */}
                         <div>
-                            <h4 className="text-sm font-semibold mb-4">Entreprise</h4>
+                            <h4 className="text-sm font-semibold mb-4">Company</h4>
                             <ul className="space-y-2.5">
                                 {FOOTER_LINKS.company.map((link) => (
                                     <li key={link.href}>
@@ -86,14 +86,14 @@ export function Footer() {
                     <div className="mt-12 pt-8 border-t border-border">
                         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                             <p className="text-xs text-text-muted">
-                                © {currentYear} IPTV The King. Tous droits réservés.
+                                © {currentYear} IPTV The King. All rights reserved.
                             </p>
                             <div className="flex items-center gap-6">
-                                <Link href="/politique-de-confidentialite" className="text-xs text-text-muted hover:text-text-primary transition-colors">
-                                    Politique de Confidentialité
+                                <Link href="/privacy-policy" className="text-xs text-text-muted hover:text-text-primary transition-colors">
+                                    Privacy Policy
                                 </Link>
-                                <Link href="/conditions-d-utilisation" className="text-xs text-text-muted hover:text-text-primary transition-colors">
-                                    Conditions d&apos;Utilisation
+                                <Link href="/terms-of-use" className="text-xs text-text-muted hover:text-text-primary transition-colors">
+                                    Terms of Use
                                 </Link>
                             </div>
                         </div>

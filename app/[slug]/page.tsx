@@ -39,8 +39,8 @@ export async function generateMetadata({ params }: PlanPageProps): Promise<Metad
     const plan = PLANS.find((p) => p.slug === slug);
     if (!plan) return {};
     return {
-        title: `Abonnement IPTV ${plan.duration} à ${plan.price} DH — Meilleur Prix`,
-        description: `Profitez de l'abonnement IPTV ${plan.duration} à seulement ${plan.pricePerMonth} DH/mois. ${plan.features.length} fonctionnalités incluses : 10 000+ chaînes en direct, films et séries en qualité 4K. Sans engagement.`,
+        title: `${plan.duration} IPTV Subscription — Best Value at £${plan.price}`,
+        description: `Get the ${plan.duration} IPTV subscription for just £${plan.pricePerMonth}/month. ${plan.features.length} features included: 10,000+ live channels, films and series in 4K quality. No contract.`,
         alternates: {
             canonical: `${SITE_URL}/${slug}`,
         },
@@ -63,14 +63,14 @@ export default async function PlanPage({ params }: PlanPageProps) {
                     productSchema(plan),
                     serviceSchema(plan),
                     webPageSchema({
-                        name: `Abonnement IPTV ${plan.duration} à ${plan.price} DH — Meilleur Prix`,
-                        description: `Profitez de l'abonnement IPTV ${plan.duration} à seulement ${plan.pricePerMonth} DH/mois. ${plan.features.length} fonctionnalités incluses.`,
+                        name: `${plan.duration} IPTV Subscription — Best Value at £${plan.price}`,
+                        description: `Get the ${plan.duration} IPTV subscription for just £${plan.pricePerMonth}/month. ${plan.features.length} features included.`,
                         url: `${SITE_URL}/${plan.slug}`,
                     }),
                     breadcrumbSchema([
-                        { name: "Accueil", url: SITE_URL },
-                        { name: "Abonnements", url: `${SITE_URL}/#plans` },
-                        { name: `Abonnement ${plan.duration}`, url: `${SITE_URL}/${plan.slug}` },
+                        { name: "Home", url: SITE_URL },
+                        { name: "Subscriptions", url: `${SITE_URL}/#plans` },
+                        { name: `${plan.duration} Subscription`, url: `${SITE_URL}/${plan.slug}` },
                     ]),
                 ]}
             />
@@ -103,32 +103,32 @@ export default async function PlanPage({ params }: PlanPageProps) {
                                 </span>
                             )}
                             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-                                Abonnement IPTV{" "}
+                                IPTV Subscription{" "}
                                 <span className="text-gradient-purple">{plan.duration}</span>
                             </h1>
                             <p className="text-lg text-text-muted leading-relaxed">
-                                Seulement{" "}
-                                <span className="font-semibold text-text-primary">{plan.pricePerMonth} DH/mois</span>.{" "}
-                                Accès complet à toutes nos chaînes, films et séries en qualité 4K.
+                                Only{" "}
+                                <span className="font-semibold text-text-primary">£{plan.pricePerMonth}/month</span>.{" "}
+                                Full access to all our channels, films and series in 4K quality.
                             </p>
                             <div className="flex items-end gap-2">
-                                <span className="text-5xl font-extrabold text-text-primary">{plan.price} DH</span>
+                                <span className="text-5xl font-extrabold text-text-primary">£{plan.price}</span>
                                 <span className="mb-2 text-text-muted">/ {plan.duration.toLowerCase()}</span>
                             </div>
                             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                                 <a
-                                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price} DH. Pouvez-vous me donner plus d'informations ?`)}`}
+                                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hello, I'm interested in the ${plan.duration} IPTV subscription for £${plan.price}. Could you give me more information?`)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex h-12 items-center justify-center rounded-full bg-cta px-8 text-sm font-semibold text-cta-foreground transition-all hover:opacity-90 hover:shadow-xl hover:scale-[1.02] glow-purple"
                                 >
-                                    Test Gratuit
+                                    Free Trial
                                 </a>
                                 <Link
                                     href="#comparison"
                                     className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-surface/50 px-8 text-sm font-semibold text-text-primary transition-all hover:bg-surface hover:border-brand-300"
                                 >
-                                    Comparer les Plans
+                                    Compare Plans
                                 </Link>
                             </div>
                         </div>
@@ -140,8 +140,8 @@ export default async function PlanPage({ params }: PlanPageProps) {
             <Section>
                 <Container>
                     <SectionHeader
-                        title="Tout Ce Qui Est Inclus"
-                        subtitle={`Votre abonnement ${plan.duration} comprend toutes ces fonctionnalités.`}
+                        title="Everything Included"
+                        subtitle={`Your ${plan.duration} subscription includes all these features.`}
                     />
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         {plan.featureDetails.map((feature) => (
@@ -165,8 +165,8 @@ export default async function PlanPage({ params }: PlanPageProps) {
             <Section className="bg-surface/30">
                 <Container>
                     <SectionHeader
-                        title={`Pourquoi Choisir un Abonnement IPTV ${plan.duration} ?`}
-                        subtitle="Voici les raisons pour lesquelles cette formule est faite pour vous."
+                        title={`Why Choose a ${plan.duration} IPTV Subscription?`}
+                        subtitle="Here are the reasons why this plan is right for you."
                     />
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
                         {plan.whyChoose.map((reason) => (
@@ -190,8 +190,8 @@ export default async function PlanPage({ params }: PlanPageProps) {
             <Section id="comparison" className="bg-surface/30">
                 <Container>
                     <SectionHeader
-                        title="Comparer Tous les Abonnements"
-                        subtitle="Choisissez le plan qui correspond le mieux à vos besoins."
+                        title="Compare All Subscriptions"
+                        subtitle="Choose the plan that best suits your needs."
                     />
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                         {PLANS.map((p) => (
@@ -205,8 +205,8 @@ export default async function PlanPage({ params }: PlanPageProps) {
             <Section>
                 <Container>
                     <SectionHeader
-                        title="Ce Que Disent Nos Clients"
-                        subtitle="Rejoignez des milliers de clients satisfaits."
+                        title="What Our Customers Say"
+                        subtitle="Join thousands of satisfied customers."
                     />
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
                         {TESTIMONIALS.map((testimonial) => (
@@ -218,18 +218,18 @@ export default async function PlanPage({ params }: PlanPageProps) {
 
             {/* CTA */}
             <CTASection
-                title="Prêt à Profiter du Meilleur IPTV ?"
-                subtitle="Commencez dès maintenant et profitez d'un streaming illimité en qualité 4K."
-                buttonLabel="Test Gratuit"
-                buttonHref={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Bonjour, je suis intéressé(e) par l'abonnement IPTV ${plan.duration} à ${plan.price} DH. Pouvez-vous me donner plus d'informations ?`)}`}
+                title="Ready to Enjoy the Best IPTV?"
+                subtitle="Get started today and enjoy unlimited streaming in 4K quality."
+                buttonLabel="Free Trial"
+                buttonHref={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hello, I'm interested in the ${plan.duration} IPTV subscription for £${plan.price}. Could you give me more information?`)}`}
             />
 
             {/* FAQ */}
             <Section id="faq">
                 <Container>
                     <SectionHeader
-                        title="Questions Fréquentes"
-                        subtitle="Tout ce que vous devez savoir avant de vous abonner."
+                        title="Frequently Asked Questions"
+                        subtitle="Everything you need to know before subscribing."
                     />
                     <FAQAccordion faqs={plan.planFaqs} />
                 </Container>

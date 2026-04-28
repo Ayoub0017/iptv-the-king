@@ -23,9 +23,9 @@ import {
 const SITE_URL = getSiteUrl();
 
 export const metadata: Metadata = {
-  title: "Meilleur Abonnement IPTV au Maroc | 10 000+ Chaînes | IPTV The King",
+  title: "Best IPTV Provider in the UK | 10,000+ Channels | IPTV The King",
   description:
-    "Le meilleur abonnement IPTV au Maroc avec 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K. Abonnements flexibles, support 24/7 et 99.9% de disponibilité.",
+    "The best IPTV provider in the UK with 10,000+ live channels, 50,000+ films and series in 4K quality. Flexible subscriptions, 24/7 support and 99.9% uptime.",
   alternates: {
     canonical: SITE_URL,
   },
@@ -43,20 +43,20 @@ export default function HomePage() {
           websiteSchema(),
           organizationSchema(),
           webPageSchema({
-            name: "Meilleur Abonnement IPTV au Maroc | 10 000+ Chaînes | IPTV The King",
+            name: "Best IPTV Provider in the UK | 10,000+ Channels | IPTV The King",
             description:
-              "Le meilleur abonnement IPTV au Maroc avec 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K. Abonnements flexibles, support 24/7 et 99.9% de disponibilité.",
+              "The best IPTV provider in the UK with 10,000+ live channels, 50,000+ films and series in 4K quality. Flexible subscriptions, 24/7 support and 99.9% uptime.",
             url: SITE_URL,
           }),
-          breadcrumbSchema([{ name: "Accueil", url: SITE_URL }]),
+          breadcrumbSchema([{ name: "Home", url: SITE_URL }]),
         ]}
       />
       {/* Hero */}
       <HeroSection
-        title="Meilleur Abonnement IPTV au Maroc"
-        subtitle="Streamez 10 000+ chaînes en direct et 50 000+ films en qualité 4K époustouflante depuis le Maroc. Sans engagement, sans coupure — que du divertissement pur."
-        primaryCTA={{ label: "Voir les Abonnements", href: "#plans" }}
-        secondaryCTA={{ label: "En Savoir Plus", href: "/a-propos" }}
+        title="Best IPTV Provider in the UK"
+        subtitle="Stream 10,000+ live channels and 50,000+ films in stunning 4K quality from anywhere in the UK. No contract, no buffering — just pure entertainment."
+        primaryCTA={{ label: "View Subscriptions", href: "#plans" }}
+        secondaryCTA={{ label: "Learn More", href: "/about" }}
       />
 
       {/* Stats Bar */}
@@ -66,8 +66,8 @@ export default function HomePage() {
       <Section id="features">
         <Container>
           <SectionHeader
-            title="Pourquoi Choisir IPTV The King ?"
-            subtitle="Nous offrons la meilleure expérience de streaming avec des fonctionnalités premium qui nous distinguent de la concurrence."
+            title="Why Choose IPTV The King?"
+            subtitle="We offer the best streaming experience with premium features that set us apart from the competition."
           />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {FEATURES.map((feature) => (
@@ -86,8 +86,8 @@ export default function HomePage() {
       <Section id="plans" className="bg-surface/30">
         <Container>
           <SectionHeader
-            title="Choisissez Votre Abonnement"
-            subtitle="Des tarifs flexibles sans frais cachés. Tous les abonnements incluent l'accès complet à nos chaînes et notre bibliothèque VOD."
+            title="Choose Your Subscription"
+            subtitle="Flexible pricing with no hidden fees. All subscriptions include full access to our channels and VOD library."
           />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {PLANS.map((plan) => (
@@ -101,8 +101,8 @@ export default function HomePage() {
       <Section>
         <Container>
           <SectionHeader
-            title="Ce Que Disent Nos Clients"
-            subtitle="Rejoignez des milliers de clients satisfaits qui ont fait le choix d'IPTV The King."
+            title="What Our Customers Say"
+            subtitle="Join thousands of satisfied customers who have chosen IPTV The King."
           />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {TESTIMONIALS.map((testimonial) => (
@@ -117,9 +117,9 @@ export default function HomePage() {
 
       {/* CTA */}
       <CTASection
-        title="Prêt à Commencer le Streaming ?"
-        subtitle="Rejoignez des milliers de clients satisfaits et découvrez le meilleur service IPTV disponible. Essai gratuit dès aujourd'hui."
-        buttonLabel="Test Gratuit"
+        title="Ready to Start Streaming?"
+        subtitle="Join thousands of satisfied customers and discover the best IPTV service available. Free trial today."
+        buttonLabel="Free Trial"
         buttonHref="#plans"
       />
 
@@ -127,8 +127,8 @@ export default function HomePage() {
       <Section id="faq">
         <Container>
           <SectionHeader
-            title="Questions Fréquemment Posées"
-            subtitle="Tout ce que vous devez savoir sur notre service IPTV."
+            title="Frequently Asked Questions"
+            subtitle="Everything you need to know about our IPTV service."
           />
           <FAQAccordion faqs={FAQS} />
         </Container>

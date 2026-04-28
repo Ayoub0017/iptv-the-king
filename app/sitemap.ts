@@ -15,16 +15,34 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 1.0,
         },
         {
-            url: `${siteUrl}/a-propos`,
+            url: `${siteUrl}/about`,
             lastModified: now,
             changeFrequency: "monthly",
             priority: 0.7,
         },
         {
-            url: `${siteUrl}/contactez-nous`,
+            url: `${siteUrl}/contact`,
             lastModified: now,
             changeFrequency: "monthly",
             priority: 0.7,
+        },
+        {
+            url: `${siteUrl}/blog`,
+            lastModified: now,
+            changeFrequency: "weekly",
+            priority: 0.8,
+        },
+        {
+            url: `${siteUrl}/terms-of-use`,
+            lastModified: now,
+            changeFrequency: "yearly",
+            priority: 0.3,
+        },
+        {
+            url: `${siteUrl}/privacy-policy`,
+            lastModified: now,
+            changeFrequency: "yearly",
+            priority: 0.3,
         },
     ];
 

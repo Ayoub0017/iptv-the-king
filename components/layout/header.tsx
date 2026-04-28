@@ -9,9 +9,9 @@ import { NAV_LINKS, PLANS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const PLAN_DROPDOWN = PLANS.map((p) => ({
-    label: `Abonnement ${p.duration}`,
+    label: `${p.duration} Subscription`,
     href: `/${p.slug}`,
-    price: `${p.price} DH`,
+    price: `£${p.price}`,
 }));
 
 export function Header() {
@@ -37,10 +37,10 @@ export function Header() {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center gap-8" aria-label="Navigation principale">
+                    <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
                         {NAV_LINKS.map((link) =>
-                            link.label === "Abonnements" ? (
-                                /* Abonnements with dropdown */
+                            link.label === "Subscriptions" ? (
+                                /* Subscriptions with dropdown */
                                 <div
                                     key={link.href}
                                     className="relative"
@@ -90,7 +90,7 @@ export function Header() {
                                                 href="/#plans"
                                                 className="flex items-center justify-center rounded-lg px-3 py-2  text-sm font-medium text-brand-500 transition-colors hover:bg-brand-50"
                                             >
-                                                Comparer tous les plans
+                                                Compare all plans
                                             </Link>
                                         </div>
                                     </div>
@@ -110,17 +110,17 @@ export function Header() {
                     {/* CTA + Mobile Toggle */}
                     <div className="flex items-center gap-3">
                         <a
-                            href="https://wa.me/33753820307?text=Bonjour%2C%20je%20souhaite%20tester%20votre%20service%20IPTV%20gratuitement."
+                            href="https://wa.me/33753820307?text=Hello%2C%20I%27d%20like%20to%20try%20your%20IPTV%20service%20for%20free."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hidden md:inline-flex h-9 items-center justify-center rounded-full bg-cta px-5 text-sm font-semibold text-cta-foreground transition-all hover:opacity-90 hover:shadow-lg"
                         >
-                            Test Gratuit
+                            Free Trial
                         </a>
                         <button
                             onClick={() => setMobileOpen(!mobileOpen)}
                             className="inline-flex md:hidden h-9 w-9 items-center justify-center rounded-lg text-text-muted hover:text-text-primary transition-colors"
-                            aria-label="Ouvrir le menu"
+                            aria-label="Open menu"
                             aria-expanded={mobileOpen}
                         >
                             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -135,9 +135,9 @@ export function Header() {
                         mobileOpen ? "max-h-[500px] pb-6" : "max-h-0"
                     )}
                 >
-                    <nav className="flex flex-col gap-1 pt-2" aria-label="Navigation mobile">
+                    <nav className="flex flex-col gap-1 pt-2" aria-label="Mobile navigation">
                         {NAV_LINKS.map((link) =>
-                            link.label === "Abonnements" ? (
+                            link.label === "Subscriptions" ? (
                                 <div key={link.href}>
                                     <button
                                         onClick={() => setPlansOpen(!plansOpen)}
@@ -184,13 +184,13 @@ export function Header() {
                             )
                         )}
                         <a
-                            href="https://wa.me/33753820307?text=Bonjour%2C%20je%20souhaite%20tester%20votre%20service%20IPTV%20gratuitement."
+                            href="https://wa.me/33753820307?text=Hello%2C%20I%27d%20like%20to%20try%20your%20IPTV%20service%20for%20free."
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => setMobileOpen(false)}
                             className="mt-2 flex h-10 items-center justify-center rounded-full bg-cta text-sm font-semibold text-cta-foreground transition-all hover:opacity-90"
                         >
-                            Test Gratuit
+                            Free Trial
                         </a>
                     </nav>
                 </div>

@@ -12,10 +12,10 @@ import {
    Navigation
    ============================================ */
 export const NAV_LINKS = [
-  { label: "Accueil", href: "/" },
-  { label: "Abonnements", href: "/#plans" },
-  { label: "À propos", href: "/a-propos" },
-  { label: "Contact", href: "/contactez-nous" },
+  { label: "Home", href: "/" },
+  { label: "Subscriptions", href: "/#plans" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ] as const;
 
 /* ============================================
@@ -51,286 +51,286 @@ export interface Plan {
 export const PLANS: Plan[] = [
   {
     id: "3mo",
-    slug: "abonnement-iptv-3-mois",
-    duration: "3 Mois",
+    slug: "iptv-subscription-3-months",
+    duration: "3 Months",
     months: 3,
-    price: 80,
-    pricePerMonth: 26.67,
+    price: 15,
+    pricePerMonth: 5.00,
     features: [
-      "10 000+ Chaînes TV en Direct",
-      "50 000+ Films & Séries",
-      "Qualité HD & Full HD",
-      "1 Appareil Connecté",
-      "Technologie Anti-Freeze",
-      "Support Client 24/7",
-      "Guide TV EPG",
-      "Accès Bibliothèque VOD",
+      "10,000+ Live TV Channels",
+      "50,000+ Films & Series",
+      "HD & Full HD Quality",
+      "1 Connected Device",
+      "Anti-Freeze Technology",
+      "24/7 Customer Support",
+      "TV Guide EPG",
+      "VOD Library Access",
     ],
     popular: false,
     image: "/abonnement-iptv-3-mois.png",
-    imageAlt: "Abonnement IPTV 3 Mois — Homme regardant une Smart TV 4K dans un salon moderne avec éclairage ambiant bleu et violet",
+    imageAlt: "3-Month IPTV Subscription — Man watching a 4K Smart TV in a modern living room with blue and purple ambient lighting",
     featureDetails: [
       {
-        title: "10 000+ Chaînes TV en Direct",
-        description: "Accédez à plus de 10 000 chaînes du monde entier : sport, info, cinéma, jeunesse et bien plus, tous en temps réel.",
+        title: "10,000+ Live TV Channels",
+        description: "Access over 10,000 channels from around the world: sport, news, films, kids' TV and much more, all in real time.",
       },
       {
-        title: "50 000+ Films & Séries",
-        description: "Une bibliothèque VOD de plus de 50 000 titres mise à jour régulièrement pour satisfaire toutes vos envies.",
+        title: "50,000+ Films & Series",
+        description: "A VOD library of over 50,000 titles, updated regularly to keep up with everything you want to watch.",
       },
       {
-        title: "Qualité HD & Full HD",
-        description: "Profitez de vos contenus en Haute Définition et Full HD pour une image nette et une expérience visuelle optimale.",
+        title: "HD & Full HD Quality",
+        description: "Enjoy your content in High Definition and Full HD for a sharp picture and the best viewing experience.",
       },
       {
-        title: "1 Appareil Connecté",
-        description: "Utilisez votre abonnement sur l'appareil de votre choix : Smart TV, smartphone, tablette, PC ou Fire Stick.",
+        title: "1 Connected Device",
+        description: "Use your subscription on the device of your choice: Smart TV, smartphone, tablet, PC or Fire Stick.",
       },
       {
-        title: "Technologie Anti-Freeze",
-        description: "Notre infrastructure serveur haute performance élimine les coupures et la mise en mémoire tampon pour un streaming fluide.",
+        title: "Anti-Freeze Technology",
+        description: "Our high-performance server infrastructure eliminates buffering and freezing for smooth, uninterrupted streaming.",
       },
       {
-        title: "Support Client 24/7",
-        description: "Notre équipe est disponible 24h/24, 7j/7 par chat, email ou WhatsApp pour répondre à toutes vos questions.",
+        title: "24/7 Customer Support",
+        description: "Our team is available 24 hours a day, 7 days a week via chat, email or WhatsApp to answer all your questions.",
       },
       {
-        title: "Guide TV EPG",
-        description: "Consultez le programme TV en temps réel directement dans votre lecteur IPTV pour ne jamais rater vos émissions préférées.",
+        title: "TV Guide EPG",
+        description: "View the live TV schedule directly in your IPTV player so you never miss your favourite programmes.",
       },
       {
-        title: "Accès Bibliothèque VOD",
-        description: "Accédez à notre catalogue de films et séries à la demande, disponible en streaming instantané à tout moment.",
+        title: "VOD Library Access",
+        description: "Access our on-demand catalogue of films and series, available for instant streaming at any time.",
       },
     ],
     whyChoose: [
       {
-        title: "Idéal pour Découvrir",
-        description: "Testez la qualité IPTV The King sans engagement long terme. Parfait pour explorer notre catalogue avant de vous décider pour une formule plus longue.",
+        title: "Ideal for Getting Started",
+        description: "Try IPTV The King quality without a long-term commitment. Perfect for exploring our catalogue before choosing a longer plan.",
       },
       {
-        title: "Flexibilité Maximale",
-        description: "Renouvelez, changez de formule ou stoppez à tout moment après votre période. Aucune contrainte, aucun frais caché.",
+        title: "Maximum Flexibility",
+        description: "Renew, switch plan or cancel at any time after your period ends. No ties, no hidden fees.",
       },
       {
-        title: "Activation Immédiate",
-        description: "Recevez vos identifiants en quelques minutes après le paiement et profitez immédiatement de vos chaînes préférées.",
+        title: "Instant Activation",
+        description: "Receive your login details within minutes of payment and start watching your favourite channels straight away.",
       },
     ],
     planFaqs: [
       {
-        question: "L'abonnement 3 mois est-il sans engagement ?",
-        answer: "Oui, totalement. Il n'y a aucun contrat, aucun renouvellement automatique et aucun frais caché. À l'issue des 3 mois, vous choisissez librement de renouveler ou non.",
+        question: "Is the 3-month subscription contract-free?",
+        answer: "Yes, absolutely. There is no contract, no automatic renewal and no hidden fees. At the end of the 3 months, you are free to renew or not.",
       },
       {
-        question: "Puis-je passer à un abonnement plus long après les 3 mois ?",
-        answer: "Absolument. À l'expiration de votre abonnement 3 mois, vous pouvez facilement upgrader vers un abonnement 6 ou 12 mois pour bénéficier d'un tarif mensuel plus avantageux.",
+        question: "Can I upgrade to a longer subscription after 3 months?",
+        answer: "Absolutely. When your 3-month subscription expires, you can easily upgrade to a 6 or 12-month subscription to benefit from a lower monthly rate.",
       },
       {
-        question: "La qualité 4K est-elle disponible avec l'abonnement 3 mois ?",
-        answer: "L'abonnement 3 mois inclut la qualité HD et Full HD. Pour accéder au streaming 4K Ultra HD, nous vous recommandons de passer à l'abonnement 6 ou 12 mois.",
+        question: "Is 4K quality available with the 3-month subscription?",
+        answer: "The 3-month subscription includes HD and Full HD quality. To access 4K Ultra HD streaming, we recommend upgrading to the 6 or 12-month subscription.",
       },
       {
-        question: "Quels appareils sont compatibles avec l'abonnement 3 mois ?",
-        answer: "Votre abonnement 3 mois fonctionne sur tous les appareils : Smart TV (Samsung, LG, Sony), smartphones et tablettes iOS/Android, Amazon Fire Stick, PC, et tout appareil compatible IPTV.",
+        question: "Which devices are compatible with the 3-month subscription?",
+        answer: "Your 3-month subscription works on all devices: Smart TV (Samsung, LG, Sony), iOS/Android smartphones and tablets, Amazon Fire Stick, PC, and any IPTV-compatible device.",
       },
       {
-        question: "Comment activer mon abonnement 3 mois ?",
-        answer: "Après confirmation de votre paiement, vous recevez vos identifiants de connexion par WhatsApp ou email en quelques minutes. Notre équipe vous guide pour l'installation sur votre appareil.",
+        question: "How do I activate my 3-month subscription?",
+        answer: "After your payment is confirmed, you will receive your login details via WhatsApp or email within minutes. Our team will guide you through installation on your device.",
       },
     ],
   },
   {
     id: "6mo",
-    slug: "abonnement-iptv-6-mois",
-    duration: "6 Mois",
+    slug: "iptv-subscription-6-months",
+    duration: "6 Months",
     months: 6,
-    price: 150,
-    pricePerMonth: 25,
+    price: 24,
+    pricePerMonth: 4.00,
     features: [
-      "10 000+ Chaînes TV en Direct",
-      "50 000+ Films & Séries",
-      "Qualité HD, Full HD & 4K",
-      "1 Appareil Connecté",
-      "Technologie Anti-Freeze",
-      "Support Client 24/7",
-      "Guide TV EPG",
-      "Accès Bibliothèque VOD",
-      "Catch-Up TV (7 Jours)",
+      "10,000+ Live TV Channels",
+      "50,000+ Films & Series",
+      "HD, Full HD & 4K Quality",
+      "1 Connected Device",
+      "Anti-Freeze Technology",
+      "24/7 Customer Support",
+      "TV Guide EPG",
+      "VOD Library Access",
+      "Catch-Up TV (7 Days)",
     ],
     popular: false,
     image: "/abonnement-iptv-6-mois.png",
-    imageAlt: "Abonnement IPTV 6 Mois — Homme regardant une Smart TV 4K dans un salon moderne avec éclairage ambiant bleu et violet",
+    imageAlt: "6-Month IPTV Subscription — Man watching a 4K Smart TV in a modern living room with blue and purple ambient lighting",
     featureDetails: [
       {
-        title: "10 000+ Chaînes TV en Direct",
-        description: "Accédez à plus de 10 000 chaînes du monde entier : sport, info, cinéma, jeunesse et bien plus, tous en temps réel.",
+        title: "10,000+ Live TV Channels",
+        description: "Access over 10,000 channels from around the world: sport, news, films, kids' TV and much more, all in real time.",
       },
       {
-        title: "50 000+ Films & Séries",
-        description: "Une bibliothèque VOD de plus de 50 000 titres mise à jour régulièrement pour satisfaire toutes vos envies.",
+        title: "50,000+ Films & Series",
+        description: "A VOD library of over 50,000 titles, updated regularly to keep up with everything you want to watch.",
       },
       {
-        title: "Qualité HD, Full HD & 4K",
-        description: "Du HD au 4K Ultra HD, adaptez la qualité à votre écran et à votre connexion pour une image toujours parfaite.",
+        title: "HD, Full HD & 4K Quality",
+        description: "From HD to 4K Ultra HD, adapt quality to your screen and connection for a perfect picture every time.",
       },
       {
-        title: "1 Appareil Connecté",
-        description: "Utilisez votre abonnement sur l'appareil de votre choix : Smart TV, smartphone, tablette, PC ou Fire Stick.",
+        title: "1 Connected Device",
+        description: "Use your subscription on the device of your choice: Smart TV, smartphone, tablet, PC or Fire Stick.",
       },
       {
-        title: "Technologie Anti-Freeze",
-        description: "Notre infrastructure serveur haute performance élimine les coupures et la mise en mémoire tampon pour un streaming fluide.",
+        title: "Anti-Freeze Technology",
+        description: "Our high-performance server infrastructure eliminates buffering and freezing for smooth, uninterrupted streaming.",
       },
       {
-        title: "Support Client 24/7",
-        description: "Notre équipe est disponible 24h/24, 7j/7 par chat, email ou WhatsApp pour répondre à toutes vos questions.",
+        title: "24/7 Customer Support",
+        description: "Our team is available 24 hours a day, 7 days a week via chat, email or WhatsApp to answer all your questions.",
       },
       {
-        title: "Guide TV EPG",
-        description: "Consultez le programme TV en temps réel directement dans votre lecteur IPTV pour ne jamais rater vos émissions préférées.",
+        title: "TV Guide EPG",
+        description: "View the live TV schedule directly in your IPTV player so you never miss your favourite programmes.",
       },
       {
-        title: "Accès Bibliothèque VOD",
-        description: "Accédez à notre catalogue de films et séries à la demande, disponible en streaming instantané à tout moment.",
+        title: "VOD Library Access",
+        description: "Access our on-demand catalogue of films and series, available for instant streaming at any time.",
       },
       {
-        title: "Catch-Up TV (7 Jours)",
-        description: "Revivez vos émissions et matchs préférés jusqu'à 7 jours après leur diffusion. Plus besoin de programmer un enregistrement.",
+        title: "Catch-Up TV (7 Days)",
+        description: "Rewatch your favourite programmes and matches up to 7 days after broadcast. No need to schedule a recording.",
       },
     ],
     whyChoose: [
       {
-        title: "Couvrez Toute une Saison",
-        description: "6 mois suffisent pour suivre entièrement une saison de football, de tennis ou de F1 sans interruption de service.",
+        title: "Cover a Full Season",
+        description: "6 months is plenty of time to follow an entire football, tennis or F1 season without any interruption to service.",
       },
       {
-        title: "Économies par Rapport au 3 Mois",
-        description: "En choisissant 6 mois d'un coup, vous réduisez votre coût mensuel et évitez les renouvellements fréquents.",
+        title: "Savings vs the 3-Month Plan",
+        description: "By choosing 6 months upfront, you reduce your monthly cost and avoid frequent renewals.",
       },
       {
-        title: "Stabilité et Tranquillité",
-        description: "Profitez d'un accès stable pendant 6 mois sans vous soucier du renouvellement. Un confort idéal pour toute la famille.",
+        title: "Stability and Peace of Mind",
+        description: "Enjoy stable access for 6 months without worrying about renewal. Ideal comfort for the whole family.",
       },
     ],
     planFaqs: [
       {
-        question: "Quelle est la différence entre l'abonnement 6 mois et le 3 mois ?",
-        answer: "L'abonnement 6 mois inclut la qualité 4K Ultra HD et le Catch-Up TV 7 jours, en plus d'un tarif mensuel réduit à 25 DH/mois contre 26,67 DH/mois pour le 3 mois. C'est plus de fonctionnalités pour un prix moindre.",
+        question: "What is the difference between the 6-month and 3-month subscription?",
+        answer: "The 6-month subscription includes 4K Ultra HD quality and 7-day Catch-Up TV, plus a reduced monthly rate of £4.00/month versus £5.00/month for the 3-month plan. More features for less.",
       },
       {
-        question: "Le Catch-Up TV est-il inclus dans l'abonnement 6 mois ?",
-        answer: "Oui, l'abonnement 6 mois inclut le Catch-Up TV sur 7 jours. Vous pouvez revisionner n'importe quelle émission, match ou série diffusé au cours des 7 derniers jours.",
+        question: "Is Catch-Up TV included in the 6-month subscription?",
+        answer: "Yes, the 6-month subscription includes 7-day Catch-Up TV. You can rewatch any programme, match or series broadcast in the last 7 days.",
       },
       {
-        question: "Puis-je regarder en 4K avec l'abonnement 6 mois ?",
-        answer: "Oui, la qualité 4K Ultra HD est incluse à partir de l'abonnement 6 mois. Assurez-vous d'avoir une connexion d'au moins 25 Mbps et un écran compatible pour en profiter pleinement.",
+        question: "Can I watch in 4K with the 6-month subscription?",
+        answer: "Yes, 4K Ultra HD quality is included from the 6-month subscription onwards. Make sure you have a connection of at least 25 Mbps and a compatible screen to fully enjoy it.",
       },
       {
-        question: "L'abonnement 6 mois se renouvelle-t-il automatiquement ?",
-        answer: "Non. Tous nos abonnements sont prépayés et ne se renouvellent pas automatiquement. Vous recevrez un rappel avant l'expiration pour vous permettre de choisir sereinement votre prochaine formule.",
+        question: "Does the 6-month subscription auto-renew?",
+        answer: "No. All our subscriptions are prepaid and do not auto-renew. You will receive a reminder before expiry so you can calmly choose your next plan.",
       },
       {
-        question: "Combien d'appareils puis-je connecter simultanément ?",
-        answer: "L'abonnement 6 mois permet de connecter 1 appareil à la fois. Si vous souhaitez utiliser le service sur plusieurs écrans en même temps, contactez notre support pour connaître les options disponibles.",
+        question: "How many devices can I connect at the same time?",
+        answer: "The 6-month subscription allows 1 device to be connected at a time. If you wish to use the service on multiple screens simultaneously, contact our support team to find out about available options.",
       },
     ],
   },
   {
     id: "12mo",
-    slug: "abonnement-iptv-12-mois",
-    duration: "12 Mois",
+    slug: "iptv-subscription-12-months",
+    duration: "12 Months",
     months: 12,
-    price: 290,
-    pricePerMonth: 24.17,
+    price: 42,
+    pricePerMonth: 3.50,
     features: [
-      "10 000+ Chaînes TV en Direct",
-      "50 000+ Films & Séries",
-      "Qualité HD, Full HD & 4K",
-      "1 Appareil Connecté",
-      "Technologie Anti-Freeze",
-      "Support Prioritaire 24/7",
-      "Guide TV EPG",
-      "Accès Bibliothèque VOD",
-      "Catch-Up TV (14 Jours)",
-      "Événements PPV Inclus",
+      "10,000+ Live TV Channels",
+      "50,000+ Films & Series",
+      "HD, Full HD & 4K Quality",
+      "1 Connected Device",
+      "Anti-Freeze Technology",
+      "Priority 24/7 Support",
+      "TV Guide EPG",
+      "VOD Library Access",
+      "Catch-Up TV (14 Days)",
+      "PPV Events Included",
     ],
     popular: true,
-    badge: "Le Plus Populaire",
+    badge: "Most Popular",
     image: "/abonnement-iptv-12-mois.png",
-    imageAlt: "Abonnement IPTV 12 Mois — Homme regardant une Smart TV 4K dans un salon premium avec éclairage ambiant bleu et violet, streaming haute qualité toute l'année",
+    imageAlt: "12-Month IPTV Subscription — Man watching a 4K Smart TV in a premium living room with blue and purple ambient lighting, high-quality streaming all year round",
     featureDetails: [
       {
-        title: "10 000+ Chaînes TV en Direct",
-        description: "Accédez à plus de 10 000 chaînes du monde entier : sport, info, cinéma, jeunesse et bien plus, tous en temps réel.",
+        title: "10,000+ Live TV Channels",
+        description: "Access over 10,000 channels from around the world: sport, news, films, kids' TV and much more, all in real time.",
       },
       {
-        title: "50 000+ Films & Séries",
-        description: "Une bibliothèque VOD de plus de 50 000 titres mise à jour régulièrement pour satisfaire toutes vos envies.",
+        title: "50,000+ Films & Series",
+        description: "A VOD library of over 50,000 titles, updated regularly to keep up with everything you want to watch.",
       },
       {
-        title: "Qualité HD, Full HD & 4K",
-        description: "Du HD au 4K Ultra HD, adaptez la qualité à votre écran et à votre connexion pour une image toujours parfaite.",
+        title: "HD, Full HD & 4K Quality",
+        description: "From HD to 4K Ultra HD, adapt quality to your screen and connection for a perfect picture every time.",
       },
       {
-        title: "1 Appareil Connecté",
-        description: "Utilisez votre abonnement sur l'appareil de votre choix : Smart TV, smartphone, tablette, PC ou Fire Stick.",
+        title: "1 Connected Device",
+        description: "Use your subscription on the device of your choice: Smart TV, smartphone, tablet, PC or Fire Stick.",
       },
       {
-        title: "Technologie Anti-Freeze",
-        description: "Notre infrastructure serveur haute performance élimine les coupures et la mise en mémoire tampon pour un streaming fluide.",
+        title: "Anti-Freeze Technology",
+        description: "Our high-performance server infrastructure eliminates buffering and freezing for smooth, uninterrupted streaming.",
       },
       {
-        title: "Support Prioritaire 24/7",
-        description: "Bénéficiez d'un accès prioritaire à notre équipe de support disponible 24h/24, 7j/7 pour une résolution rapide de vos demandes.",
+        title: "Priority 24/7 Support",
+        description: "Benefit from priority access to our support team, available 24/7 for fast resolution of your requests.",
       },
       {
-        title: "Guide TV EPG",
-        description: "Consultez le programme TV en temps réel directement dans votre lecteur IPTV pour ne jamais rater vos émissions préférées.",
+        title: "TV Guide EPG",
+        description: "View the live TV schedule directly in your IPTV player so you never miss your favourite programmes.",
       },
       {
-        title: "Accès Bibliothèque VOD",
-        description: "Accédez à notre catalogue de films et séries à la demande, disponible en streaming instantané à tout moment.",
+        title: "VOD Library Access",
+        description: "Access our on-demand catalogue of films and series, available for instant streaming at any time.",
       },
       {
-        title: "Catch-Up TV (14 Jours)",
-        description: "Accédez à 14 jours de contenu en replay. Rattrapez facilement vos séries, documentaires et événements sportifs manqués.",
+        title: "Catch-Up TV (14 Days)",
+        description: "Access 14 days of content on replay. Easily catch up on missed series, documentaries and sporting events.",
       },
       {
-        title: "Événements PPV Inclus",
-        description: "Les grands événements pay-per-view (combats de boxe, MMA, matchs exclusifs) sont inclus sans surcoût dans votre abonnement.",
+        title: "PPV Events Included",
+        description: "Major pay-per-view events (boxing, MMA, exclusive matches) are included at no extra cost in your subscription.",
       },
     ],
     whyChoose: [
       {
-        title: "Meilleur Rapport Qualité-Prix",
-        description: "À seulement 24,17 DH/mois, c'est notre formule la plus populaire. Économisez un maximum tout en profitant d'un service premium toute l'année.",
+        title: "Best Value for Money",
+        description: "At just £3.50/month, this is our most popular plan. Save the most while enjoying a premium service all year round.",
       },
       {
-        title: "Événements PPV Sans Supplément",
-        description: "Combats de boxe, MMA, matchs exclusifs... Tous les grands événements pay-per-view sont inclus dans votre abonnement 12 mois.",
+        title: "PPV Events at No Extra Cost",
+        description: "Boxing, MMA, exclusive matches... All major pay-per-view events are included in your 12-month subscription.",
       },
       {
-        title: "Toute l'Année Sans Interruption",
-        description: "Un an d'accès ininterrompu à 10 000+ chaînes et 50 000+ films. Vous ne pensez plus à rien, on s'occupe de tout.",
+        title: "A Full Year Without Interruption",
+        description: "A year of uninterrupted access to 10,000+ channels and 50,000+ films. Nothing to worry about — we take care of everything.",
       },
     ],
     planFaqs: [
       {
-        question: "Pourquoi l'abonnement 12 mois est-il le plus populaire ?",
-        answer: "L'abonnement 12 mois offre le meilleur équilibre entre prix et fonctionnalités : à 24,17 DH/mois, il inclut la 4K, le Catch-Up TV 14 jours, les événements PPV et un support prioritaire. C'est la formule préférée de nos clients pour une année entière sans se soucier du renouvellement.",
+        question: "Why is the 12-month subscription the most popular?",
+        answer: "The 12-month subscription offers the best balance of price and features: at £3.50/month, it includes 4K, 14-day Catch-Up TV, PPV events and priority support. It is the preferred plan for customers who want a full year without worrying about renewal.",
       },
       {
-        question: "Les événements PPV sont-ils vraiment inclus sans supplément ?",
-        answer: "Oui, absolument. Avec l'abonnement 12 mois, tous les grands événements pay-per-view — combats de boxe, MMA, matchs exclusifs — sont diffusés sans frais additionnels. Aucune mauvaise surprise sur votre facture.",
+        question: "Are PPV events really included at no extra cost?",
+        answer: "Yes, absolutely. With the 12-month subscription, all major pay-per-view events — boxing, MMA, exclusive matches — are broadcast at no additional charge. No nasty surprises on your bill.",
       },
       {
-        question: "Qu'est-ce que le Catch-Up TV 14 jours inclus dans ce plan ?",
-        answer: "Le Catch-Up TV vous permet de revisionner n'importe quel programme diffusé au cours des 14 derniers jours. Un match raté, une série manquée ? Retrouvez-le facilement depuis votre lecteur IPTV, sans enregistrement préalable.",
+        question: "What is the 14-day Catch-Up TV included in this plan?",
+        answer: "Catch-Up TV lets you rewatch any programme broadcast in the last 14 days. Missed a match or a series? Find it easily in your IPTV player, without any prior recording needed.",
       },
       {
-        question: "En quoi consiste le support prioritaire 24/7 ?",
-        answer: "Contrairement au support standard, le support prioritaire vous place en tête de file pour un traitement accéléré de vos demandes. Notre équipe est disponible 24h/24, 7j/7 par chat, email et WhatsApp pour vous répondre en priorité.",
+        question: "What does priority 24/7 support mean?",
+        answer: "Unlike standard support, priority support puts you at the front of the queue for faster handling of your requests. Our team is available 24/7 via chat, email and WhatsApp to respond to you as a priority.",
       },
     ],
   },
@@ -348,39 +348,39 @@ export interface Feature {
 export const FEATURES: Feature[] = [
   {
     icon: Tv,
-    title: "10 000+ Chaînes en Direct",
+    title: "10,000+ Live Channels",
     description:
-      "Accédez aux chaînes premium du monde entier : sport, actualités, divertissement et bien plus encore.",
+      "Access premium channels from around the world: sport, news, entertainment and much more.",
   },
   {
     icon: MonitorPlay,
-    title: "Qualité 4K Ultra HD",
+    title: "4K Ultra HD Quality",
     description:
-      "Streaming cristallin en HD, Full HD et 4K sans aucune interruption ni mise en mémoire tampon.",
+      "Crystal-clear streaming in HD, Full HD and 4K with no interruptions or buffering.",
   },
   {
     icon: Smartphone,
-    title: "Multi-Appareils",
+    title: "Multi-Device",
     description:
-      "Regardez sur Smart TV, téléphone, tablette, PC ou tout appareil compatible avec nos applications.",
+      "Watch on Smart TV, phone, tablet, PC or any compatible device with our apps.",
   },
   {
     icon: ShieldCheck,
-    title: "Sans Engagement",
+    title: "No Contract",
     description:
-      "Des abonnements flexibles sans frais cachés, sans contrat à long terme. Résiliez quand vous voulez.",
+      "Flexible subscriptions with no hidden fees and no long-term contract. Cancel whenever you like.",
   },
   {
     icon: Headphones,
-    title: "Support Expert 24/7",
+    title: "Expert 24/7 Support",
     description:
-      "Notre équipe de support dédiée est disponible 24h/24 et 7j/7 pour vous assister.",
+      "Our dedicated support team is available 24 hours a day, 7 days a week to assist you.",
   },
   {
     icon: Zap,
-    title: "99,9% de Disponibilité",
+    title: "99.9% Uptime",
     description:
-      "Des serveurs haute performance garantissent une expérience de streaming fluide et sans interruption.",
+      "High-performance servers guarantee a smooth, uninterrupted streaming experience.",
   },
 ];
 
@@ -393,10 +393,10 @@ export interface Stat {
 }
 
 export const STATS: Stat[] = [
-  { value: "10 000+", label: "Chaînes en Direct" },
-  { value: "50 000+", label: "Films & Séries" },
-  { value: "99,9%", label: "Disponibilité" },
-  { value: "150+", label: "Pays Couverts" },
+  { value: "10,000+", label: "Live Channels" },
+  { value: "50,000+", label: "Films & Series" },
+  { value: "99.9%", label: "Uptime" },
+  { value: "150+", label: "Countries Covered" },
 ];
 
 /* ============================================
@@ -411,24 +411,24 @@ export interface Testimonial {
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Michel R.",
-    avatar: "M",
+    name: "James T.",
+    avatar: "J",
     quote:
-      "J'ai quitté le câble pour IPTV The King et j'économise plus de 100€/mois. La qualité est incroyable et le choix de chaînes est incomparable !",
+      "I ditched Sky for IPTV The King and I'm saving over £80 a month. The quality is incredible and the channel selection is unbeatable!",
     rating: 5,
   },
   {
-    name: "Sophie L.",
+    name: "Sarah M.",
     avatar: "S",
     quote:
-      "Le meilleur service IPTV que j'ai essayé. La qualité 4K est époustouflante et j'adore pouvoir regarder sur tous mes appareils. Le support client est au top.",
+      "The best IPTV service I've tried. The 4K quality is stunning and being able to watch on all my devices is brilliant. Support is top notch.",
     rating: 5,
   },
   {
     name: "David K.",
     avatar: "D",
     quote:
-      "Abonné depuis plus d'un an maintenant. Zéro mise en mémoire tampon, une bibliothèque VOD incroyable, et le prix défie toute concurrence. Je recommande vivement !",
+      "Been subscribed for over a year now. Zero buffering, an incredible VOD library, and the price is unbeatable. Highly recommend!",
     rating: 5,
   },
 ];
@@ -443,44 +443,44 @@ export interface FAQ {
 
 export const FAQS: FAQ[] = [
   {
-    question: "Qu'est-ce que l'IPTV ?",
+    question: "What is IPTV?",
     answer:
-      "L'IPTV (Internet Protocol Television) diffuse du contenu télévisé via Internet plutôt que par câble ou satellite traditionnel. Cela vous permet de regarder vos chaînes favorites et du contenu à la demande sur n'importe quel appareil connecté à Internet.",
+      "IPTV (Internet Protocol Television) delivers TV content over the internet rather than through traditional cable or satellite. It lets you watch your favourite channels and on-demand content on any internet-connected device.",
   },
   {
-    question: "Quels appareils sont compatibles ?",
+    question: "Which devices are compatible?",
     answer:
-      "Vous pouvez utiliser IPTV The King sur pratiquement tous les appareils — Smart TV (Samsung, LG, Sony), smartphones et tablettes Android/iOS, Amazon Fire Stick, NVIDIA Shield, boîtiers MAG, ordinateurs, et bien plus.",
+      "You can use IPTV The King on virtually any device — Smart TV (Samsung, LG, Sony), Android/iOS smartphones and tablets, Amazon Fire Stick, NVIDIA Shield, MAG boxes, computers, and many more.",
   },
   {
-    question: "Quelle vitesse Internet est nécessaire ?",
+    question: "What internet speed is needed?",
     answer:
-      "Nous recommandons un minimum de 10 Mbps pour le streaming HD et 25 Mbps pour le contenu 4K. Une connexion Internet stable garantit la meilleure expérience de visionnage.",
+      "We recommend a minimum of 10 Mbps for HD streaming and 25 Mbps for 4K content. A stable internet connection ensures the best viewing experience.",
   },
   {
-    question: "Puis-je essayer avant d'acheter ?",
+    question: "Can I try before I buy?",
     answer:
-      "Oui ! Nous offrons un essai gratuit de 24 heures pour que vous puissiez tester notre service et constater la qualité par vous-même avant de vous engager.",
+      "Yes! We offer a free 24-hour trial so you can test our service and see the quality for yourself before committing.",
   },
   {
-    question: "En combien de temps puis-je commencer à regarder ?",
+    question: "How quickly can I start watching?",
     answer:
-      "Instantanément ! Dès que votre paiement est confirmé, vous recevrez vos identifiants de connexion en quelques minutes. Notre guide d'installation facilite la mise en route sur tout appareil.",
+      "Instantly! As soon as your payment is confirmed, you will receive your login details within minutes. Our installation guide makes getting set up easy on any device.",
   },
   {
-    question: "Y a-t-il un contrat ou un engagement ?",
+    question: "Is there a contract or commitment?",
     answer:
-      "Aucun contrat, aucun frais caché. Tous nos abonnements sont prépayés pour la durée sélectionnée. Vous pouvez renouveler ou changer de formule à tout moment.",
+      "No contract, no hidden fees. All our subscriptions are prepaid for the selected duration. You can renew or change plan at any time.",
   },
   {
-    question: "Proposez-vous un support client ?",
+    question: "Do you offer customer support?",
     answer:
-      "Absolument ! Nous offrons un support client 24/7 par chat en direct, email et WhatsApp. Notre équipe est toujours prête à vous aider pour l'installation, le dépannage ou toute question.",
+      "Absolutely! We offer 24/7 customer support via live chat, email and WhatsApp. Our team is always ready to help with installation, troubleshooting or any question you may have.",
   },
   {
-    question: "Quels moyens de paiement acceptez-vous ?",
+    question: "What payment methods do you accept?",
     answer:
-      "Nous acceptons les principales cartes de crédit/débit, PayPal, les cryptomonnaies et divers autres moyens de paiement pour votre commodité.",
+      "We accept all major credit/debit cards, PayPal, cryptocurrency and various other payment methods for your convenience.",
   },
 ];
 
@@ -500,84 +500,84 @@ export interface BlogPost {
 }
 
 export const BLOG_CATEGORIES = [
-  "Tous",
+  "All",
   "Guides",
-  "Actualités",
-  "Astuces",
-  "Avis",
+  "News",
+  "Tips",
+  "Reviews",
 ] as const;
 
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: "1",
-    slug: "comment-installer-iptv-sur-firestick",
-    fullSlug: ["comment-installer-iptv-sur-firestick"],
-    title: "Comment Installer l'IPTV sur Amazon Fire Stick",
+    slug: "how-to-install-iptv-on-firestick",
+    fullSlug: ["how-to-install-iptv-on-firestick"],
+    title: "How to Install IPTV on Amazon Fire Stick",
     excerpt:
-      "Un guide complet étape par étape pour installer et configurer l'IPTV sur votre Amazon Fire Stick pour la meilleure expérience de streaming.",
+      "A complete step-by-step guide to installing and setting up IPTV on your Amazon Fire Stick for the best streaming experience.",
     category: "Guides",
     date: "2026-02-28",
-    readTime: "5 min de lecture",
+    readTime: "5 min read",
     image: "/logo.png",
   },
   {
     id: "2",
-    slug: "meilleurs-lecteurs-iptv-2026",
-    fullSlug: ["meilleurs-lecteurs-iptv-2026"],
-    title: "Top 5 des Lecteurs IPTV pour 2026",
+    slug: "best-iptv-players-2026",
+    fullSlug: ["best-iptv-players-2026"],
+    title: "Top 5 IPTV Players for 2026",
     excerpt:
-      "Découvrez les meilleures applications de lecteur IPTV disponibles aujourd'hui. Nous comparons les fonctionnalités, performances et compatibilité.",
-    category: "Avis",
+      "Discover the best IPTV player apps available today. We compare features, performance and compatibility.",
+    category: "Reviews",
     date: "2026-02-20",
-    readTime: "7 min de lecture",
+    readTime: "7 min read",
     image: "/logo.png",
   },
   {
     id: "3",
-    slug: "iptv-vs-cable-comparaison",
-    fullSlug: ["iptv-vs-cable-comparaison"],
-    title: "IPTV vs Câble TV : Lequel Choisir ?",
+    slug: "iptv-vs-cable-comparison",
+    fullSlug: ["iptv-vs-cable-comparison"],
+    title: "IPTV vs Cable TV: Which Should You Choose?",
     excerpt:
-      "Une comparaison détaillée entre l'IPTV et la télévision par câble traditionnelle — coût, qualité, flexibilité et choix de chaînes.",
+      "A detailed comparison between IPTV and traditional cable television — cost, quality, flexibility and channel choice.",
     category: "Guides",
     date: "2026-02-15",
-    readTime: "6 min de lecture",
+    readTime: "6 min read",
     image: "/logo.png",
   },
   {
     id: "4",
-    slug: "optimiser-qualite-streaming",
-    fullSlug: ["optimiser-qualite-streaming"],
-    title: "5 Astuces pour Optimiser la Qualité de Votre IPTV",
+    slug: "improve-streaming-quality",
+    fullSlug: ["improve-streaming-quality"],
+    title: "5 Tips to Improve Your IPTV Streaming Quality",
     excerpt:
-      "Vous avez des problèmes de mise en mémoire tampon ? Ces astuces éprouvées vous aideront à obtenir un streaming IPTV fluide et de haute qualité.",
-    category: "Astuces",
+      "Experiencing buffering? These proven tips will help you achieve smooth, high-quality IPTV streaming.",
+    category: "Tips",
     date: "2026-02-10",
-    readTime: "4 min de lecture",
+    readTime: "4 min read",
     image: "/logo.png",
   },
   {
     id: "5",
-    slug: "tendances-iptv-2026",
-    fullSlug: ["tendances-iptv-2026"],
-    title: "Les Tendances IPTV à Suivre en 2026",
+    slug: "iptv-trends-2026",
+    fullSlug: ["iptv-trends-2026"],
+    title: "IPTV Trends to Watch in 2026",
     excerpt:
-      "Des recommandations IA au streaming 8K, voici les grandes tendances qui façonnent l'avenir de l'IPTV.",
-    category: "Actualités",
+      "From AI recommendations to 8K streaming, here are the key trends shaping the future of IPTV.",
+    category: "News",
     date: "2026-02-05",
-    readTime: "8 min de lecture",
+    readTime: "8 min read",
     image: "/logo.png",
   },
   {
     id: "6",
-    slug: "vpn-avec-iptv-guide",
-    fullSlug: ["vpn-avec-iptv-guide"],
-    title: "Faut-il Utiliser un VPN avec l'IPTV ? Guide Complet",
+    slug: "vpn-with-iptv-guide",
+    fullSlug: ["vpn-with-iptv-guide"],
+    title: "Should You Use a VPN with IPTV? Complete Guide",
     excerpt:
-      "Découvrez pourquoi utiliser un VPN peut améliorer votre expérience IPTV et comment le configurer correctement.",
+      "Find out why using a VPN can enhance your IPTV experience and how to set it up correctly.",
     category: "Guides",
     date: "2026-01-28",
-    readTime: "5 min de lecture",
+    readTime: "5 min read",
     image: "/logo.png",
   },
 ];
@@ -587,24 +587,24 @@ export const BLOG_POSTS: BlogPost[] = [
    ============================================ */
 export const COMPANY_VALUES = [
   {
-    title: "La Qualité Avant Tout",
+    title: "Quality First",
     description:
-      "Nous investissons dans une infrastructure serveur premium pour offrir des flux de la plus haute qualité sans compromis.",
+      "We invest in premium server infrastructure to deliver the highest quality streams without compromise.",
   },
   {
-    title: "Obsession Client",
+    title: "Customer Obsession",
     description:
-      "Chaque décision que nous prenons commence par nos clients. Votre satisfaction est notre priorité absolue.",
+      "Every decision we make starts with our customers. Your satisfaction is our absolute priority.",
   },
   {
     title: "Innovation",
     description:
-      "Nous améliorons continuellement notre technologie pour rester à la pointe et offrir des fonctionnalités de dernière génération.",
+      "We continually improve our technology to stay ahead and deliver the latest features.",
   },
   {
-    title: "Transparence",
+    title: "Transparency",
     description:
-      "Aucun frais caché, aucun contrat, aucune surprise. Ce que vous voyez est exactement ce que vous obtenez.",
+      "No hidden fees, no contracts, no surprises. What you see is exactly what you get.",
   },
 ];
 
@@ -613,16 +613,16 @@ export const COMPANY_VALUES = [
    ============================================ */
 export const FOOTER_LINKS = {
   plans: [
-    { label: "Abonnement 3 Mois", href: "/abonnement-iptv-3-mois" },
-    { label: "Abonnement 6 Mois", href: "/abonnement-iptv-6-mois" },
-    { label: "Abonnement 12 Mois", href: "/abonnement-iptv-12-mois" },
+    { label: "3-Month Subscription", href: "/iptv-subscription-3-months" },
+    { label: "6-Month Subscription", href: "/iptv-subscription-6-months" },
+    { label: "12-Month Subscription", href: "/iptv-subscription-12-months" },
   ],
   company: [
-    { label: "À propos", href: "/a-propos" },
-    { label: "Contact", href: "/contactez-nous" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ],
   support: [
     { label: "FAQ", href: "/#faq" },
-    { label: "Contacter le Support", href: "/contactez-nous" },
+    { label: "Contact Support", href: "/contact" },
   ],
 } as const;

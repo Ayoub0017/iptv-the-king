@@ -16,19 +16,19 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Meilleur Abonnement IPTV au Maroc | 10 000+ Chaînes | IPTV The King",
+    default: "Best IPTV Provider in the UK | 10,000+ Channels | IPTV The King",
     template: "%s | IPTV The King",
   },
   description:
-    "Le meilleur abonnement IPTV au Maroc avec 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K. Abonnements flexibles, support 24/7 et 99.9% de disponibilité.",
+    "The best IPTV provider in the UK with 10,000+ live channels, 50,000+ films and series in 4K quality. Flexible subscriptions, 24/7 support and 99.9% uptime.",
   keywords: [
-    "meilleur abonnement iptv au maroc",
-    "iptv maroc",
-    "abonnement iptv",
-    "iptv 4K",
+    "best iptv provider uk",
+    "iptv uk",
+    "iptv subscription uk",
+    "iptv 4k",
     "iptv premium",
-    "chaînes iptv",
-    "iptv pas cher",
+    "iptv channels uk",
+    "cheap iptv uk",
   ],
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

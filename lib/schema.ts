@@ -115,13 +115,13 @@ export function productSchema(plan: Plan): JsonLd {
     return {
         "@context": "https://schema.org",
         "@type": "Product",
-        name: `Abonnement IPTV ${plan.duration}`,
-        description: `Abonnement IPTV premium de ${plan.duration} avec ${plan.features.length} fonctionnalités incluses : 10 000+ chaînes en direct, films et séries en qualité 4K.`,
+        name: `IPTV Subscription ${plan.duration}`,
+        description: `Premium IPTV subscription for ${plan.duration} with ${plan.features.length} included features: 10,000+ live channels, films and series in 4K quality.`,
         image: LOGO_URL,
         url: `${SITE_URL}/${plan.slug}`,
         sku: `IPTV-${plan.id.toUpperCase()}`,
         mpn: `IPTV-${plan.id.toUpperCase()}`,
-        category: "Abonnement IPTV",
+        category: "IPTV Subscription",
         brand: {
             "@type": "Brand",
             name: SITE_NAME,
@@ -143,15 +143,15 @@ export function productSchema(plan: Plan): JsonLd {
             },
             author: {
                 "@type": "Person",
-                name: "Michel R.",
+                name: "James T.",
             },
             reviewBody:
-                "J'ai quitté le câble pour IPTV The King et j'économise plus de 100€/mois. La qualité est incroyable et le choix de chaînes est incomparable !",
+                "I ditched Sky for IPTV The King and I'm saving over £80 a month. The quality is incredible and the channel selection is unbeatable!",
         },
         offers: {
             "@type": "Offer",
             price: plan.price,
-            priceCurrency: "MAD",
+            priceCurrency: "GBP",
             availability: "https://schema.org/InStock",
             url: `${SITE_URL}/${plan.slug}`,
             priceValidUntil: "2027-12-31",
@@ -165,7 +165,7 @@ export function productSchema(plan: Plan): JsonLd {
             priceSpecification: {
                 "@type": "UnitPriceSpecification",
                 price: plan.price,
-                priceCurrency: "MAD",
+                priceCurrency: "GBP",
                 referenceQuantity: {
                     "@type": "QuantitativeValue",
                     value: plan.months,
@@ -183,8 +183,8 @@ export function serviceSchema(plan: Plan): JsonLd {
     return {
         "@context": "https://schema.org",
         "@type": "Service",
-        name: `IPTV The King — Abonnement ${plan.duration}`,
-        description: `Service d'abonnement IPTV premium de ${plan.duration}. Accès à 10 000+ chaînes en direct, 50 000+ films et séries en qualité 4K.`,
+        name: `IPTV The King — ${plan.duration} Subscription`,
+        description: `Premium IPTV subscription service for ${plan.duration}. Access to 10,000+ live channels, 50,000+ films and series in 4K quality.`,
         url: `${SITE_URL}/${plan.slug}`,
         provider: {
             "@type": "Organization",
@@ -200,17 +200,17 @@ export function serviceSchema(plan: Plan): JsonLd {
         serviceType: "IPTV Streaming Subscription",
         areaServed: {
             "@type": "Country",
-            name: "Maroc",
+            name: "United Kingdom",
         },
         hasOfferCatalog: {
             "@type": "OfferCatalog",
-            name: "Abonnements IPTV",
+            name: "IPTV Subscriptions",
             itemListElement: [
                 {
                     "@type": "Offer",
                     itemOffered: {
                         "@type": "Service",
-                        name: `Abonnement IPTV ${plan.duration}`,
+                        name: `IPTV Subscription ${plan.duration}`,
                     },
                 },
             ],
@@ -218,7 +218,7 @@ export function serviceSchema(plan: Plan): JsonLd {
         offers: {
             "@type": "Offer",
             price: plan.price,
-            priceCurrency: "MAD",
+            priceCurrency: "GBP",
             availability: "https://schema.org/InStock",
             url: `${SITE_URL}/${plan.slug}`,
             priceValidUntil: "2027-12-31",
@@ -233,9 +233,9 @@ export function blogSchema(): JsonLd {
     return {
         "@context": "https://schema.org",
         "@type": "Blog",
-        name: `Blog ${SITE_NAME}`,
+        name: `${SITE_NAME} Blog`,
         description:
-            "Guides, astuces et actualités pour profiter au maximum de votre expérience IPTV.",
+            "Guides, tips and news to help you get the most out of your IPTV experience.",
         url: `${SITE_URL}/blog`,
         publisher: {
             "@type": "Organization",
@@ -303,7 +303,7 @@ export function blogPostingSchema(options: {
         datePublished: options.datePublished,
         dateModified: options.dateModified,
         url: options.url,
-        inLanguage: "fr-FR",
+        inLanguage: "en-GB",
         ...(options.articleSection && { articleSection: options.articleSection }),
         ...(options.wordCount && { wordCount: options.wordCount }),
         ...(options.keywords?.length && { keywords: options.keywords.join(", ") }),
@@ -358,7 +358,7 @@ export function contactOrganizationSchema(): JsonLd {
             contactType: "customer support",
             email: "support@iptvtheking.com",
             telephone: "+33753820307",
-            availableLanguage: ["French", "English"],
+            availableLanguage: ["English"],
         },
     });
 }
