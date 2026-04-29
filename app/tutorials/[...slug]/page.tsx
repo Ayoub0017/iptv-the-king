@@ -50,7 +50,7 @@ export async function generateMetadata(
 
     if (!post) {
         return {
-            title: "Article Not Found",
+            title: "Tutorial Not Found",
         };
     }
 
@@ -58,7 +58,7 @@ export async function generateMetadata(
         title: `${post.title} — IPTV The King`,
         description: post.excerpt,
         alternates: {
-            canonical: `${SITE_URL}/articles/${slug.join("/")}`,
+            canonical: `${SITE_URL}/tutorials/${slug.join("/")}`,
         },
         openGraph: {
             title: post.title,
@@ -94,11 +94,11 @@ export default async function ArticlePage({ params }: Props) {
 
     const breadcrumbList = [
         { name: "Home", url: SITE_URL },
-        { name: "Articles", url: `${SITE_URL}/articles` },
+        { name: "Tutorials", url: `${SITE_URL}/tutorials` },
     ];
     
     // Add parent articles to breadcrumb if they exist
-    let currentPath = `${SITE_URL}/articles`;
+    let currentPath = `${SITE_URL}/tutorials`;
     for (let i = 0; i < slug.length - 1; i++) {
         currentPath += `/${slug[i]}`;
         // we'd typically look up the title for this slug, but for simplicity we'll just use the slug capitalized
@@ -106,7 +106,7 @@ export default async function ArticlePage({ params }: Props) {
         breadcrumbList.push({ name, url: currentPath });
     }
     
-    breadcrumbList.push({ name: post.title, url: `${SITE_URL}/articles/${slug.join("/")}` });
+    breadcrumbList.push({ name: post.title, url: `${SITE_URL}/tutorials/${slug.join("/")}` });
 
     const headings = post.body ? extractHeadings(post.body) : [];
 
@@ -123,7 +123,7 @@ export default async function ArticlePage({ params }: Props) {
                         authorName: post.author?.name || "IPTV The King",
                         authorDescription: post.author?.bio,
                         authorImage: post.author?.avatar,
-                        url: `${SITE_URL}/articles/${slug.join("/")}`,
+                        url: `${SITE_URL}/tutorials/${slug.join("/")}`,
                     }),
                     breadcrumbSchema(breadcrumbList),
                 ]}
@@ -236,10 +236,10 @@ export default async function ArticlePage({ params }: Props) {
                                             
                                             <div className="flex items-center justify-center md:justify-start gap-4">
                                                 <Link 
-                                                    href="/articles" 
+                                                    href="/tutorials" 
                                                     className="text-sm font-bold text-text-strong hover:text-primary transition-colors flex items-center"
                                                 >
-                                                    View all articles
+                                                    View all tutorials
                                                     <svg className="ml-1.5 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                                     </svg>
@@ -252,11 +252,11 @@ export default async function ArticlePage({ params }: Props) {
                             
                             {/* Tags / Footer */}
                             <div className="mt-12 pt-8 border-t border-border flex justify-between items-center">
-                                <Link href="/articles" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
+                                <Link href="/tutorials" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
                                     <svg className="w-5 h-5 mr-2 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
-                                    Back to Articles
+                                    Back to Tutorials
                                 </Link>
                             </div>
                         </div>

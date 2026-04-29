@@ -11,11 +11,11 @@ const SITE_URL = getSiteUrl();
 export const revalidate = 0; // Ensure fresh content on every request
 
 export const metadata: Metadata = {
-    title: "Articles — IPTV Guides, Tips & News",
+    title: "Tutorials — IPTV Guides, Tips & News",
     description:
         "Guides, tips and news to help you get the most out of your IPTV experience. Installation tutorials, player reviews, streaming tips and more.",
     alternates: {
-        canonical: `${SITE_URL}/articles`,
+        canonical: `${SITE_URL}/tutorials`,
     },
     robots: {
         index: true,
@@ -31,10 +31,10 @@ export default async function ArticlesPage() {
             <SchemaMarkup
                 schemas={[
                     webPageSchema({
-                        name: "Articles — IPTV Guides, Tips & News",
+                        name: "Tutorials — IPTV Guides, Tips & News",
                         description:
                             "Guides, tips and news to help you get the most out of your IPTV experience.",
-                        url: `${SITE_URL}/articles`,
+                        url: `${SITE_URL}/tutorials`,
                     }),
                     blogSchema(),
                     blogItemListSchema(posts.map(p => ({
@@ -43,7 +43,7 @@ export default async function ArticlesPage() {
                     }))),
                     breadcrumbSchema([
                         { name: "Home", url: SITE_URL },
-                        { name: "Articles", url: `${SITE_URL}/articles` },
+                        { name: "Tutorials", url: `${SITE_URL}/tutorials` },
                     ]),
                 ]}
             />
@@ -51,20 +51,20 @@ export default async function ArticlesPage() {
             <Section>
                 <Container>
                     <SectionHeader
-                        title="Articles"
+                        title="Tutorials"
                         subtitle="Guides, tips and news to help you get the most out of your IPTV experience."
                     />
 
                     {posts.length === 0 ? (
                         <div className="flex flex-col items-center justify-center py-24 text-center">
-                            <p className="text-text-muted text-lg">No articles found. Check back later!</p>
+                            <p className="text-text-muted text-lg">No tutorials found. Check back later!</p>
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-12">
                             {posts.map((post) => (
                                 <Link
                                     key={post.id}
-                                    href={`/articles/${post.fullSlug.join("/")}`}
+                                    href={`/tutorials/${post.fullSlug.join("/")}`}
                                     className="group flex flex-col overflow-hidden rounded-2xl bg-surface border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow-sm"
                                 >
                                     <div className="aspect-video w-full overflow-hidden relative bg-surface-muted">
@@ -103,7 +103,7 @@ export default async function ArticlesPage() {
                                         </p>
                                         
                                         <div className="mt-auto flex items-center text-primary font-medium text-sm group/btn">
-                                            Read article
+                                            Read tutorial
                                             <svg className="ml-2 w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
