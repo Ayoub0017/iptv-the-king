@@ -8,16 +8,10 @@ if (process.env.CONTENTFUL_SPACE_ID && process.env.CONTENTFUL_ACCESS_TOKEN) {
   contentfulClient = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    // Add environment if needed (default is 'master')
     environment: process.env.CONTENTFUL_ENVIRONMENT || "master",
   });
 } else {
-  // Use user-provided credentials directly if env variables are not present
-  contentfulClient = createClient({
-    space: "b5pnz26ipgd5",
-    accessToken: "S5d_GTD4VWk3DHKw4gtWZ3IoJWkOb3NIzar3dEQXmFU",
-    environment: "master",
-  });
+  console.error("CRITICAL: Contentful environment variables are missing! Check .env.local");
 }
 
 /**
@@ -56,6 +50,8 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
       order: ["-sys.createdAt"],
       include: 2, // resolve linked entries (parentPost) up to 2 levels deep
     });
+
+    console.log(`[Contentful] Fetched ${entries.items.length} blog posts`);
 
     return entries.items.map((entry: any) => ({
       id: entry.sys.id,
