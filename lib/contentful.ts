@@ -11,6 +11,13 @@ if (process.env.CONTENTFUL_SPACE_ID && process.env.CONTENTFUL_ACCESS_TOKEN) {
     // Add environment if needed (default is 'master')
     environment: process.env.CONTENTFUL_ENVIRONMENT || "master",
   });
+} else {
+  // Use user-provided credentials directly if env variables are not present
+  contentfulClient = createClient({
+    space: "b5pnz26ipgd5",
+    accessToken: "S5d_GTD4VWk3DHKw4gtWZ3IoJWkOb3NIzar3dEQXmFU",
+    environment: "master",
+  });
 }
 
 /**
@@ -19,7 +26,7 @@ if (process.env.CONTENTFUL_SPACE_ID && process.env.CONTENTFUL_ACCESS_TOKEN) {
  */
 function buildFullSlug(entry: any, allEntries: any[]): string[] {
   const slug: string = entry.fields.slug || "no-slug";
-  const parentRef = entry.fields.parentArticle;
+  const parentRef = entry.fields.parentPost;
 
   if (!parentRef) return [slug];
 
@@ -47,7 +54,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
     const entries = await contentfulClient.getEntries({
       content_type: "blogPost",
       order: ["-sys.createdAt"],
-      include: 2, // resolve linked entries (parentArticle) up to 2 levels deep
+      include: 2, // resolve linked entries (parentPost) up to 2 levels deep
     });
 
     return entries.items.map((entry: any) => ({
@@ -88,7 +95,7 @@ export async function getBlogPostBySlug(slugArray: string[]): Promise<any | null
     const entries = await contentfulClient.getEntries({
       content_type: "blogPost",
       "fields.slug": slug,
-      include: 2, // resolve parentArticle links
+      include: 2, // resolve parentPost links
       limit: 1,
     });
 

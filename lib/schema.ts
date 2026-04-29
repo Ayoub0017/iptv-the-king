@@ -236,7 +236,7 @@ export function blogSchema(): JsonLd {
         name: `${SITE_NAME} Blog`,
         description:
             "Guides, tips and news to help you get the most out of your IPTV experience.",
-        url: `${SITE_URL}/blog`,
+        url: `${SITE_URL}/articles`,
         publisher: {
             "@type": "Organization",
             name: SITE_NAME,
@@ -262,7 +262,7 @@ export function blogItemListSchema(posts: BlogPost[]): JsonLd {
             "@type": "ListItem",
             position: index + 1,
             name: post.title,
-            url: `${SITE_URL}/blog/${post.slug}`,
+            url: `${SITE_URL}/articles/${post.slug}`,
         })),
     };
 }
@@ -277,6 +277,7 @@ export function blogPostingSchema(options: {
     datePublished: string;
     dateModified: string;
     authorName: string;
+    authorDescription?: string;
     url: string;
     authorImage?: string;
     articleSection?: string;
@@ -286,8 +287,10 @@ export function blogPostingSchema(options: {
     const author: JsonLd = {
         "@type": "Person",
         name: options.authorName,
+        ...(options.authorDescription && { description: options.authorDescription }),
     };
     if (options.authorImage) author.image = options.authorImage;
+    if (options.url) author.url = options.url; // Person URL can be their profile or the site link
 
     return {
         "@context": "https://schema.org",

@@ -14,6 +14,7 @@ import {
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Subscriptions", href: "/#plans" },
+  { label: "Articles", href: "/articles" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -619,6 +620,7 @@ export const FOOTER_LINKS = {
   ],
   company: [
     { label: "About", href: "/about" },
+    { label: "Articles", href: "/articles" },
     { label: "Contact", href: "/contact" },
   ],
   support: [
