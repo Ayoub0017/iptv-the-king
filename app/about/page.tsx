@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Tv, Heart, Lightbulb, Eye } from "lucide-react";
+import { Tv, Heart, Lightbulb, Eye, MapPin } from "lucide-react";
 import { Container, Section } from "@/components/layout";
 import {
     HeroSection,
@@ -48,6 +48,12 @@ export default function AboutPage() {
                     organizationSchema({
                         description:
                             "IPTV The King is the best IPTV provider in the UK, offering 10,000+ live channels and 50,000+ films and series in 4K quality.",
+                        address: {
+                            street: "76 Guild Street",
+                            city: "London",
+                            postalCode: "EC4M 2WW",
+                            country: "GB",
+                        },
                     }),
                     breadcrumbSchema([
                         { name: "Home", url: SITE_URL },
@@ -81,6 +87,29 @@ export default function AboutPage() {
                                 description={value.description}
                             />
                         ))}
+                    </div>
+                </Container>
+            </Section>
+
+            {/* Contact & Location */}
+            <Section>
+                <Container>
+                    <SectionHeader
+                        title="Our Location"
+                        subtitle="Visit us at our London office."
+                    />
+                    <div className="mx-auto flex max-w-md justify-center">
+                        <div className="flex w-full items-start gap-4 rounded-2xl border border-border bg-card p-6 transition-all hover:border-brand-300/50 hover:shadow-lg hover:shadow-brand-500/5">
+                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-600">
+                                <MapPin className="h-5 w-5" />
+                            </div>
+                            <div>
+                                <h3 className="text-sm font-semibold">Our Address</h3>
+                                <p className="mt-1 text-sm text-text-primary">76 Guild Street</p>
+                                <p className="text-sm text-text-primary">London, EC4M 2WW</p>
+                                <p className="text-sm text-text-primary">United Kingdom</p>
+                            </div>
+                        </div>
                     </div>
                 </Container>
             </Section>

@@ -43,6 +43,12 @@ export function websiteSchema(): JsonLd {
 export function organizationSchema(options?: {
     description?: string;
     contactPoint?: JsonLd;
+    address?: {
+        street: string;
+        city: string;
+        postalCode: string;
+        country: string;
+    };
 }): JsonLd {
     const schema: JsonLd = {
         "@context": "https://schema.org",
@@ -63,6 +69,16 @@ export function organizationSchema(options?: {
 
     if (options?.contactPoint) {
         schema.contactPoint = options.contactPoint;
+    }
+
+    if (options?.address) {
+        schema.address = {
+            "@type": "PostalAddress",
+            streetAddress: options.address.street,
+            addressLocality: options.address.city,
+            postalCode: options.address.postalCode,
+            addressCountry: options.address.country,
+        };
     }
 
     return schema;
@@ -365,6 +381,12 @@ export function contactOrganizationSchema(): JsonLd {
             contactType: "customer support",
             email: "support@iptvtheking.com",
             availableLanguage: ["English"],
+        },
+        address: {
+            street: "76 Guild Street",
+            city: "London",
+            postalCode: "EC4M 2WW",
+            country: "GB",
         },
     });
 }
