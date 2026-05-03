@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Clock, MessageCircle } from "lucide-react";
+import { Mail, Clock, MessageCircle, MapPin } from "lucide-react";
 import { Container, Section } from "@/components/layout";
 import { SectionHeader, ContactForm } from "@/components/marketing";
 import { SchemaMarkup } from "@/components/schema-markup";
@@ -26,6 +26,13 @@ export const metadata: Metadata = {
 };
 
 const CONTACT_INFO = [
+    {
+        icon: MapPin,
+        title: "Our Address",
+        description: "76 Guild Street",
+        detail: "London, EC4M 2WW",
+        href: undefined,
+    },
     {
         icon: MessageCircle,
         title: "WhatsApp",
