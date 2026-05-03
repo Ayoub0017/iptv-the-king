@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.iptvtheking.com"),
   title: {
     default: "Best IPTV Provider in the UK | 10,000+ Channels | IPTV The King",
     template: "%s | IPTV The King",
@@ -30,6 +31,10 @@ export const metadata: Metadata = {
     "iptv channels uk",
     "cheap iptv uk",
   ],
+  openGraph: {
+    locale: "en_GB",
+    siteName: "IPTV The King",
+  },
 };
 
 export default function RootLayout({
@@ -38,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

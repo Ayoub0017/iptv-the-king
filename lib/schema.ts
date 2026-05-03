@@ -22,6 +22,7 @@ export function websiteSchema(): JsonLd {
         "@type": "WebSite",
         name: SITE_NAME,
         url: SITE_URL,
+        inLanguage: "en-GB",
         publisher: {
             "@type": "Organization",
             name: SITE_NAME,
@@ -82,6 +83,7 @@ export function webPageSchema(options: {
         name: options.name,
         description: options.description,
         url: options.url,
+        inLanguage: "en-GB",
         isPartOf: {
             "@type": "WebSite",
             name: SITE_NAME,
@@ -117,6 +119,7 @@ export function productSchema(plan: Plan): JsonLd {
         "@type": "Product",
         name: `IPTV Subscription ${plan.duration}`,
         description: `Premium IPTV subscription for ${plan.duration} with ${plan.features.length} included features: 10,000+ live channels, films and series in 4K quality.`,
+        inLanguage: "en-GB",
         image: LOGO_URL,
         url: `${SITE_URL}/${plan.slug}`,
         sku: `IPTV-${plan.id.toUpperCase()}`,
@@ -186,6 +189,7 @@ export function serviceSchema(plan: Plan): JsonLd {
         name: `IPTV The King — ${plan.duration} Subscription`,
         description: `Premium IPTV subscription service for ${plan.duration}. Access to 10,000+ live channels, 50,000+ films and series in 4K quality.`,
         url: `${SITE_URL}/${plan.slug}`,
+        inLanguage: "en-GB",
         provider: {
             "@type": "Organization",
             name: SITE_NAME,
