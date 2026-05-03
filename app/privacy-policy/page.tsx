@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
             <SchemaMarkup
                 schemas={[
                     webPageSchema({
-                        name: "Privacy Policy — IPTV The King",
+                        name: "Privacy Policy | IPTV The King",
                         description:
                             "Privacy Policy for IPTV The King: how we collect, use and protect your personal data.",
                         url: `${SITE_URL}/privacy-policy`,

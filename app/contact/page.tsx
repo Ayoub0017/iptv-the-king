@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Clock, MessageCircle, Phone } from "lucide-react";
+import { Mail, Clock, MessageCircle } from "lucide-react";
 import { Container, Section } from "@/components/layout";
 import { SectionHeader, ContactForm } from "@/components/marketing";
 import { SchemaMarkup } from "@/components/schema-markup";
@@ -13,7 +13,7 @@ import {
 const SITE_URL = getSiteUrl();
 
 export const metadata: Metadata = {
-    title: "Contact Us — 24/7 Customer Support",
+    title: "Contact Us | 24/7 Customer Support",
     description:
         "Need help with your IPTV subscription? Contact the IPTV The King team by email, live chat or WhatsApp. Customer support available 24 hours a day, 7 days a week.",
     alternates: {
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 const CONTACT_INFO = [
     {
-        icon: Phone,
-        title: "Phone / WhatsApp",
-        description: "+33 7 53 82 03 07",
-        detail: "Available 24/7 on WhatsApp",
+        icon: MessageCircle,
+        title: "WhatsApp",
+        description: "Message us on WhatsApp",
+        detail: "Instant response — available 24/7",
         href: "https://wa.me/33753820307",
     },
     {
@@ -47,13 +47,6 @@ const CONTACT_INFO = [
         detail: "We are always available",
         href: undefined,
     },
-    {
-        icon: MessageCircle,
-        title: "WhatsApp",
-        description: "+33 7 53 82 03 07",
-        detail: "Instant response",
-        href: "https://wa.me/33753820307",
-    },
 ];
 
 export default function ContactPage() {
@@ -62,7 +55,7 @@ export default function ContactPage() {
             <SchemaMarkup
                 schemas={[
                     webPageSchema({
-                        name: "Contact Us — 24/7 Customer Support",
+                        name: "Contact Us | 24/7 Customer Support",
                         description:
                             "Need help with your IPTV subscription? Contact the IPTV The King team by email, live chat or WhatsApp. Support available 24/7.",
                         url: `${SITE_URL}/contact`,

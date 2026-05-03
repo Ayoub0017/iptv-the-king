@@ -11,7 +11,7 @@ const SITE_URL = getSiteUrl();
 export const revalidate = 0; // Ensure fresh content on every request
 
 export const metadata: Metadata = {
-    title: "Tutorials — IPTV Guides, Tips & News",
+    title: "Tutorials | IPTV Guides, Tips & News",
     description:
         "Guides, tips and news to help you get the most out of your IPTV experience. Installation tutorials, player reviews, streaming tips and more.",
     alternates: {
@@ -31,7 +31,7 @@ export default async function ArticlesPage() {
             <SchemaMarkup
                 schemas={[
                     webPageSchema({
-                        name: "Tutorials — IPTV Guides, Tips & News",
+                        name: "Tutorials | IPTV Guides, Tips & News",
                         description:
                             "Guides, tips and news to help you get the most out of your IPTV experience.",
                         url: `${SITE_URL}/tutorials`,

@@ -21,7 +21,7 @@ const VALUE_ICONS = [Tv, Heart, Lightbulb, Eye];
 const SITE_URL = getSiteUrl();
 
 export const metadata: Metadata = {
-    title: "About — Our Mission & Story",
+    title: "About | Our Mission & Story",
     description:
         "Discover the story of IPTV The King, the best IPTV provider in the UK. Our mission: to make premium streaming accessible to everyone with 10,000+ channels in 4K.",
     alternates: {
@@ -39,7 +39,7 @@ export default function AboutPage() {
             <SchemaMarkup
                 schemas={[
                     webPageSchema({
-                        name: "About — Our Mission & Story",
+                        name: "About | Our Mission & Story",
                         description:
                             "Discover the story of IPTV The King, the best IPTV provider in the UK. Our mission: to make premium streaming accessible to everyone with 10,000+ channels in 4K.",
                         url: `${SITE_URL}/about`,

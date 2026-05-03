@@ -26,7 +26,7 @@ export default function TermsOfUsePage() {
             <SchemaMarkup
                 schemas={[
                     webPageSchema({
-                        name: "Terms of Use — IPTV The King",
+                        name: "Terms of Use | IPTV The King",
                         description:
                             "Terms of Use for IPTV The King: usage rules, subscriptions, payments and responsibilities.",
                         url: `${SITE_URL}/terms-of-use`,

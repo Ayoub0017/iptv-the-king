@@ -186,7 +186,7 @@ export function serviceSchema(plan: Plan): JsonLd {
     return {
         "@context": "https://schema.org",
         "@type": "Service",
-        name: `IPTV The King — ${plan.duration} Subscription`,
+        name: `IPTV The King | ${plan.duration} Subscription`,
         description: `Premium IPTV subscription service for ${plan.duration}. Access to 10,000+ live channels, 50,000+ films and series in 4K quality.`,
         url: `${SITE_URL}/${plan.slug}`,
         inLanguage: "en-GB",
@@ -364,7 +364,6 @@ export function contactOrganizationSchema(): JsonLd {
             "@type": "ContactPoint",
             contactType: "customer support",
             email: "support@iptvtheking.com",
-            telephone: "+33753820307",
             availableLanguage: ["English"],
         },
     });

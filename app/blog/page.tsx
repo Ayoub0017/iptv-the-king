@@ -7,7 +7,7 @@ import { webPageSchema, breadcrumbSchema, getSiteUrl } from "@/lib/schema";
 const SITE_URL = getSiteUrl();
 
 export const metadata: Metadata = {
-    title: "Blog — IPTV Guides, Tips & News",
+    title: "Blog | IPTV Guides, Tips & News",
     description:
         "Guides, tips and news to help you get the most out of your IPTV experience. Installation tutorials, player reviews, streaming tips and more.",
     alternates: {
@@ -25,7 +25,7 @@ export default function BlogPage() {
             <SchemaMarkup
                 schemas={[
                     webPageSchema({
-                        name: "Blog — IPTV Guides, Tips & News",
+                        name: "Blog | IPTV Guides, Tips & News",
                         description:
                             "Guides, tips and news to help you get the most out of your IPTV experience.",
                         url: `${SITE_URL}/blog`,

@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PlanPageProps): Promise<Metad
     const plan = PLANS.find((p) => p.slug === slug);
     if (!plan) return {};
     return {
-        title: `${plan.duration} IPTV Subscription — Best Value at £${plan.price}`,
+        title: `${plan.duration} IPTV Subscription | Best Value at £${plan.price}`,
         description: `Get the ${plan.duration} IPTV subscription for just £${plan.pricePerMonth}/month. ${plan.features.length} features included: 10,000+ live channels, films and series in 4K quality. No contract.`,
         alternates: {
             canonical: `${SITE_URL}/${slug}`,
@@ -63,7 +63,7 @@ export default async function PlanPage({ params }: PlanPageProps) {
                     productSchema(plan),
                     serviceSchema(plan),
                     webPageSchema({
-                        name: `${plan.duration} IPTV Subscription — Best Value at £${plan.price}`,
+                        name: `${plan.duration} IPTV Subscription | Best Value at £${plan.price}`,
                         description: `Get the ${plan.duration} IPTV subscription for just £${plan.pricePerMonth}/month. ${plan.features.length} features included.`,
                         url: `${SITE_URL}/${plan.slug}`,
                     }),

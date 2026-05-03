@@ -55,12 +55,13 @@ export async function generateMetadata(
     }
 
     return {
-        title: `${post.title} — IPTV The King`,
+        title: `${post.title} | IPTV The King`,
         description: post.excerpt,
         alternates: {
             canonical: `${SITE_URL}/tutorials/${slug.join("/")}`,
         },
         openGraph: {
+            locale: "en_GB",
             title: post.title,
             description: post.excerpt,
             type: "article",
@@ -155,9 +156,9 @@ export default async function ArticlePage({ params }: Props) {
                             )}
                             <div className="flex items-center space-x-2">
                                 <time dateTime={new Date(post.date).toISOString()}>
-                                    {new Date(post.date).toLocaleDateString('en-US', {
-                                        month: 'long',
+                                    {new Date(post.date).toLocaleDateString('en-GB', {
                                         day: 'numeric',
+                                        month: 'long',
                                         year: 'numeric'
                                     })}
                                 </time>
